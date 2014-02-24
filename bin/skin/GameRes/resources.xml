@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Resources>
+
+  <!-- 图片定义 -->
+  <Images>
+    <Image id="IDB_MAINFRAME_BG" path="images/main/5.jpg"/>
+    <Image id="IDB_MAINFRAME_AERO" path="images/main/aero.png"/>
+    <Image id="IDB_PANEL" path="images/main/panel.png"/>
+    <Image id="IDB_LOGO" path="images/main/logo.png"/>
+
+    <Image id="IDB_SYSBTN_CLOSE_NORMAL" path="images/sysbtn/btn_close_normal.png"/>
+    <Image id="IDB_SYSBTN_CLOSE_HOT" path="images/sysbtn/btn_close_highlight.png"/>
+    <Image id="IDB_SYSBTN_CLOSE_PUSHED" path="images/sysbtn/btn_close_down.png"/>
+    
+    <Image id="IDB_SYSBTN_MAX_NORMAL" path="images/sysbtn/btn_max_normal.png"/>
+    <Image id="IDB_SYSBTN_MAX_HOT" path="images/sysbtn/btn_max_highlight.png"/>
+    <Image id="IDB_SYSBTN_MAX_PUSHED" path="images/sysbtn/btn_max_down.png"/>
+    
+    <Image id="IDB_SYSBTN_RESTORE_NORMAL" path="images/sysbtn/btn_restore_normal.png"/>
+    <Image id="IDB_SYSBTN_RESTORE_HOT" path="images/sysbtn/btn_restore_highlight.png"/>
+    <Image id="IDB_SYSBTN_RESTORE_PUSHED" path="images/sysbtn/btn_restore_down.png"/>
+
+    <Image id="IDB_SYSBTN_MINI_NORMAL" path="images/sysbtn/btn_mini_normal.png"/>
+    <Image id="IDB_SYSBTN_MINI_HOT" path="images/sysbtn/btn_mini_highlight.png"/>
+    <Image id="IDB_SYSBTN_MINI_PUSHED" path="images/sysbtn/btn_mini_down.png"/>
+
+    <Image id="IDB_SYSBTN_SKIN_NORMAL" path="images/sysbtn/btn_skin_normal.png"/>
+    <Image id="IDB_SYSBTN_SKIN_HOT" path="images/sysbtn/btn_skin_highlight.png"/>
+    <Image id="IDB_SYSBTN_SKIN_PUSHED" path="images/sysbtn/btn_skin_down.png"/>
+    
+    <Image id="IDB_MAINSEARCH_BG" path="images/search/main_search_bg.png"/>
+    <Image id="IDB_MAINSEARCH_BTN" path="images/search/main_search_btn.png"/>
+    <Image id="IDB_MAINSEARCH_MENU" path="images/search/main_search_menu.png"/>
+    
+    <Image id="IDB_AVATAR_PIC" path="images/avatar/avatar.png"/>
+    <Image id="IDB_AVATAR_NORMAL" path="images/avatar/normal.png"/>
+    <Image id="IDB_AVATAR_HOT" path="images/avatar/hot.png"/>
+    <Image id="IDB_AVATAR_PUSHED" path="images/avatar/hot.png"/>
+    
+    <Image id="IDB_MAINMENUBTN_NORMAL" path="images/mainmenu/menu_btn_normal.png" />
+    <Image id="IDB_MAINMENUBTN_HOT" path="images/mainmenu/menu_btn_highlight.png" />
+
+    <Image id="IDB_BUTTON_ALL_PUSHED" path="images/button/allbtn_down.png" />
+    <Image id="IDB_BUTTON_ALL_HOT" path="images/button/allbtn_highlight.png" />
+
+    <Image id="IDB_EDIT_PUSHED" path="images/edit/pushed.png" />
+    <Image id="IDB_EDIT_HOT" path="images/edit/hot.png" />
+
+    <Image id="IDB_LEFT_BG" path="images/app/left.png"/>
+    <Image id="IDB_ONLINE_BG" path="images/app/online_bg.png"/>
+    <Image id="IDB_ONLINE_ICON" path="images/app/online_icon.png"/>
+
+    <!-- 状态图片 -->
+    <Image id="IDB_MAIN_TAB_NORMAL" path="images/maingroup/main_tab_normal.png" />
+    <Image id="IDB_MAIN_TAB_HOT" path="images/maingroup/main_tab_hot.png" />
+    <Image id="IDB_MAIN_TAB_PUSHED" path="images/maingroup/main_tab_pushed.png" />
+    
+    <Image id="IDB_MAIN_TAB_HOME" path="images/maingroup/OfficialWebsite.png" />
+    <Image id="IDB_MAIN_TAB_GAME" path="images/maingroup/gamelib.png" />
+    <Image id="IDB_MAIN_TAB_SHOP" path="images/maingroup/ItemShop.png" />
+    <Image id="IDB_MAIN_TAB_VIP" path="images/maingroup/BlueVip.png" />
+    <Image id="IDB_MAIN_TAB_MATCH" path="images/maingroup/match.png" />
+    <Image id="IDB_MAIN_TAB_3366" path="images/maingroup/3366.png" />
+    
+    <!-- 游戏标签 -->
+    <Image id="IDB_GAME_TAB_NORMAL" path="images/gametab/tab_normal.png" />
+    <Image id="IDB_GAME_TAB_HOT" path="images/gametab/tab_hot.png" />
+    <Image id="IDB_GAME_TAB_PUSHED" path="images/gametab/tab_pushed.png" />
+
+    <!-- 游戏标签 -->
+    <Image id="IDB_APPICON_ITEM" path="images/app/appicon_hot.png" />
+    <Image id="IDB_APPICON_ADD" path="images/app/appicon_add.png" />
+    <Image id="IDB_APPLIST_ITEM" path="images/app/applist_hot.png" />
+    <Image id="IDB_PANEL" path="images/app/panel.png" />
+
+    <Image id="IDB_SKINBTN_HOT" path="images/skin/btn_hot.png" />
+    <Image id="IDB_SKINBTN_SELECTED" path="images/skin/btn_selected.png" />
+    <Image id="IDB_COLORBTN" path="images/skin/color_btn.png" />
+    <Image id="IDB_IMAGEBTN" path="images/skin/image_btn.png" />
+  </Images>
+  
+
+  <Xmls>
+    <Xml id="IDX_MAINFRAME" path="main.xml"/>
+    <Xml id="IDX_SKINFRAME" path="skin.xml"/>
+  </Xmls>
+
+  <Fonts>
+    <Font id="font12" size="12" bold="false" />
+    <Font id="font13u" size="13" underline="true" bold="false" />
+    <Font id="font13" size="13" bold="false" />
+    <Font id="font13b" size="13" bold="true" />
+    <Font id="font12b" size="12" bold="true" />
+    <Font id="font18" size="18" bold="false" />
+  </Fonts>
+
+  <Styles>
+    <Style id="btn_style_skin" width="28" height="20" normalimage="res='IDB_SYSBTN_SKIN_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_SKIN_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_SKIN_PUSHED' dest='0,-2,28,18'"/>
+    <Style id="btn_style_min" width="28" height="20" normalimage="res='IDB_SYSBTN_MINI_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MINI_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MINI_PUSHED' dest='0,-2,28,18'"/>
+    <Style id="btn_style_max" width="28" height="20" normalimage="res='IDB_SYSBTN_MAX_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MAX_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MAX_PUSHED' dest='0,-2,28,18'" />
+    <Style id="btn_style_restore" width="28" height="20" normalimage="res='IDB_SYSBTN_RESTORE_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_RESTORE_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_RESTORE_PUSHED' dest='0,-2,28,18'" />
+    <Style id="btn_style_close" width="39" height="20" normalimage="res='IDB_SYSBTN_CLOSE_NORMAL' dest='0,-2,39,18'" hotimage="res='IDB_SYSBTN_CLOSE_HOT' dest='0,-2,39,18'" pushedimage="res='IDB_SYSBTN_CLOSE_PUSHED' dest='0,-2,39,18'" />
+    
+    <Style id="allbtn_style" glowsize="0" width="22" height="22" hotimage="res='IDB_BUTTON_ALL_HOT' corner='4,4,4,4'" pushedimage="res='IDB_BUTTON_ALL_PUSHED' corner='4,4,4,4'" />
+
+    <Style id="edit_style" glowsize="0" hotimage="res='IDB_EDIT_HOT' corner='4,4,4,4'" pushedimage="res='IDB_EDIT_PUSHED' corner='4,4,4,4'" focusedimage="res='IDB_EDIT_PUSHED' corner='4,4,4,4'" />
+    <Style id="menubtn_style" glowsize="0" height="22" hotimage="res='IDB_MENUBTN_HOT' corner='4,4,4,4'" pushedimage="res='IDB_MENUBTN_PUSHED' corner='4,4,4,4'" arrowimage="res='IDB_MENUBTN_ARROW_DOWN' dest='-12,8,-3,12'"/>
+    <Style id="searchbtn_style" glowsize="0" height="22" normalimage="res='IDB_MAINSEARCH_BTN' source='0,0,22,21'" hotimage="res='IDB_MAINSEARCH_BTN' source='22,0,44,21'" pushedimage="res='IDB_MAINSEARCH_BTN' source='44,0,66,21'"/>
+
+    <Style id="appicon_btn_style" glowsize="0" cursor="hand" width="72" height="101" textstyle="center, bottom" textpadding="0,0,0,6" iconsize="66,67" iconalign="center,top" iconpadding="0,3,0,0" hotimage="res='IDB_APPICON_ITEM' corner='0'" pushedimage="res='IDB_APPICON_ITEM' corner='0'" />
+    <Style id="applist_btn_style" glowsize="0" cursor="hand" width="149" height="74" showhtml="true" textstyle="left, top, wordbreak:true" textpadding="78,12,0,0" iconsize="66,67" iconalign="left,vcenter" iconpadding="6,0,0,0" hotimage="res='IDB_APPLIST_ITEM' corner='0'" pushedimage="res='IDB_APPLIST_ITEM' corner='0'" />
+
+    <Style id="maintab_style" option="true" glowsize="0" width="63" textcolor="#FF000000" textstyle="center, bottom" textpadding="0,0,0,4" iconsize="68,50" iconalign="center,top" normalimage="res='IDB_MAIN_TAB_NORMAL' corner='6,6,6,6'" hotimage="res='IDB_MAIN_TAB_HOT' corner='6,6,6,6'" pushedimage="res='IDB_MAIN_TAB_PUSHED' corner='6,6,6,6'" selectedimage="res='IDB_MAIN_TAB_PUSHED' corner='6,6,6,6'" group="main_tab" />
+    <Style id="gametab_style" option="true" hoveroption="true" glowsize="0" width="57" textcolor="#FF000000" textstyle="center, vcenter" textpadding="0,0,0,4" normalimage="res='IDB_GAME_TAB_NORMAL' corner='6,6,6,6'" hotimage="res='IDB_GAME_TAB_HOT' corner='6,6,6,6'" pushedimage="res='IDB_GAME_TAB_PUSHED' corner='6,6,6,6'" selectedimage="res='IDB_GAME_TAB_PUSHED' corner='6,6,6,6'" group="game_tab" />
+
+    <Style id="skinbtn_style" option="true" glowsize="0" width="28" height="40" hotimage="res='IDB_SKINBTN_HOT' corner='6,6,6,6'" selectedimage="res='IDB_SKINBTN_SELECTED' corner='6,6,6,6'" group="skin_image_tab" />
+    <Style id="colorbtn_style" option="true" glowsize="0" width="26" height="22" normalimage="res='IDB_COLORBTN' source='0,0,26,22'" hotimage="res='IDB_COLORBTN' source='26,0,52,22'" selectedimage="res='IDB_COLORBTN' source='52,0,78,22'" group="skin_tab" />
+    <Style id="imagebtn_style" option="true" glowsize="0" width="26" height="22" normalimage="res='IDB_IMAGEBTN' source='0,0,26,22'" hotimage="res='IDB_IMAGEBTN' source='26,0,52,22'" selectedimage="res='IDB_IMAGEBTN' source='52,0,78,22'" group="skin_tab" />
+
+  </Styles>
+  
+  
+</Resources>

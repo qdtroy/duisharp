@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Resources>
+
+  <!-- 图片定义 -->
+  <Images>
+    <Image id="IDB_MAINFRAME_BG" path="images/main/bg.jpg"/>
+    <Image id="IDB_MAINFRAME_AERO" path="images/main/aero.png"/>
+    <Image id="IDB_MAINFRAME_NORMAL" path="images/main/normal.png"/>
+    
+    <Image id="IDB_LOGO" path="images/main/logo.png"/>
+
+    <Image id="IDB_SYSBTN_CLOSE_NORMAL" path="images/sysbtn/btn_close_normal.png"/>
+    <Image id="IDB_SYSBTN_CLOSE_HOT" path="images/sysbtn/btn_close_highlight.png"/>
+    <Image id="IDB_SYSBTN_CLOSE_PUSHED" path="images/sysbtn/btn_close_down.png"/>
+    
+    <Image id="IDB_SYSBTN_MAX_NORMAL" path="images/sysbtn/btn_max_normal.png"/>
+    <Image id="IDB_SYSBTN_MAX_HOT" path="images/sysbtn/btn_max_highlight.png"/>
+    <Image id="IDB_SYSBTN_MAX_PUSHED" path="images/sysbtn/btn_max_down.png"/>
+    
+    <Image id="IDB_SYSBTN_RESTORE_NORMAL" path="images/sysbtn/btn_restore_normal.png"/>
+    <Image id="IDB_SYSBTN_RESTORE_HOT" path="images/sysbtn/btn_restore_highlight.png"/>
+    <Image id="IDB_SYSBTN_RESTORE_PUSHED" path="images/sysbtn/btn_restore_down.png"/>
+
+    <Image id="IDB_SYSBTN_MINI_NORMAL" path="images/sysbtn/btn_mini_normal.png"/>
+    <Image id="IDB_SYSBTN_MINI_HOT" path="images/sysbtn/btn_mini_highlight.png"/>
+    <Image id="IDB_SYSBTN_MINI_PUSHED" path="images/sysbtn/btn_mini_down.png"/>
+
+    <Image id="IDB_MAINSEARCH_BG" path="images/search/main_search_bg.png"/>
+    <Image id="IDB_MAINSEARCH_MENU" path="images/search/main_search_menu.png"/>
+    
+    <Image id="IDB_AVATAR_PIC" path="images/avatar/avatar.png"/>
+    <Image id="IDB_AVATAR_NORMAL" path="images/avatar/normal.png"/>
+    <Image id="IDB_AVATAR_HOT" path="images/avatar/hot.png"/>
+    <Image id="IDB_AVATAR_PUSHED" path="images/avatar/hot.png"/>
+
+    <Image id="IDB_WEATHER_SUN" path="images/weather/sun.png"/>
+    
+    <Image id="IDB_MAINMENUBTN_NORMAL" path="images/mainmenu/menu_btn_normal.png" />
+    <Image id="IDB_MAINMENUBTN_HOT" path="images/mainmenu/menu_btn_highlight.png" />
+
+    <Image id="IDB_BUTTON_ALL_PUSHED" path="images/button/allbtn_down.png" />
+    <Image id="IDB_BUTTON_ALL_HOT" path="images/button/allbtn_highlight.png" />
+
+    <Image id="IDB_EDIT_PUSHED" path="images/edit/pushed.png" />
+    <Image id="IDB_EDIT_HOT" path="images/edit/hot.png" />
+
+    <Image id="IDB_MENUBTN_PUSHED" path="images/button/allbtn_down.png" />
+    <Image id="IDB_MENUBTN_HOT" path="images/button/allbtn_highlight.png" />
+    <Image id="IDB_MENUBTN_ARROW_DOWN" path="images/button/arrow_down.png" />
+    
+    <!-- 应用图标 -->
+    <Image id="IDB_APPICON_MUSIC" path="images/app/music.png" />
+    <Image id="IDB_APPICON_GAME" path="images/app/game.png" />
+    <Image id="IDB_APPICON_TENPAY" path="images/app/tenpay.png" />
+    <Image id="IDB_APPICON_MANAGER" path="images/app/manager.png" />
+    
+    <Image id="IDB_APPICON_TOOLS" path="images/app/tools.png" />
+    <Image id="IDB_APPICON_MESSAGE" path="images/app/message.png" />
+    <Image id="IDB_APPICON_FIND" path="images/app/find.png" />
+
+    <Image id="IDB_WEBICON_ZONE" path="images/web/zone.png" />
+    <Image id="IDB_WEBICON_WEIBO" path="images/web/weibo.png" />
+    <Image id="IDB_WEBICON_EMAIL" path="images/web/email.png" />
+    <Image id="IDB_WEBICON_XIAOYOU" path="images/web/xiaoyou.png" />
+    <Image id="IDB_WEBICON_MSGMGR" path="images/web/msgmgr.png" />
+    
+    <!-- 状态图片 -->
+    <Image id="IDB_GG_IMONLINE" path="images/status/gg/imonline.png" />
+    <Image id="IDB_GG_INVISIBLE" path="images/status/gg/invisible.png" />
+    <Image id="IDB_GG_QME" path="images/status/gg/qme.png" />
+    <Image id="IDB_GG_BUSY" path="images/status/gg/busy.png" />
+    <Image id="IDB_GG_MUTE" path="images/status/gg/mute.png" />
+    <Image id="IDB_GG_AWAY" path="images/status/gg/away.png" />
+    
+    <!-- 状态图片 -->
+    <Image id="IDB_LEVEL" path="images/level/lv.png" />
+    <Image id="IDB_LEVEL_VALUE" path="images/level/levelvalue.png" />
+
+    <Image id="IDB_MAIN_TAB_BG" path="images/maingroup/bg.png" />
+    <Image id="IDB_MAIN_TAB_NORMAL" path="images/maingroup/main_tab_normal.png" />
+    <Image id="IDB_MAIN_TAB_HOT" path="images/maingroup/main_tab_hot.png" />
+    <Image id="IDB_MAIN_TAB_PUSHED" path="images/maingroup/main_tab_pushed.png" />
+    
+    <Image id="IDB_MAIN_TAB_CONTACTS" path="images/maingroup/icon_contacts_normal.png" />
+    <Image id="IDB_MAIN_TAB_CONTACTS_SELECTED" path="images/maingroup/icon_contacts_selected.png" />
+    <Image id="IDB_MAIN_TAB_GROUP" path="images/maingroup/icon_group_normal.png" />
+    <Image id="IDB_MAIN_TAB_GROUP_SELECTED" path="images/maingroup/icon_group_selected.png" />
+    <Image id="IDB_MAIN_TAB_LAST" path="images/maingroup/icon_last_normal.png" />
+    <Image id="IDB_MAIN_TAB_LAST_SELECTED" path="images/maingroup/icon_last_selected.png" />
+
+
+  </Images>
+  
+
+  <Xmls>
+    <Xml id="IDX_MAINDLG" path="main.xml"/>
+    <Xml id="IDX_MESSAGEBOX" path="messagebox.xml"/>
+  </Xmls>
+
+  <Fonts>
+    <Font id="font12" size="12" bold="false" />
+    <Font id="font12u" size="12" bold="false" />
+    <Font id="font13" size="13" bold="false" />
+    <Font id="font13b" size="13" bold="true" />
+    <Font id="font12b" size="12" bold="true" />
+    <Font id="font18" size="18" bold="false" />
+  </Fonts>
+
+  <Styles>
+    <Style id="btn_style_min" width="28" height="20" normalimage="res='IDB_SYSBTN_MINI_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MINI_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MINI_PUSHED' dest='0,-2,28,18'"/>
+    <Style id="btn_style_max" width="28" height="20" normalimage="res='IDB_SYSBTN_MAX_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MAX_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MAX_PUSHED' dest='0,-2,28,18'" />
+    <Style id="btn_style_restore" width="28" height="20" normalimage="res='IDB_SYSBTN_RESTORE_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_RESTORE_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_RESTORE_PUSHED' dest='0,-2,28,18'" />
+    <Style id="btn_style_close" width="39" height="20" normalimage="res='IDB_SYSBTN_CLOSE_NORMAL' dest='0,-2,39,18'" hotimage="res='IDB_SYSBTN_CLOSE_HOT' dest='0,-2,39,18'" pushedimage="res='IDB_SYSBTN_CLOSE_PUSHED' dest='0,-2,39,18'" />
+
+    <Style id="edit_style" glowsize="0" hotimage="res='IDB_EDIT_HOT' corner='4,4,4,4'" pushedimage="res='IDB_EDIT_PUSHED' corner='4,4,4,4'" focusedimage="res='IDB_EDIT_PUSHED' corner='4,4,4,4'" />
+    <Style id="allbtn_style" glowsize="0" width="22" height="22" hotimage="res='IDB_BUTTON_ALL_HOT' corner='4,4,4,4'" pushedimage="res='IDB_BUTTON_ALL_PUSHED' corner='4,4,4,4'" />
+    <Style id="menubtn_style" glowsize="0" height="22" hotimage="res='IDB_MENUBTN_HOT' corner='4,4,4,4'" pushedimage="res='IDB_MENUBTN_PUSHED' corner='4,4,4,4'" arrowimage="res='IDB_MENUBTN_ARROW_DOWN' dest='-12,8,-3,12'"/>
+    
+    <Style id="maintab_style" height="34" option="true" textcolor="#FFFFFFFF" iconsize="20,20" iconalign="center,vcenter" normalimage="res='IDB_MAIN_TAB_NORMAL' corner='6,6,6,6'" hotimage="res='IDB_MAIN_TAB_HOT' corner='6,6,6,6'" pushedimage="res='IDB_MAIN_TAB_PUSHED' corner='6,6,6,6'" selectedimage="res='IDB_MAIN_TAB_PUSHED' corner='6,6,6,6'" group="main_tab" />
+    
+    <Style id="toolbar_style" bkimage="res='IDB_TOOLBAR_BG' corner='0,2,0,2'" />
+
+    <Style id="qqlist_style" header="hidden" itemglowsize="2" itembkimage="file='tree_normal.png' corner='2,1,2,1' " itemhotimage="file='tree_hot.png' corner='2,1,2,1' " itemselectedimage="file='tree_select.png' corner='2,1,2,1'" itemlinecolor="#FFE4EAF2" itemshowhtml="true" vscrollbar="true" hscrollbar="true" >
+      <vscrollbarstyle>scrollsize="15"</vscrollbarstyle>
+    </Style>
+
+    
+  </Styles>
+  
+  
+</Resources>

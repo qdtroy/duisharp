@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Resources>
+
+  <!-- 图片定义 -->
+  <Images>
+    <Image id="IDB_MAINFRAME_BG" path="images/main/bg.png"/>
+    <Image id="IDB_LOGO" path="images/main/logo.png"/>
+
+    <Image id="IDB_SYSBTN_CLOSE" path="images/sysbtn/closebtn.png"/>
+    <Image id="IDB_SYSBTN_MAXIMIZE" path="images/sysbtn/maxbtn.png"/>
+    <Image id="IDB_SYSBTN_MINIMIZE" path="images/sysbtn/minbtn.png"/>
+    <Image id="IDB_SYSBTN_RESTORE" path="images/sysbtn/restorebtn.png"/>
+
+    <Image id="IDB_TABBUTTON_HOVER" path="images/TabCtrl/Tabbutton_hover.png"/>
+    <Image id="IDB_TABBUTTON_PUSHED" path="images/TabCtrl/Tabbutton_focus.png"/>
+    <Image id="IDB_TABBUTTON_SELECTED" path="images/TabCtrl/Tabbutton_focus.png"/>
+    
+    <Image id="IDB_TABBUTTON_SOFTHOUSE" path="images/TabCtrl/softmgr_tab_icon_all.png"/>
+    <Image id="IDB_TABBUTTON_UPGRADE" path="images/TabCtrl/softmgr_tab_icon_upgrade.png"/>
+    <Image id="IDB_TABBUTTON_UNINSTALL" path="images/TabCtrl/softmgr_tab_icon_uninst.png"/>
+
+    <Image id="IDB_CATALOG_BG" path="images/catalog/bg.png"/>
+    <Image id="IDB_CATALOG_ITEM_NORMAL" path="images/catalog/itemnormal.png"/>
+    <Image id="IDB_CATALOG_ITEM_HOT" path="images/catalog/itemhot.png"/>
+    <Image id="IDB_CATALOG_ITEM_SELECTED" path="images/catalog/itemselected.png"/>
+
+    <Image id="IDB_CATALOG_ICON_0" path="images/catalog/catalog_0.png"/>
+    <Image id="IDB_CATALOG_ICON_NOMINATE" path="images/catalog/catalog_nominate.png"/>
+   
+    <Image id="IDB_SOFTLIST_ITEM_NORMAL" path="images/softlist/itemnormal.png"/>
+    <Image id="IDB_SOFTLIST_ITEM_HOT" path="images/softlist/itemhot.png"/>
+    <Image id="IDB_SOFTLIST_ITEM_SELECTED" path="images/softlist/itemselected.png"/>
+
+    <Image id="IDB_SOFT_DEFLOGO" path="images/softlist/deflogo.png"/>
+    <Image id="IDB_SEARCHEDIT_BG" path="images/edit/editbk.png"/>
+    <Image id="IDB_SEARCHBTN_NORMAL" path="images/edit/editbt_normal.png"/>
+    <Image id="IDB_SEARCHBTN_HOVER" path="images/edit/editbt_hover.png"/>
+    <Image id="IDB_SEARCHBTN_PUSHED" path="images/edit/editbt_down.png"/>
+    
+    <Image id="IDB_TOOLBAR_BG" path="images/toolbar/bg.png"/>
+
+    <Image id="IDB_COMBO_BG" path="images/ComboBox/bg.png"/>
+    
+    <Image id="IDB_COMBO_NORMAL" path="images/ComboBox/normal.png"/>
+    <Image id="IDB_COMBO_HOVER" path="images/ComboBox/hot.png"/>
+    <Image id="IDB_COMBO_PUSHED" path="images/ComboBox/pushed.png"/>
+
+    <Image id="IDB_COMBO_ITEM_NORMAL" path="images/ComboBox/itemnormal.png"/>
+    <Image id="IDB_COMBO_ITEM_HOVER" path="images/ComboBox/itemhot.png"/>
+    <Image id="IDB_COMBO_ITEM_PUSHED" path="images/ComboBox/itempushed.png"/>
+    
+  </Images>
+
+  <Xmls>
+    <Xml id="IDX_MAINDLG" path="main.xml"/>
+    <Xml id="IDX_MESSAGEBOX" path="messagebox.xml"/>
+  </Xmls>
+
+  <Fonts>
+    <Font id="font12" size="12" bold="false" />
+    <Font id="font12u" size="12" bold="false" />
+    <Font id="font13" size="13" bold="false" />
+    <Font id="font12b" size="12" bold="true" />
+    <Font id="font18" size="18" bold="false" />
+  </Fonts>
+
+  <Styles>
+    <Style id="btn_style_min" width="28" height="18"  normalimage="res='IDB_SYSBTN_MINIMIZE' source='0,0,28,18'" hotimage="res='IDB_SYSBTN_MINIMIZE' source='0,18,28,36'" pushedimage="res='IDB_SYSBTN_MINIMIZE' source='0,36,28,54'" font="font12" />
+    <Style id="btn_style_max" width="28" height="18"  normalimage="res='IDB_SYSBTN_MAXIMIZE' source='0,0,28,18'" hotimage="res='IDB_SYSBTN_MAXIMIZE' source='0,18,28,36'" pushedimage="res='IDB_SYSBTN_MAXIMIZE' source='0,36,28,54'" font="font12" />
+    <Style id="btn_style_restore" width="28" height="18"  normalimage="res='IDB_SYSBTN_RESTORE' source='0,0,28,18'" hotimage="res='IDB_SYSBTN_RESTORE' source='0,18,28,36'" pushedimage="res='IDB_SYSBTN_RESTORE' source='0,36,28,54'" font="font12" />
+    <Style id="btn_style_close" width="37" height="18"  normalimage="res='IDB_SYSBTN_CLOSE' source='0,0,37,18'" hotimage="res='IDB_SYSBTN_CLOSE' source='0,18,37,36'" pushedimage="res='IDB_SYSBTN_CLOSE' source='0,36,37,54'" font="font12" />
+    <Style id="tab_btn_style" width="84" height="75" textcolor="FFFFFFFF" textstyle="bottom" hotimage="res='IDB_TABBUTTON_HOVER' corner='6,6,6,6'" pushedimage="res='IDB_TABBUTTON_PUSHED' corner='6,6,6,6'" selectedimage="res='IDB_TABBUTTON_SELECTED' corner='6,6,6,6'" group="tabbar" />
+
+    <Style id="combo_style" height="23" normalimage="res='IDB_COMBO_NORMAL' corner='23,0,23,0'" hotimage="res='IDB_COMBO_HOVER' corner='23,0,23,0'" pushedimage="res='IDB_COMBO_PUSHED' corner='23,0,23,0'" font="font12" >
+      <dropbox>bkimage="res='IDB_COMBO_BG' corner='4,4,4,4'" bordersize="0"</dropbox>
+      <itembkimage>res='IDB_COMBO_ITEM_NORMAL' corner='4,4,4,4' xtiled='true'</itembkimage>
+      <!--<itemhotimage>res='IDB_COMBO_ITEM_HOVER' corner='4,4,4,4' xtiled='true'</itemhotimage>-->
+      <itempushedimage>res='IDB_COMBO_ITEM_PUSHED' corner='4,4,4,4' xtiled='true'</itempushedimage>
+      <itemselectedimage>res='IDB_COMBO_ITEM_PUSHED' corner='4,4,4,4' xtiled='true'</itemselectedimage>
+
+    </Style>
+    
+    <Style id="toolbar_style" bkimage="res='IDB_TOOLBAR_BG' corner='0,2,0,2'" />
+    
+    <Style id="body_catalog_style" width="190" header="hidden" bkimage="res='IDB_CATALOG_BG' corner='8,8,8,8'" itemfont="font12" vscrollbar="true">
+      <itemtextpadding>42,0,0,0</itemtextpadding>
+      <itemtextcolor>#FF555555</itemtextcolor>
+      <itemhottextcolor>#FF555555</itemhottextcolor>
+      <itemselectedtextcolor>#FFFFFFF</itemselectedtextcolor>
+      <itembkimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itembkimage>
+      <itemhotimage>res='IDB_CATALOG_ITEM_HOT' corner='0,4,0,4' xtiled='true'</itemhotimage>
+      <itemselectedimage>res='IDB_CATALOG_ITEM_SELECTED' corner='0,4,0,4' xtiled='true'</itemselectedimage>
+      <itemforeimage>res='IDB_CATALOG_ICON_NOMINATE' source='17,0,34,17' dest='21,6,38,23'</itemforeimage>
+    </Style>
+
+    <Style id="body_catalog_item_title_style" width="190" height="40" itemfont="font12b" itemtextstyle="center">
+      <itemtextcolor>#FF555555</itemtextcolor>
+      <itemhottextcolor>#FF555555</itemhottextcolor>
+      <itemselectedtextcolor>#FF555555</itemselectedtextcolor>
+      <itembkimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itembkimage>
+      <itemhotimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itemhotimage>
+      <itemselectedimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itemselectedimage>
+      <itemforeimage>res='IDB_CATALOG_ICON_0' source='0,0,17,17' dest='49,10,66,27'</itemforeimage>
+    </Style>
+    
+    <Style id="body_catalog_item_style" height="32"/>
+
+    <Style id="body_list_style" header="hidden" vscrollbar="true">
+      <itemhotbkcolor>#00000000</itemhotbkcolor>
+      <itembkimage>res='IDB_SOFTLIST_ITEM_NORMAL' corner='4,4,4,4'</itembkimage>
+      <itemhotimage>res='IDB_SOFTLIST_ITEM_HOT' corner='4,4,4,4'</itemhotimage>
+      <itemselectedimage>res='IDB_SOFTLIST_ITEM_SELECTED' corner='4,4,4,4'</itemselectedimage>
+      <vscrollbarstyle>scrollsize="20"</vscrollbarstyle>
+    </Style>
+
+    <Style id="searchbtn_style" width="28" height="23" normalimage="IDB_SEARCHBTN_NORMAL" hotimage="IDB_SEARCHBTN_HOVER" pushedimage="IDB_SEARCHBTN_PUSHED"/>
+
+  </Styles>
+  
+  
+</Resources>

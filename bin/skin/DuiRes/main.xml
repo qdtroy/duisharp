@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="700,532" sizebox="4,4,4,4" caption="0,0,0,30" blur="false" shadow="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
+
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+
+  <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1680,200,0,0' fade='128'">
+    <HorizontalLayout height="30" inset="6">
+      <!-- 系统标题 -->
+      <Label name="titlebar" text="DuiSharp v0.1 控件演示" textcolor="#FFFFFFFF" height="30" font="font12b" />
+      <Control />
+      <!-- 系统按钮 -->
+      <ExButton fade="true" name="menubtn" style="btn_style_menu" />
+      <ExButton fade="true" name="minbtn" style="btn_style_min" />
+      <ExButton fade="true" name="maxbtn" style="btn_style_max" />
+      <ExButton fade="true" name="restorebtn" visible="false" style="btn_style_restore" />
+      <ExButton fade="true" name="closebtn" style="btn_style_close" />
+    </HorizontalLayout>
+
+    <HorizontalLayout height="34" bkimage="IDB_MAIN_TAB_BG">
+      <ExButton name="qqtab" userdata="tabgroup1" text="基础控件" selected="true" style="maintab_style" iconimage="IDB_MAIN_TAB_CONTACTS" selectediconimage="IDB_MAIN_TAB_CONTACTS_SELECTED"/>
+      <ExButton name="qqtab" userdata="tabgroup2" text="高级控件" style="maintab_style" iconimage="IDB_MAIN_TAB_GROUP" selectediconimage="IDB_MAIN_TAB_GROUP_SELECTED"/>
+      <ExButton name="qqtab" userdata="tabgroup3" text="辅助控件" style="maintab_style" iconimage="IDB_MAIN_TAB_LAST" selectediconimage="IDB_MAIN_TAB_LAST_SELECTED"/>
+    </HorizontalLayout>
+
+    <TabLayout name="main_tab" inset="1,0,1,30">
+      <VerticalLayout name="tabgroup1" inset="6,0,6,0" bkcolor="#FFFFFFFF">
+        <HorizontalLayout height="60">
+          <Label text="按钮控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout >
+            <Control />
+            <HorizontalLayout height="30" childpadding="12">
+              <Button name="button1" text="普通按钮" textcolor="#FF555555" style="button_style" width="100"/>
+              <Button name="button2" text="图标按钮" textcolor="#FF555555" style="button_style" width="100" textpadding="20,0,0,0" iconsize="16,16" iconpadding="8,0,0,0" iconimage="images/icon/icon1.png" />
+
+              <HorizontalLayout width="84">
+                <Button name="sendbtn" textcolor="#FF555555" style="lbutton_style" text="发送(&S)" shortcut="S"/>
+                <Button name="menubtn" textcolor="#FF555555" style="rbutton_arrowdown_style" padding="-1"/>
+              </HorizontalLayout>
+
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+        </HorizontalLayout>
+
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="60" bkcolor="#FFFFFFFF">
+          <Label text="输入控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout >
+            <Control />
+            <HorizontalLayout height="30" childpadding="12">
+              <Edit name="button1" hint="请输入文字" style="edit_style" height="30"/>
+              <Edit name="button1" text="只读控件" readonly="true" style="edit_style" height="30"/>
+              <Edit name="button1" hint="限制数字" number="true" style="edit_style" height="30"/>
+              <Edit name="button1" hint="请输入密码" password="true" style="edit_style" height="30"/>
+
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+          
+        </HorizontalLayout>
+
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="60">
+          <Label text="Combo控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout>
+            <Control />
+            <HorizontalLayout height="23" childpadding="12">
+              <Combo name="font_size" style="combo_style" width="100">
+                <ListElement text="9" selected="true" height="23" />
+                <ListElement text="10" height="23" />
+                <ListElement text="11" height="23" />
+                <ListElement text="12" height="23" />
+                <ListElement text="13" height="23" />
+                <ListElement text="14" height="23" />
+                <ListElement text="15" height="23" />
+                <ListElement text="16" height="23" />
+                <ListElement text="17" height="23" />
+                <ListElement text="18" height="23" />
+                <ListElement text="19" height="23" />
+                <ListElement text="20" height="23" />
+                <ListElement text="21" height="23" />
+              </Combo>
+
+              <Combo name="font_size" style="combo_style" droplist="false" width="100" textpadding="3,0,23,0">
+                <ListElement text="9" selected="true" height="23" />
+                <ListElement text="10" height="23" />
+                <ListElement text="11" height="23" />
+                <ListElement text="12" height="23" />
+                <ListElement text="13" height="23" />
+                <ListElement text="14" height="23" />
+                <ListElement text="15" height="23" />
+                <ListElement text="16" height="23" />
+                <ListElement text="17" height="23" />
+                <ListElement text="18" height="23" />
+                <ListElement text="19" height="23" />
+                <ListElement text="20" height="23" />
+                <ListElement text="21" height="23" />
+              </Combo>
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+
+        </HorizontalLayout>
+
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="60" bkcolor="#FFFFFFFF">
+          <Label text="日期控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout>
+            <Control />
+            <HorizontalLayout height="23" childpadding="12">
+              <Calender name="calender" height="23" width="100" font="0" droplist="true" textpadding="6,0,22,0" style="combo_style" />
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+        </HorizontalLayout>
+
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="180" bkcolor="#FFFFFFFF">
+          <Label text="动画控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout >
+            <Control />
+            <HorizontalLayout height="200" childpadding="12">
+              <Image name="ani_images" width="128" height="128" text="序列帧动画_Gdi" textstyle="top" textcolor="#FF555555" glowsize="0" framecount="64" framesize="128,128" frameelapse="60" bkimage="images/ani/images.png"/>
+              <Image name="ani_gif1" width="200" height="177" text="gif动画_Gdi+" textstyle="top" textcolor="#FF555555" glowsize="0" bkimage="images/ani/gif1.gif"/>
+              <Gif name="ani_gif2" width="200" height="200" text="gif动画_Gdi" textstyle="top" textcolor="#FF555555" glowsize="0" gifimage="images/ani/gif2.gif"/>
+
+              <DataImage name="dataimage" width="200" height="177" text="数据图像控件" textstyle="top" textcolor="#FF555555" glowsize="0" />
+            </HorizontalLayout>
+            <Control />
+          </VerticalLayout>
+        </HorizontalLayout>
+
+      </VerticalLayout>
+
+      <VerticalLayout name="tabgroup2" inset="6,6,6,6" bkcolor="#FFFFFFFF" vscrollbar="true">
+
+        <HorizontalLayout height="120" bkcolor="#FFFFFFFF" inset="0,6,0,6">
+          <Label text="RichEdit控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
+            <RichEdit name="wordedit" readonly="false" vscrollbar="true" autovscroll="true"/>
+          </VerticalLayout>
+        </HorizontalLayout>
+        
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="120" bkcolor="#FFFFFFFF" inset="0,6,0,6">
+          <Label text="List控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
+            <List style="list_style">
+              <ListElement text="one1"/>
+              <ListElement text="one2"/>
+              <ListElement text="one3"/>
+              <ListElement text="one4"/>
+            </List>
+          </VerticalLayout>
+        </HorizontalLayout>
+        
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="180" bkcolor="#FFFFFFFF" inset="0,6,0,6">
+          <Label text="Tree控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
+            <QQList name="group_list" style="list_style"/>
+          </VerticalLayout>
+        </HorizontalLayout>
+
+        <Label height="1" bkimage="images/hor_line.bmp"/>
+        <HorizontalLayout height="180" bkcolor="#FFFFFFFF" inset="0,6,0,6">
+          <Label text="ListView控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
+            <List name="listview" vscrollbar="true" hscrollbar="true" headerbkimage="file='list_header_bg.png'" itemtextstyle="center">
+              <ListHeader height="24" menu="true">
+                <ListHeaderItem text="姓名" width="30" hotimage="file='images/list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+                <ListHeaderItem text="学号" width="260" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+                <ListHeaderItem text="成绩" width="240" hotimage="file='list_header_hot.png'" pushedimage="file='list_header_pushed.png'" sepimage="file='list_header_sep.png'" sepwidth="1"/>
+              </ListHeader>
+            </List>
+          </VerticalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <VerticalLayout name="tabgroup3" inset="6,6,6,6" bkcolor="#FFFFFFFF">
+
+        <HorizontalLayout height="180" bkcolor="#FFFFFFFF" inset="0,6,0,6">
+          <Label text="Web控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
+            <WebBrowser bkcolor="#FF0000FF" name="webbrowser1" url="http://www.hao123.com" autonavi="true" />
+          </VerticalLayout>
+        </HorizontalLayout>
+
+        <HorizontalLayout height="180" bkcolor="#FFFFFFFF" inset="0,6,0,6">
+          <Label text="Flash控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
+          <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
+            <ActiveX name="flash" float="true" width="600" height="400" relativepadding="0,0,0,0" clsid="{D27CDB6E-AE6D-11CF-96B8-444553540000}" mouse="true" />
+          </VerticalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+    </TabLayout>
+
+  </VerticalLayout>
+</Window>

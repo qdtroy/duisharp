@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="537,484" mininfo="537,484" sizebox="4,4,4,4" caption="0,0,0,86" blur="false" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
+
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+
+  <ExVerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='268,430,8,8' fade='32'">
+    <HorizontalLayout height="85" inset="6">
+      <!-- 头像 -->
+      <MyButton name="avatarbtn" width="66" height="66" cursor="hand" bkimage="res='IDB_AVATAR_PIC' dest='4,4,62,62'" normalimage="res='IDB_AVATAR_NORMAL' corner='5,5,5,5'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
+      <VerticalLayout>
+        <MyButton name="nicknamebtn" height="22" autowidth="true" cursor="hand" text="duiplus" textcolor="#FF000000" textpadding="6,0,0,0" glowsize="6" font="font14bu"/>
+
+        <HorizontalLayout>
+          <MyButton name="levevaluebtn" height="7" width="10" bkimage="IDB_LEVEL" padding="4,9,0,0" glowsize="8" font="font13b"/>
+          <MyButton name="levevaluebtn" height="7" width="30" bkimage="res='IDB_LEVEL_VALUE' source='6,0,18,7' dest='0,0,12,7'" padding="0,9,0,0" glowsize="8" font="font13b"/>
+          <Edit name="myword" hint="请输入个性签名" text="个性签名" readonly="true" style="edit_style" width="0" height="19" textpadding="7,0,7,0" font="font12" composited="true" glowsize="6"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <Control />
+      <!-- 系统按钮 -->
+      <HorizontalLayout>
+        <Control />
+        <MyButton fade="true" name="minbtn" style="btn_style_min" />
+        <MyButton fade="true" name="maxbtn" style="btn_style_max" />
+        <MyButton fade="true" name="restorebtn" visible="false" style="btn_style_restore" />
+        <MyButton fade="true" name="closebtn" style="btn_style_close" />
+      </HorizontalLayout>
+
+    </HorizontalLayout>
+
+    <HorizontalLayout name="body">
+      <VerticalLayout name="body.left">
+        <HorizontalLayout>
+          <VerticalLayout>
+            <RichEdit name="wordedit" readonly="true" vscrollbar="true" autovscroll="true"/>
+            <HorizontalLayout name="fontbar" visible="false" height="30" childpadding="3" bkimage="file='font_bk.bmp'" inset="4,4,4,4">
+              <Combo name="font_type" style="chat_combo" width="100">
+                <ListElement text="微软雅黑" selected="true" height="23"/>
+                <ListElement text="宋体" height="23" />
+                <ListElement text="黑体" height="23" />
+                <ListElement text="幼圆" height="23" />
+                <ListElement text="楷体" height="23" />
+              </Combo>
+              <Combo name="font_size" style="chat_combo">
+                <ListElement text="9" selected="true" height="23" />
+                <ListElement text="10" height="23" />
+                <ListElement text="11" height="23" />
+                <ListElement text="12" height="23" />
+                <ListElement text="13" height="23" />
+                <ListElement text="14" height="23" />
+                <ListElement text="15" height="23" />
+                <ListElement text="16" height="23" />
+                <ListElement text="17" height="23" />
+                <ListElement text="18" height="23" />
+                <ListElement text="19" height="23" />
+                <ListElement text="20" height="23" />
+                <ListElement text="21" height="23" />
+                <ListElement text="22" height="23" />
+                <ListElement text="24" height="23" />
+                <ListElement text="28" height="23" />
+                <ListElement text="32" height="23" />
+              </Combo>
+              <Control width="5"/>
+              <MyButton name="boldbtn" option="true" iconimage="images/chat/bold.png" style="chat_fontbtn"/>
+              <MyButton name="italicbtn" option="true" iconimage="images/chat/italic.png" style="chat_fontbtn"/>
+              <MyButton name="underlinebtn" option="true" iconimage="images/chat/underline.png" style="chat_fontbtn"/>
+              <MyButton name="colorbtn" option="true" iconimage="images/chat/color.png" style="chat_fontbtn"/>
+            </HorizontalLayout>
+            <HorizontalLayout height="28" inset="6,3" childpadding="5">
+              <MyButton name="fontbtn" option="true" style="chat_toolbtn" iconimage="images/chat/icon_font.png" />
+              <MyButton name="emotionbtn" option="true" style="chat_toolbtn" iconimage="images/chat/icon_face.png" />
+              <MyButton name="imagebtn" style="chat_toolbtn" iconimage="images/chat/icon_pic.png" />
+              <MyButton name="shockbtn" style="chat_toolbtn" iconimage="images/chat/icon_shark.png" />
+              <MyButton name="screenshotsbtn" style="chat_toolbtn" iconimage="images/chat/icon_screenshots.png" />
+            </HorizontalLayout>
+
+            <RichEdit name="inputedit" height="120" textpadding="6" wantreturn="false" vscrollbar="true" autovscroll="true"/>
+          </VerticalLayout>
+          
+          <VerticalLayout width="8" bkcolor="#FAEEEEEE">
+            <Control />
+            <MyButton name="splitbtn" option="true" height="198" hotimage="IDB_CHAT_SPLIT_RIGHT" pushedimage="IDB_CHAT_SPLIT_RIGHT" selectedhotimage="IDB_CHAT_SPLIT_LEFT" selectedpushedimage="IDB_CHAT_SPLIT_LEFT"/>
+            <Control />
+          </VerticalLayout>
+          
+        </HorizontalLayout>
+        
+        <HorizontalLayout height="36" inset="7,7,7,7">
+          <ExLabel text="duiplus完整UI解决方案" textstyle="left,vcenter" glowsize="0" font="font12u" cursor="hand"/>
+          <MyButton name="cancelbtn" keyboard="true" style="button_style" text="关闭(&C)" shortcut="C"/>
+          <Control width="8"/>
+          <MyButton name="sendbtn" style="lbutton_style" text="发送(&S)" shortcut="S"/>
+          <MyButton name="menubtn" style="rbutton_arrowdown_style" padding="-1"/>
+        </HorizontalLayout>
+        
+      </VerticalLayout>
+      
+      <VerticalLayout name="body.right" width="140" bkcolor="#FEFFFFFF">
+        <Control height="226" bkimage="images/chat/female.gif"/>
+        <Control bkcolor="#F0FFFFFF"/>
+        <Control height="150" bkimage="images/chat/male.gif"/>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </ExVerticalLayout>
+</Window>

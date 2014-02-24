@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="275,152" mininfo="275,152" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
+
+  <HorizontalLayout name="root" bkcolor="#FF00FFFF" inset="6,6,6,6">
+    <Control width="76" height="133" bkimage="images/chat/female.gif"/>
+    <VerticalLayout>
+      <Button name="namebtn" height="18" text="{a}duisharp(221499948){/a}" showhtml="true"/>
+      <Label name="signature" height="40" width="178" text="道生一，一生二，二生三，三生万物" textstyle="left, endellipsis:true, wordbreal:true"/>
+      <HorizontalLayout name="" bkcolor="#FFFF00FF">
+        
+      </HorizontalLayout>
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

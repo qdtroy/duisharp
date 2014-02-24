@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="162,136" bktrans="true">
+  <VerticalLayout name="root" bkcolor="AA000000" inset="6,6,6,6">
+    <HorizontalLayout height="22">
+      <Control />
+      <ExButton name="skin_image" style="imagebtn_style" selected="true"/>
+      <ExButton name="skin_color" style="colorbtn_style"/>
+    </HorizontalLayout>
+
+    <TabLayout name="skin_tab">
+      <TileLayout name="skin_image" itemsize="28,40" padding="0,12">
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/0.jpg" bkimage="images/skin/0.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/1.jpg" bkimage="images/skin/1.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/2.jpg" bkimage="images/skin/2.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/3.jpg" bkimage="images/skin/3.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/4.jpg" bkimage="images/skin/4.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/5.jpg" bkimage="images/skin/5.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/6.jpg" bkimage="images/skin/6.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/7.jpg" bkimage="images/skin/7.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/8.jpg" bkimage="images/skin/8.png"/>
+        <ExButton name="skin_image_btn" style="skinbtn_style" userdata="images/main/9.jpg" bkimage="images/skin/9.png"/>
+      </TileLayout>
+
+      <TileLayout name="skin_color" itemsize="22,22" padding="0,12" childpadding="6">
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FF66BAEB" normalimage="file='images\skin\colour_001.bmp'" hotimage="file='images\skin\colour_001highlight.bmp'" pushedimage="file='images\skin\colour_001.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FF76A8D0" normalimage="file='images\skin\colour_002.bmp'" hotimage="file='images\skin\colour_002highlight.bmp'" pushedimage="file='images\skin\colour_002.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FFA138D8" normalimage="file='images\skin\colour_003.bmp'" hotimage="file='images\skin\colour_003highlight.bmp'" pushedimage="file='images\skin\colour_003.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FF6EC446" normalimage="file='images\skin\colour_004.bmp'" hotimage="file='images\skin\colour_004highlight.bmp'" pushedimage="file='images\skin\colour_004.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FFD08942" normalimage="file='images\skin\colour_005.bmp'" hotimage="file='images\skin\colour_005highlight.bmp'" pushedimage="file='images\skin\colour_005.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FFC55C3C" normalimage="file='images\skin\colour_006.bmp'" hotimage="file='images\skin\colour_006highlight.bmp'" pushedimage="file='images\skin\colour_006.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FFC13892" normalimage="file='images\skin\colour_007.bmp'" hotimage="file='images\skin\colour_007highlight.bmp'" pushedimage="file='images\skin\colour_007.bmp'" />
+        <ExButton name="skin_color_btn" option="true" width="22" height="22" bkcolor="#FF929292" normalimage="file='images\skin\colour_008.bmp'" hotimage="file='images\skin\colour_008highlight.bmp'" pushedimage="file='images\skin\colour_008.bmp'" />
+
+      </TileLayout>
+    </TabLayout>
+
+  </VerticalLayout>
+</Window>

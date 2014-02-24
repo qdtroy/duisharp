@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="800,600" mininfo="500,400" sizebox="4,4,4,4" caption="0,0,0,90" blur="false" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
+
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+
+  <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1000,750,2,2' fade='255'">
+    <VerticalLayout height="90" >
+      <HorizontalLayout height="22" inset="6">
+        <!-- 系统标题 -->
+        <Label name="titlebar" text="TroyGame v1.0 UI库\界面定制开发 QQ：656067418" height="22" font="font12b" glowsize="6" />
+        <Control />
+        <!-- 系统按钮 -->
+        <ExButton fade="true" name="skinbtn" style="btn_style_skin" />
+        <ExButton fade="true" name="minbtn" style="btn_style_min" />
+        <ExButton fade="true" name="maxbtn" style="btn_style_max" />
+        <ExButton fade="true" name="restorebtn" visible="false" style="btn_style_restore" />
+        <ExButton fade="true" name="closebtn" style="btn_style_close" />
+      </HorizontalLayout>
+
+      <HorizontalLayout height="68">
+        <ExButton name="avatarbtn" width="66" height="66" cursor="hand" bkimage="res='IDB_AVATAR_PIC' dest='4,4,62,62'" normalimage="res='IDB_AVATAR_NORMAL' corner='5,5,5,5'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
+        <VerticalLayout width="244">
+          <ExButton name="nicknamebtn" height="22" autowidth="true" cursor="hand" text="duisharp" textstyle="left" textpadding="6,0,0,0" glowsize="6" font="font13u"/>
+          <Edit name="myword" hint="请输入个性签名" style="edit_style" width="0" height="19" textpadding="7,0,7,0" font="font12" composited="true" glowsize="6"/>
+        </VerticalLayout>
+        
+        <HorizontalLayout inset="4" childpadding="2">
+          <ExButton name="maintab" userdata="home_tab" selected="true" style="maintab_style" text="主页" iconimage="IDB_MAIN_TAB_HOME" />
+          <ExButton name="maintab" userdata="game_tab" style="maintab_style" text="游戏库" iconimage="IDB_MAIN_TAB_GAME" />
+          <ExButton name="maintab" userdata="shop_tab" style="maintab_style" text="游戏商城" iconimage="IDB_MAIN_TAB_SHOP" />
+          <ExButton name="maintab" userdata="vip_tab" style="maintab_style" text="蓝钻VIP" iconimage="IDB_MAIN_TAB_VIP" />
+          <ExButton name="maintab" userdata="match_tab" style="maintab_style" text="比赛专区" iconimage="IDB_MAIN_TAB_MATCH" />
+          <ExButton name="maintab" userdata="3366_tab" style="maintab_style" text="小游戏" iconimage="IDB_MAIN_TAB_3366" />
+          <Control />
+          
+        </HorizontalLayout>
+        
+      </HorizontalLayout>
+
+    </VerticalLayout>
+
+    <HorizontalLayout name="body" childpadding="2" inset="3,0,3,3" bkimage1="res='IDB_PANEL' corner='2,2,2,2'" >
+      <VerticalLayout name="left" width="310">
+        <HorizontalLayout name="searchbg" height="26" bkimage="res='IDB_MAINSEARCH_BG' corner='4,4,4,4' source='0,0,'" inset="4,0,4,0" >
+          <Edit name="searchedit" hint="搜索联系人..." padding="0,2,0,2" bkcolor="#FFFFFFFF" nativebkcolor="#FFFFFFFF" composited="true" glowsize="0"/>
+          <ExButton name="searchmenu" width="22" height="21" padding="0,2,0,2" style="searchbtn_style"/>
+        </HorizontalLayout>
+        
+        <HorizontalLayout height="28" bkimage="res='IDB_ONLINE_BG' source='4,4,6,6'" inset="6,6">
+          <Label name="mygame" style="allbtn_style" autowidth="true" text="我的游戏(5)" />
+          <Control />
+          <ExButton name="gametab" style="allbtn_style" autowidth="true" text="36" textpadding="16,0,6,0" iconimage="IDB_ONLINE_ICON" iconsize="8,9" iconalign="left,vcenter" iconpadding="6,0,0,0" />
+        </HorizontalLayout>
+        
+        <TileLayout itemsize="72,101" vscrollbar="true">
+          <ExButton name="appgame1" style="appicon_btn_style" text="斗地主" iconimage="images/appicon/AppID105.png" />
+          <ExButton name="appgame1" style="appicon_btn_style" text="拖拉机" iconimage="images/appicon/AppID91.png"/>
+          <ExButton name="appgame1" style="appicon_btn_style" text="欢乐斗地主" iconimage="images/appicon/AppID218.png"/>
+          <ExButton name="appgame1" style="appicon_btn_style" text="保皇" iconimage="images/appicon/AppID28.png"/>
+          <ExButton name="appgame1" style="appicon_btn_style" text="五子棋" iconimage="images/appicon/AppID8.png"/>
+          <ExButton name="appgame1" style="appicon_btn_style" text="添加游戏" iconimage="IDB_APPICON_ADD"/>
+
+        </TileLayout>
+
+        <VerticalLayout height="300" >
+          <HorizontalLayout height="33">
+            <ExButton name="gametab" userdata="hotgame_tab" style="gametab_style" text="热门游戏" selected="true" />
+            <ExButton name="gametab" userdata="pokergame_tab" style="gametab_style" text="棋牌游戏" />
+            <ExButton name="gametab" userdata="matchgame_tab" style="gametab_style" text="休闲娱乐" />
+            <ExButton name="gametab" userdata="rolegame_tab" style="gametab_style" text="角色扮演" />
+            <ExButton name="gametab" userdata="othergame_tab" style="gametab_style" text="其它游戏" />
+          </HorizontalLayout>
+
+          <TabLayout name="game_tablayout" >
+            <TileLayout name="hotgame_tab" itemsize="149,74" inset="4,6,3,6" >
+              <ExButton name="appgame1" style="applist_btn_style" text="斗地主{n}{c #FF999999}游戏{/c}{n}10分" iconimage="images/appicon/AppID105.png" />
+              <ExButton name="appgame1" style="applist_btn_style" text="拖拉机{n}{c #FF999999}游戏{/c}{n}10分" iconimage="images/appicon/AppID91.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="欢乐斗地主{n}{c #FF999999}游戏{/c}{n}10分" iconimage="images/appicon/AppID218.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="保皇{n}{c #FF999999}游戏{/c}{n}10分" iconimage="images/appicon/AppID28.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="五子棋{n}{c #FF999999}游戏{/c}{n}10分" iconimage="images/appicon/AppID8.png"/>
+            </TileLayout>
+            <TileLayout name="pokergame_tab" itemsize="149,74" inset="0,6,0,0" >
+              <ExButton name="appgame1" style="applist_btn_style" text="斗地主{n}{c #FF999999}棋牌游戏{/c}{n}10分" iconimage="images/appicon/AppID105.png" />
+              <ExButton name="appgame1" style="applist_btn_style" text="拖拉机{n}{c #FF999999}棋牌游戏{/c}{n}10分" iconimage="images/appicon/AppID91.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="欢乐斗地主{n}{c #FF999999}棋牌游戏{/c}{n}10分" iconimage="images/appicon/AppID218.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="保皇{n}{c #FF999999}棋牌游戏{/c}{n}10分" iconimage="images/appicon/AppID28.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="五子棋{n}{c #FF999999}棋牌游戏{/c}{n}10分" iconimage="images/appicon/AppID8.png"/>
+            </TileLayout>
+            <TileLayout name="matchgame_tab" itemsize="149,74" inset="0,6,0,0" >
+              <ExButton name="appgame1" style="applist_btn_style" text="斗地主{n}{c #FF999999}比赛{/c}{n}10分" iconimage="images/appicon/AppID105.png" />
+              <ExButton name="appgame1" style="applist_btn_style" text="拖拉机{n}{c #FF999999}比赛{/c}{n}10分" iconimage="images/appicon/AppID91.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="欢乐斗地主{n}{c #FF999999}比赛{/c}{n}10分" iconimage="images/appicon/AppID218.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="保皇{n}{c #FF999999}比赛{/c}{n}10分" iconimage="images/appicon/AppID28.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="五子棋{n}{c #FF999999}比赛{/c}{n}10分" iconimage="images/appicon/AppID8.png"/>
+            </TileLayout>
+              <TileLayout name="rolegame_tab" itemsize="149,74" inset="0,6,0,0" >
+              <ExButton name="appgame1" style="applist_btn_style" text="斗地主{n}{c #FF999999}角色扮演{/c}{n}10分" iconimage="images/appicon/AppID105.png" />
+              <ExButton name="appgame1" style="applist_btn_style" text="拖拉机{n}{c #FF999999}角色扮演{/c}{n}10分" iconimage="images/appicon/AppID91.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="欢乐斗地主{n}{c #FF999999}角色扮演{/c}{n}10分" iconimage="images/appicon/AppID218.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="保皇{n}{c #FF999999}角色扮演{/c}{n}10分" iconimage="images/appicon/AppID28.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="五子棋{n}{c #FF999999}角色扮演{/c}{n}10分" iconimage="images/appicon/AppID8.png"/>
+            </TileLayout>
+            <TileLayout name="othergame_tab" itemsize="149,74" inset="0,6,0,0" >
+              <ExButton name="appgame1" style="applist_btn_style" text="斗地主{n}{c #FF999999}其它游戏{/c}{n}10分" iconimage="images/appicon/AppID105.png" />
+              <ExButton name="appgame1" style="applist_btn_style" text="拖拉机{n}{c #FF999999}其它游戏{/c}{n}10分" iconimage="images/appicon/AppID91.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="欢乐斗地主{n}{c #FF999999}其它游戏{/c}{n}10分" iconimage="images/appicon/AppID218.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="保皇{n}{c #FF999999}其它游戏{/c}{n}10分" iconimage="images/appicon/AppID28.png"/>
+              <ExButton name="appgame1" style="applist_btn_style" text="五子棋{n}{c #FF999999}其它游戏{/c}{n}10分" iconimage="images/appicon/AppID8.png"/>
+            </TileLayout>
+          </TabLayout>
+        </VerticalLayout>
+        
+        <Label name="online" height="33" font="font12b" text="8888888 在线" textpadding="18,0,0,0" bkimage="res='IDB_ONLINE_BG' corner='2,0,2,0'" iconimage="IDB_ONLINE_ICON" iconsize="8,9" iconalign="left,vcenter" iconpadding="6,0,0,0"/>
+      </VerticalLayout>
+
+      <TabLayout name="main_tablayout">
+        <WebBrowser name="home_tab" menu="true" url="http://qqgameplatcdn.qq.com/social_hall/index_zm.html" autonavi="true" />
+        <WebBrowser name="game_tab" menu="true" url="http://www.2345.com/?kms656067418" autonavi="true" />
+        <WebBrowser name="shop_tab" menu="true" url="http://www.2345.com/?kms656067418" autonavi="true" />
+        <WebBrowser name="vip_tab" menu="true" url="http://www.2345.com/?kms656067418" autonavi="true" />
+        <WebBrowser name="match_tab" menu="true" url="http://qqgame.qq.com/appdir/tga/index.shtml" autonavi="true" />
+        <WebBrowser name="3366_tab" menu="true" url="http://www.3366.com/hall/tag/index.shtml?aid=7000201" autonavi="true" />
+      </TabLayout>
+
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiDemo_2005", "simples\DuiDemo\DuiDemo_2005.vcproj", "{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo_2005", "simples\QQDemo\QQDemo_2005.vcproj", "{8ECD8703-0768-49BF-A077-818B526AF4F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}.Debug|Win32.Build.0 = Debug|Win32
+		{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}.Release|Win32.ActiveCfg = Release|Win32
+		{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}.Release|Win32.Build.0 = Release|Win32
+		{8ECD8703-0768-49BF-A077-818B526AF4F6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8ECD8703-0768-49BF-A077-818B526AF4F6}.Debug|Win32.Build.0 = Debug|Win32
+		{8ECD8703-0768-49BF-A077-818B526AF4F6}.Release|Win32.ActiveCfg = Release|Win32
+		{8ECD8703-0768-49BF-A077-818B526AF4F6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

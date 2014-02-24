@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="948,671" sizebox="4,4,6,6" roundcorner="5,5" caption="0,0,0,90" mininfo="948,671" bktrans="false">
+
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.bmp' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.bmp' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.bmp' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.bmp' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.bmp' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.bmp' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.bmp' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.bmp' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.bmp' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.bmp' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.bmp' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.bmp' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.bmp' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.bmp' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.bmp' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.bmp' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.bmp' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.bmp' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.bmp' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.bmp' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.bmp' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.bmp' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.bmp' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.bmp' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.bmp' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.bmp' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.bmp' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.bmp' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.bmp' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.bmp' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.bmp' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.bmp' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.bmp' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.bmp' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.bmp' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.bmp' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.bmp' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.bmp' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.bmp' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.bmp' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+
+  <VerticalLayout bkimage="res='IDB_MAINFRAME_BG' corner='6,97,6,29,'" borderround="5,5" inset="1,0,1,0">
+    <VerticalLayout height="97">
+      <HorizontalLayout name="titlebar" height="22" />
+      <HorizontalLayout name="toolbar" height="75" inset="18,0,18,0">
+        <HorizontalLayout bkimage="IDB_LOGO" width="150" height="54" />
+        <HorizontalLayout inset="21,0,0,0">
+          <ExButton option="true" name="tabbar_soft" text="软件仓库" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_SOFTHOUSE' dest='15,8,69,57'" selected="true"/>
+          <ExButton option="true" name="tabbar_upgrade" text="软件升级" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_UPGRADE' dest='15,8,69,57'" />
+          <ExButton option="true" name="tabbar_uninstall" text="软件卸载" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_UNINSTALL' dest='15,8,69,57'" />
+        </HorizontalLayout>
+        <HorizontalLayout width="250" height="25" padding="0,20,0,0">
+          <HorizontalLayout bkimage="res='IDB_SEARCHEDIT_BG' corner='22,0,2,0'" inset="12,1,0,3"  >
+            <Edit name="searchedit" bkcolor="FFFFFFFF"/>
+          </HorizontalLayout>
+          <ExButton fade="true" name="searchbtn" style="searchbtn_style"/>
+        </HorizontalLayout>
+
+      </HorizontalLayout>
+    </VerticalLayout>
+
+    <TabLayout name="body" bkcolor="#FFFFFFFF">
+
+      <VerticalLayout name="body_soft">
+        <HorizontalLayout height="32" style="toolbar_style">
+
+        </HorizontalLayout>
+        <HorizontalLayout>
+          <List name="body_soft_catalog" style="body_catalog_style" >
+            <ListElement name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListElement name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
+            <ListElement name="ossoft" text="装机必备" style="body_catalog_item_style" />
+            <ListElement name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
+
+            <ListElement name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListElement name="playersoft" text="播放器" style="body_catalog_item_style" />
+            <ListElement name="browsersoft" text="浏览器" style="body_catalog_item_style" />
+            <ListElement name="safesoft" text="安全工具" style="body_catalog_item_style" />
+          </List>
+          <TabLayout name="body_soft_list">
+            <WebBrowser bkcolor="#FF0000FF" name="webbrowser1" url="http://www.baidu.com" autonavi="true" />
+            
+            <List name="soft_list_ossoft" style="body_list_style">
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+              <Include source="controls.xml" window="body_soft_item"/>
+            </List>
+
+            <List name="soft_list_qqsoft" style="body_list_style">
+
+            </List>
+          </TabLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <VerticalLayout name="body_upgrade" visible="false">
+        <HorizontalLayout height="32" style="toolbar_style">
+
+        </HorizontalLayout>
+        <HorizontalLayout>
+          <List name="body_upgrade_catalog" style="body_catalog_style" >
+            <ListElement name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListElement name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
+            <ListElement name="ossoft" text="装机必备" style="body_catalog_item_style" />
+            <ListElement name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
+
+            <ListElement name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListElement name="playersoft" text="播放器" style="body_catalog_item_style" />
+            <ListElement name="browsersoft" text="浏览器" style="body_catalog_item_style" />
+            <ListElement name="safesoft" text="安全工具" style="body_catalog_item_style" />
+          </List>
+          <TabLayout name="body_upgrade_list">
+            <WebBrowser bkcolor="#FF0000FF" name="webbrowser2" url="http://www.qq.com" autonavi="true" />
+            <List name="body_upgrade_ossoft" style="body_list_style">
+
+            </List>
+
+            <List name="body_upgrade_qqsoft" style="body_list_style">
+
+            </List>
+          </TabLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+      <VerticalLayout name="body_uninstall" visible="false">
+        <HorizontalLayout height="32" style="toolbar_style">
+
+        </HorizontalLayout>
+        <HorizontalLayout>
+          <List name="body_uninstall_catalog" style="body_catalog_style" >
+            <ListElement name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListElement name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
+            <ListElement name="ossoft" text="装机必备" style="body_catalog_item_style" />
+            <ListElement name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
+
+            <ListElement name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListElement name="playersoft" text="播放器" style="body_catalog_item_style" />
+            <ListElement name="browsersoft" text="浏览器" style="body_catalog_item_style" />
+            <ListElement name="safesoft" text="安全工具" style="body_catalog_item_style" />
+          </List>
+          <TabLayout name="body_uninstall_list">
+            <WebBrowser bkcolor="#FF0000FF" name="webbrowser3" url="http://www.hao123.com" autonavi="true" />
+            <List name="body_uninstall_ossoft" style="body_list_style">
+
+            </List>
+
+            <List name="body_uninstall_qqsoft" style="body_list_style">
+
+            </List>
+          </TabLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+
+    </TabLayout>
+
+    <HorizontalLayout name="statusbar" height="29">
+      <Control />
+      <Label text="{c #386382}已成功连接至QQ云安全中心{/c}" width="160" textstyle="left vcenter" showhtml="true"/>
+    </HorizontalLayout>
+
+    <!-- 系统按钮 -->
+    <HorizontalLayout name="syspanel" float="true" width="130" height="18" relativepadding="-1,0,0,-1" >
+      <Control />
+      <ExButton fade="true" name="minbtn" style="btn_style_min" />
+      <ExButton fade="true" name="maxbtn" style="btn_style_max" />
+      <ExButton fade="true" name="restorebtn" visible="false" style="btn_style_restore" />
+      <ExButton fade="true" name="closebtn" style="btn_style_close" />
+    </HorizontalLayout>
+
+  </VerticalLayout>
+</Window>
+
+<Window name="webbrowser">
+  <VerticalLayout >
+    <WebBrowser bkcolor="#FF0000FF" name="ie" url="http://www.baidu.com" autonavi="true" />
+  </VerticalLayout>
+</Window>
+
+<Window name="searchedit">
+  <HorizontalLayout >
+    <Edit name="searchedit" bkcolor="FFFFFFFF"/>
+  </HorizontalLayout>
+</Window>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="281,532" mininfo="281,532" sizebox="4,4,4,4" caption="0,0,0,136" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
+
+  <!--<Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
+  <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />-->
+
+  <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1430,250,0,0' fade='200'">
+    <VerticalLayout height="136" >
+      <HorizontalLayout height="22" inset="6">
+        <!-- 系统标题 -->
+        <Label name="titlebar" text="QQ2012" height="22" font="font12b" glowsize="6" />
+        <Control />
+        <!-- 系统按钮 -->
+        <ExButton fade="true" name="skinbtn" style="btn_style_skin" />
+        <ExButton fade="true" name="minbtn" style="btn_style_min" />
+        <ExButton fade="true" name="maxbtn" style="btn_style_max" />
+        <ExButton fade="true" name="restorebtn" visible="false" style="btn_style_restore" />
+        <ExButton fade="true" name="closebtn" style="btn_style_close" />
+      </HorizontalLayout>
+
+      <HorizontalLayout inset="2,0,0,0">
+        <ExButton name="avatarbtn" width="61" height="61" cursor="hand" bkimage="res='IDB_AVATAR_BG'" foreimage="res='IDB_AVATAR_PIC' dest='1,1,60,60'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
+        <VerticalLayout>
+          <HorizontalLayout>
+            <ExButton name="statusbtn" style="statusbtn_style" height="22" width="38" iconimage="res='IDB_GG_IMONLINE' dest='1,1,21,21'"/>
+            <ExButton name="nicknamebtn" height="22" autowidth="true" text="duisharp" textpadding="6,0,0,0" glowsize="6" font="font13b"/>
+            <ExButton name="levevaluebtn" height="7" width="10" bkimage="IDB_LEVEL" padding="4,9,0,0" glowsize="8" font="font13b"/>
+            <ExButton name="levevaluebtn" height="7" width="30" bkimage="res='IDB_LEVEL_VALUE' source='6,0,18,7' dest='0,0,12,7'" padding="0,9,0,0" glowsize="8" font="font13b"/>
+          </HorizontalLayout>
+
+          <HorizontalLayout padding="0,0,48,0">
+            <Edit name="myword" hint="请输入个性签名" style="edit_style" width="0" height="19" textpadding="7,0,7,0" font="font12" composited="true" glowsize="6"/>
+          </HorizontalLayout>
+
+          <HorizontalLayout childpadding="1" inset="0,0,6,0">
+            <ExButton style="allbtn_style" text="10" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_ZONE' dest='1,1,21,21'"/>
+            <ExButton style="allbtn_style" text="10" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_WEIBO' dest='2,2,20,20'"/>
+            <ExButton style="allbtn_style" text="10" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_EMAIL' dest='1,1,21,21'"/>
+            <ExButton style="allbtn_style" text="20" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_XIAOYOU' dest='3,3,19,19'"/>
+            <Control />
+            <ExButton style="allbtn_style" text="" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_MSGMGR' dest='1,1,21,21'"/>
+          </HorizontalLayout>
+        </VerticalLayout>
+
+        <ExButton name="weatherbtn" width="48" height="48" cursor="hand" float="true" relativepadding="-1,0,6,-1" bkimage="IDB_WEATHER_SUN"/>
+
+      </HorizontalLayout>
+
+      <HorizontalLayout name="searchbg" height="30" bkimage="res='IDB_MAINSEARCH_BG' fade='255' corner='4,4,4,4'" inset="4,0,4,0" >
+        <Edit name="searchedit" hint="搜索联系人..." padding="0,3,0,3" bkcolor="#FFFFFFFF" nativebkcolor="#FFFFFFFF" composited="true" glowsize="0"/>
+        <ExButton name="searchmenu" width="31" height="28" padding="0,1,0,1" bkimage="IDB_MAINSEARCH_MENU"/>
+      </HorizontalLayout>
+    </VerticalLayout>
+
+    <VerticalLayout name="body" >
+      <HorizontalLayout height="34" bkimage="IDB_MAIN_TAB_BG">
+        <ExButton name="qqtab" userdata="contacts_list" selected="true" style="maintab_style" iconimage="IDB_MAIN_TAB_CONTACTS" selectediconimage="IDB_MAIN_TAB_CONTACTS_SELECTED"/>
+        <ExButton name="qqtab" userdata="group_list" style="maintab_style" iconimage="IDB_MAIN_TAB_GROUP" selectediconimage="IDB_MAIN_TAB_GROUP_SELECTED"/>
+        <ExButton name="qqtab" userdata="last_list" style="maintab_style" iconimage="IDB_MAIN_TAB_LAST" selectediconimage="IDB_MAIN_TAB_LAST_SELECTED"/>
+      </HorizontalLayout>
+
+      <TabLayout name="main_tab">
+        <QQList name="contacts_list" style="qqlist_style" />
+        <QQList name="group_list" style="qqlist_style" />
+        <Tree name="last_list" style="qqlist_style" expandbtn="true" checkbtn="true" vscrollbar="true" itemshowhtml="true" itemtextpadding="6">
+          <TreeElement name="root1" text="level0" style="tree_element_style" childindent="0">
+            <TreeElement text="level1" style="tree_element_style">
+              <TreeElement text="level2" style="tree_element_style">
+                <TreeElement text="level3" style="tree_element_style">
+
+                </TreeElement>
+                <TreeElement text="level3" style="tree_element_style">
+
+                </TreeElement>
+                <TreeElement text="level3" style="tree_element_style">
+
+                </TreeElement>
+              </TreeElement>
+            </TreeElement>
+          </TreeElement>
+        </Tree>
+      </TabLayout>
+    </VerticalLayout>
+
+    <HorizontalLayout name="statusbar" height="70" inset="6,0,6,0">
+      <HorizontalLayout width="47" inset="0,16,0,7">
+        <ExButton fade="true" width="47" height="47" normalimage="IDB_MAINMENUBTN_NORMAL" hotimage="IDB_MAINMENUBTN_HOT" pushedimage="IDB_MAINMENUBTN_HOT"/>
+      </HorizontalLayout>
+
+      <VerticalLayout inset="8,12,0,0" childpadding="6">
+        <HorizontalLayout height="22" childpadding="6">
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MUSIC' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_GAME' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TENPAY' dest='1,1,21,21'"/>
+          <Control />
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MANAGER' dest='1,1,21,21'"/>
+
+        </HorizontalLayout>
+        <HorizontalLayout childpadding="6">
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TOOLS' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MESSAGE' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" width="56" text="查找" textstyle="vcenter" textpadding="22,0,0,0" glowsize="0" iconimage="res='IDB_APPICON_FIND' dest='1,1,21,21'"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </HorizontalLayout>
+
+  </VerticalLayout>
+</Window>
