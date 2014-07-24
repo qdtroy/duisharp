@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "MainfFrame.h"
-//#define USE_ZIP
+
 class CMyApp : public CUIApp
 {
 public:
@@ -17,7 +17,6 @@ public:
 	virtual BOOL Init(HINSTANCE hInstance)
 	{
 		CUIApp::Init(hInstance);
-		CUIShadow::Initialize(hInstance);
 
 #ifdef USE_ZIP
 		TUISkin skin;
@@ -31,20 +30,31 @@ public:
 		skin.sType = _T("SKIN");
 #endif
 		LoadSkin(skin);
+		
+		return TRUE;
+	}
 
-		CQQFrame* pFrame = new CQQFrame();
+	virtual int Run()
+	{
+		// 添加消息链
+		CUIMessageLoop msgLoop;
+		_App->AddMessageLoop(&msgLoop);
+
+		// 创建窗口
+		CMainFrame* pFrame = new CMainFrame();
 		if( pFrame == NULL ) return 0;
 		pFrame->Create(NULL, _T("DuiSharp v0.1"), WS_OVERLAPPEDWINDOW, 0L, 0, 0, 296, 573);
 		
 		pFrame->CenterWindow();
 		::ShowWindow(*pFrame, SW_SHOW);
 
-		return TRUE;
-	}
+		// 消息运行
+		msgLoop.Run();
 
-	virtual int Run()
-	{
-		return CUIApp::Run();
+		// 移除消息链
+		_App->RemoveMessageLoop();
+
+		return 0;
 	}
 
 	virtual void Term()
@@ -54,3 +64,16 @@ public:
 };
 
 CMyApp myApp;
+
+int APIENTRY WinMain(HINSTANCE hInstance,
+	HINSTANCE hPrevInstance,
+	LPSTR     lpCmdLine,
+	int       nCmdShow)
+{
+	if(myApp.Init(hInstance))
+	{
+		myApp.Run();
+		myApp.Term();
+	}
+	return 0;
+}

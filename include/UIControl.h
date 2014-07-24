@@ -46,10 +46,6 @@ namespace duisharp {
 		// 图形相关
 		DWORD GetBkColor() const;
 		void SetBkColor(DWORD dwBackColor);
-		DWORD GetBkColor2() const;
-		void SetBkColor2(DWORD dwBackColor);
-		DWORD GetBkColor3() const;
-		void SetBkColor3(DWORD dwBackColor);
 		LPCTSTR GetBkImage();
 		void SetBkImage(LPCTSTR pStrImage);
 		DWORD GetForeColor() const;
@@ -91,13 +87,15 @@ namespace duisharp {
 		virtual void SetMinHeight(int cy);
 		virtual int GetMaxHeight() const;
 		virtual void SetMaxHeight(int cy);
-		virtual void SetRelativePadding(RECT rcPadding);
-		virtual RECT GetRelativePadding() const;
-		virtual bool IsRelativePadding() const;
-		virtual void SetRelativePos(SIZE szMove,SIZE szZoom);
-		virtual void SetRelativeParentSize(SIZE sz);
-		virtual TUIRelativePos GetRelativePos() const;
-		virtual bool IsRelativePos() const;
+		
+		// 浮动控件
+		virtual bool IsFloat() const;
+		virtual void SetFloat(bool bFloat = true);
+		virtual UINT GetFloatAlign() const;
+		virtual void SetFloatAlign(UINT uAlign);
+		virtual void SetFloatPadding(RECT rcPadding);
+		virtual RECT GetFloatPadding() const;
+
 
 		// 自动适应大小
 		virtual bool IsAutoWidth() const;
@@ -136,17 +134,13 @@ namespace duisharp {
 		virtual void SetVisible(bool bVisible = true);
 		virtual void SetInternVisible(bool bVisible = true); // 仅供内部调用，有些UI拥有窗口句柄，需要重写此函数
 		virtual bool IsEnabled() const;
-		virtual bool IsRandom() const;
 		virtual void SetEnabled(bool bEnable = true);
-		virtual void SetRandom(bool bRandom = true);
 		virtual bool IsMouseEnabled() const;
 		virtual void SetMouseEnabled(bool bEnable = true);
 		virtual bool IsKeyboardEnabled() const;
 		virtual void SetKeyboardEnabled(bool bEnable = true);
 		virtual bool IsFocused() const;
 		virtual void SetFocus();
-		virtual bool IsFloat() const;
-		virtual void SetFloat(bool bFloat = true);
 
 		// 定时器函数
 		bool SetTimer(UINT nTimerID, UINT nElapse);
@@ -158,7 +152,8 @@ namespace duisharp {
 		virtual void SetEffect(UINT uEffect);
 		virtual UINT GetEffectTime();
 		virtual void SetEffectTime(UINT uTime = 300);
-		virtual void StartEffect(UINT uTime = 0, bool bClear = true);
+		// uFlag:1-截图，0-动作
+		virtual void StartEffect(UINT uTime = 0, UINT uFlag = 1, bool bClear = true);
 		virtual void StopEffect(bool bMsg = true, bool bClear = true);
 
 		virtual CUIControl* FindControl(FINDCONTROLPROC Proc, LPVOID pData, UINT uFlags);
@@ -212,7 +207,6 @@ namespace duisharp {
 		CStdString m_sName;
 		bool m_bUpdateNeeded;
 		bool m_bMenuUsed;
-		HRGN m_hRgn;			//当启用不规则区域时，此变量保存该对象的区域
 		RECT m_rcItem;
 		RECT m_rcPadding;
 		SIZE m_cXY;
@@ -222,17 +216,14 @@ namespace duisharp {
 		bool m_bVisible;
 		bool m_bInternVisible;
 		bool m_bEnabled;
-		bool m_bRandom;			// Is Tool random?
-		bool m_bGetRegion;		//是否刷新区域信息
 		bool m_bMouseEnabled;
 		bool m_bKeyboardEnabled ;
 		bool m_bFocused;
 		bool m_bFloat;
+		UINT m_uFloatAlign;
+		RECT m_rcFloatPadding;
 		bool m_bSetPos; // 防止SetPos循环调用
 		bool m_bSized;
-		bool m_bRelativePadding;
-		RECT m_rcRelativePadding;
-		TUIRelativePos m_tRelativePos;
 
 		CStdString m_sFont;
 		CStdString m_sText;
@@ -253,8 +244,6 @@ namespace duisharp {
 		UINT_PTR m_pTag;
 
 		DWORD m_dwBackColor;
-		DWORD m_dwBackColor2;
-		DWORD m_dwBackColor3;
 		CStdString m_sBkImage;
 		DWORD m_dwForeColor;
 		CStdString m_sForeImage;
@@ -278,10 +267,6 @@ namespace duisharp {
 		RECT m_rcEffect;
 		HBITMAP m_hBitmap;
 		RECT m_rcWnd;
-
-	public:
-		// 取控件图片非透明色区域
-		void GetRegion(HDC hDC, LPCTSTR pStrImage, COLORREF dwColorKey);
 	};
 
 } // namespace duisharp

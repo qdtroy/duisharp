@@ -8,10 +8,10 @@
 #include "TipFrame.h"
 #include "SkinFrame.h"
 
-class CQQFrame : public CUIWindow, public CSkinChangedReceiver
+class CMainFrame : public CUIWindow, public CSkinChangedReceiver
 {
 public:
-	CQQFrame() 
+	CMainFrame() 
 	{
 		m_pCloseBtn = NULL;
 		m_pMaxBtn = NULL;
@@ -20,12 +20,12 @@ public:
 	}
 
 public:
-	BEGIN_UIMSG_MAP(CQQFrame)
+	BEGIN_UIMSG_MAP(CMainFrame)
 		UIMESSAGE_HANDLER(WM_SYSCOMMAND, OnSysCommand)
 		CHAIN_UIMSG_MAP(CUIWindow)
 	END_UIMSG_MAP()
 
-	BEGIN_UINOTIFY_MAP(CQQFrame)
+	BEGIN_UINOTIFY_MAP(CMainFrame)
 		UINM_WINDOWINIT(_T("root"), OnWindowInit)
 		UINM_LCLICK(_T("skinbtn"), OnSysBtnLClick)
 		UINM_LCLICK(_T("minbtn"), OnSysBtnLClick)
@@ -117,8 +117,6 @@ public:
 		REALCONTROL(CUIVerticalLayout, pRoot, pControl);
 		if(pRoot != NULL)
 		{
-			//pRoot->SetEffect(Effect_RBExpand);
-			//pRoot->StartEffect(30);
 		}
 	}
 
@@ -209,7 +207,8 @@ public:
 		//}
 	}
 public:
-	void OnInit() {
+	void OnInit()
+	{
 		CSkinManager::GetSkinManager()->AddReceiver(this);
 
 		SetIcon(IDR_MAINFRAME);
@@ -261,15 +260,15 @@ public:
 
 				for(int i = 0; i < 6; i++)
 				{
-					CUIListElement* pListElement = new CUIListElement;
-					pListElement->SetName(_T("listitem"));
-					pListElement->SetFixedHeight(56);
+					CUIListItem* pListItem = new CUIListItem;
+					pListItem->SetName(_T("listitem"));
+					pListItem->SetFixedHeight(56);
 
 					CStdString sIcon = _T("1.png");
 					CStdString sFormat;
 					sFormat.Format(_T("{x 4}{i %s 1 1}{x 4}%s"), sIcon.GetData(), _T("duisharp(221499948)"));
-					pListElement->SetText(sFormat);
-					pList->Add(pListElement);
+					pListItem->SetText(sFormat);
+					pList->Add(pListItem);
 				}
 			}
 		}
@@ -323,7 +322,7 @@ public:
 			return 0;
 		}
 		BOOL bZoomed = ::IsZoomed(*this);
-		LRESULT lRes = CWindowWnd::HandleMessage(uMsg, wParam, lParam);
+		LRESULT lRes = CStdWindow::HandleMessage(uMsg, wParam, lParam);
 		if( ::IsZoomed(*this) != bZoomed ) {
 			if( !bZoomed ) {
 				CUIControl* pControl = static_cast<CUIControl*>(m_ui.FindControl(_T("maxbtn")));

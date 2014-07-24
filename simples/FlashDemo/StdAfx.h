@@ -11,12 +11,10 @@
 using namespace duisharp;
 
 #ifdef _DEBUG
-# pragma comment(lib, "..\\..\\Lib\\DuiSharp_d.lib")
+# pragma comment(lib, "..\\..\\Lib\\duisharp_d.lib")
 #else
-# pragma comment(lib, "..\\..\\Lib\\DuiSharp.lib")
+# pragma comment(lib, "..\\..\\Lib\\duisharp.lib")
 #endif
-
-#pragma comment( lib, "d3d9.lib" )
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

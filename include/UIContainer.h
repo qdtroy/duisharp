@@ -134,7 +134,6 @@ namespace duisharp {
 		// ≤ºæ÷≈≈–Ú
 		virtual void SetPos(RECT rc);
 		virtual bool Sort(SORTCONTROLPROC Proc);
-		virtual SIZE EstimateSize(SIZE szAvailable, bool bSized = true);
 
 		void DoEvent(TUIEvent& event);
 		void DoPaint(HDC hDC, const RECT& rcPaint, UINT uType = 0);
@@ -142,7 +141,6 @@ namespace duisharp {
 		void SetManager(CUIManager* pManager, CUIControl* pParent, bool bInit = true);
 
 	protected:
-		virtual void SetFloatPos(int iIndex);
 		virtual void ProcessScrollBar(RECT rc, int cxRequired, int cyRequired);
 
 	protected:

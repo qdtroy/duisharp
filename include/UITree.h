@@ -5,7 +5,7 @@ namespace duisharp {
 
 	//////////////////////////////////////////////////////////////////////
 	//
-	class CUITreeElement;
+	class CUITreeItem;
 
 	class DUISHARP_API CUITree : public CUIList
 	{
@@ -28,8 +28,8 @@ namespace duisharp {
 		virtual bool OnExpandBtnSelectChanged(void* param);
 		virtual bool OnElementMsg(void * param);
 
-		virtual bool SetItemCheck(CUITreeElement* pTreeItem, bool bSelected);
-		virtual bool SetItemExpand(CUITreeElement* pTreeItem, bool bExpand = true);
+		virtual bool SetItemCheck(CUITreeItem* pTreeItem, bool bSelected);
+		virtual bool SetItemExpand(CUITreeItem* pTreeItem, bool bExpand = true);
 		virtual bool SetItemExpand(int iIndex, bool bExpand = true);
 
 		virtual void SetExpandVisible(bool bEnabled = true);
@@ -50,12 +50,12 @@ namespace duisharp {
 
 	//////////////////////////////////////////////////////////////////////
 	//
-	class DUISHARP_API CUITreeElement : public CUIListElement
+	class DUISHARP_API CUITreeItem : public CUIListItem
 	{
-		typedef CUIListElement theBase;
+		typedef CUIListItem theBase;
 	public:
-		CUITreeElement();
-		~CUITreeElement();
+		CUITreeItem();
+		~CUITreeItem();
 
 	public:
 		LPCTSTR GetClass() const;
@@ -70,13 +70,13 @@ namespace duisharp {
 		virtual void RemoveChildItemAll();
 
 		int GetChildItemIndex(CUIControl* pControl);
-		CUITreeElement* GetChildItemAt(int nIndex);
+		CUITreeItem* GetChildItemAt(int nIndex);
 		CStdPtrArray GetChildItems();
 		virtual bool HasChildItem() const;
 		virtual int	GetChildItemCount() const;
 		
-		virtual CUITreeElement* GetParentItem() const;
-		virtual void SetParentItem(CUITreeElement* pTreeItem);
+		virtual CUITreeItem* GetParentItem() const;
+		virtual void SetParentItem(CUITreeItem* pTreeItem);
 		virtual void SetChildItemVisible(bool bVisible);
 		virtual bool IsChildItemVisible() const;
 
@@ -119,7 +119,7 @@ namespace duisharp {
 		CUIButton* m_pCheckBtn;
 
 		CUITree* m_pTree;
-		CUITreeElement* m_pParentItem;
+		CUITreeItem* m_pParentItem;
 		CStdPtrArray m_aChildItems;
 	};
 }

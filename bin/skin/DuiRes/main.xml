@@ -4,13 +4,13 @@
   <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,90,16,106' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,90,34,106' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,90,52,106' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,90,70,106' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,108,16,124' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,108,34,124' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,108,52,124' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,108,70,124' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,126,16,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,126,34,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,126,52,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,126,70,142' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,144,16,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,144,34,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,144,52,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,144,70,160' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,162,16,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,162,34,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,162,52,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,162,70,178' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
   <Default name="HScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='scrollbar.png' source='18,0,34,16' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='scrollbar.png' source='36,0,52,16' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='scrollbar.png' source='54,0,70,16' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,18,16,34' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='scrollbar.png' source='18,18,34,34' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='scrollbar.png' source='36,18,52,34' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='scrollbar.png' source='54,18,70,34' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,36,16,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='scrollbar.png' source='18,36,34,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='36,36,52,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='scrollbar.png' source='54,36,70,52' corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='scrollbar.png' source='0,54,16,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='scrollbar.png' source='18,54,34,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='scrollbar.png' source='36,54,52,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='scrollbar.png' source='54,54,70,70' corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,72,16,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='scrollbar.png' source='18,72,34,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='scrollbar.png' source='36,72,52,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='scrollbar.png' source='54,72,70,88' corner='2,2,2,2' mask='#FFFF00FF'&quot; " />
 
-  <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1680,200,0,0' fade='128'">
+  <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1680,200,0,0' fade='255'" >
     <HorizontalLayout height="30" inset="6">
       <!-- 系统标题 -->
       <Label name="titlebar" text="DuiSharp v0.1 控件演示" textcolor="#FFFFFFFF" height="30" font="font12b" />
       <Control />
       <!-- 系统按钮 -->
-      <ExButton fade="true" name="menubtn" style="btn_style_menu" />
+      <ExButton fade="true" name="menubtn" style="btn_style_menu" tooltip="菜单"/>
       <ExButton fade="true" name="minbtn" style="btn_style_min" />
       <ExButton fade="true" name="maxbtn" style="btn_style_max" />
       <ExButton fade="true" name="restorebtn" visible="false" style="btn_style_restore" />
@@ -67,35 +67,35 @@
             <Control />
             <HorizontalLayout height="23" childpadding="12">
               <Combo name="font_size" style="combo_style" width="100">
-                <ListElement text="9" selected="true" height="23" />
-                <ListElement text="10" height="23" />
-                <ListElement text="11" height="23" />
-                <ListElement text="12" height="23" />
-                <ListElement text="13" height="23" />
-                <ListElement text="14" height="23" />
-                <ListElement text="15" height="23" />
-                <ListElement text="16" height="23" />
-                <ListElement text="17" height="23" />
-                <ListElement text="18" height="23" />
-                <ListElement text="19" height="23" />
-                <ListElement text="20" height="23" />
-                <ListElement text="21" height="23" />
+                <ListItem text="9" selected="true" height="23" />
+                <ListItem text="10" height="23" />
+                <ListItem text="11" height="23" />
+                <ListItem text="12" height="23" />
+                <ListItem text="13" height="23" />
+                <ListItem text="14" height="23" />
+                <ListItem text="15" height="23" />
+                <ListItem text="16" height="23" />
+                <ListItem text="17" height="23" />
+                <ListItem text="18" height="23" />
+                <ListItem text="19" height="23" />
+                <ListItem text="20" height="23" />
+                <ListItem text="21" height="23" />
               </Combo>
 
               <Combo name="font_size" style="combo_style" droplist="false" width="100" textpadding="3,0,23,0">
-                <ListElement text="9" selected="true" height="23" />
-                <ListElement text="10" height="23" />
-                <ListElement text="11" height="23" />
-                <ListElement text="12" height="23" />
-                <ListElement text="13" height="23" />
-                <ListElement text="14" height="23" />
-                <ListElement text="15" height="23" />
-                <ListElement text="16" height="23" />
-                <ListElement text="17" height="23" />
-                <ListElement text="18" height="23" />
-                <ListElement text="19" height="23" />
-                <ListElement text="20" height="23" />
-                <ListElement text="21" height="23" />
+                <ListItem text="9" selected="true" height="23" />
+                <ListItem text="10" height="23" />
+                <ListItem text="11" height="23" />
+                <ListItem text="12" height="23" />
+                <ListItem text="13" height="23" />
+                <ListItem text="14" height="23" />
+                <ListItem text="15" height="23" />
+                <ListItem text="16" height="23" />
+                <ListItem text="17" height="23" />
+                <ListItem text="18" height="23" />
+                <ListItem text="19" height="23" />
+                <ListItem text="20" height="23" />
+                <ListItem text="21" height="23" />
               </Combo>
             </HorizontalLayout>
             <Control />
@@ -109,7 +109,7 @@
           <VerticalLayout>
             <Control />
             <HorizontalLayout height="23" childpadding="12">
-              <Calender name="calender" height="23" width="100" font="0" droplist="true" textpadding="6,0,22,0" style="combo_style" />
+              <Calendar name="calendar" height="23" font="0" droplist="true" textpadding="6,0,22,0" style="combo_style" width="100" />
             </HorizontalLayout>
             <Control />
           </VerticalLayout>
@@ -147,10 +147,10 @@
           <Label text="List控件" textcolor="#FF555555" glowsize="0" font="font13" width="80"/>
           <VerticalLayout bordersize="1" bordercolor="#FF666666" inset="2,2,2,2">
             <List style="list_style">
-              <ListElement text="one1"/>
-              <ListElement text="one2"/>
-              <ListElement text="one3"/>
-              <ListElement text="one4"/>
+              <ListItem text="one1"/>
+              <ListItem text="one2"/>
+              <ListItem text="one3"/>
+              <ListItem text="one4"/>
             </List>
           </VerticalLayout>
         </HorizontalLayout>

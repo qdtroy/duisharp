@@ -122,6 +122,7 @@ namespace duisharp {
 		CUIListHeader* GetHeader() const;  
 		CUIListBody* GetList() const;
 		TUIListInfo* GetListInfo();
+		void SetListInfo(TUIListInfo Info);
 
 		CUIControl* GetItemAt(int iIndex) const;
 		int GetItemIndex(CUIControl* pControl) const;
@@ -295,10 +296,10 @@ namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-	class DUISHARP_API CUIListElement : public CUIHorizontalLayout, public IUIListItem
+	class DUISHARP_API CUIListItem : public CUIHorizontalLayout, public IUIListItem
 	{
 	public:
-		CUIListElement();
+		CUIListItem();
 
 	public:
 		LPCTSTR GetClass() const;

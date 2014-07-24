@@ -96,6 +96,7 @@ namespace duisharp {
 		void SetPos(RECT rc);
 		void DoEvent(TUIEvent& event);
 		void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
+		void DoPaint(HDC hDC, const RECT& rcPaint, UINT uType = 0);
 
 	protected:
 		CComboWnd* m_pWindow;

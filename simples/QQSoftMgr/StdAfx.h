@@ -11,9 +11,9 @@
 using namespace duisharp;
 
 #ifdef _DEBUG
-# pragma comment(lib, "..\\..\\Lib\\DuiSharp_d.lib")
+# pragma comment(lib, "..\\..\\Lib\\duisharp_d.lib")
 #else
-# pragma comment(lib, "..\\..\\Lib\\DuiSharp.lib")
+# pragma comment(lib, "..\\..\\Lib\\duisharp.lib")
 #endif
 
 //{{AFX_INSERT_LOCATION}}

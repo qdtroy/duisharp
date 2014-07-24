@@ -11,9 +11,6 @@ namespace duisharp {
 		UINT nDelay;       // delay (in 1/100s of a second)
 		UINT nDisposal;    // disposal method
 	};
-
-	typedef std::vector<GIFFrame> GIFFRAME;
-	typedef std::vector<GIFFrame>::iterator GIFFRAMEITER;
 	
 	struct TGIFHeader;
 	struct TGIFLSDescriptor;
@@ -87,7 +84,7 @@ namespace duisharp {
 		// 动画数据
 		UINT *m_puFrameElapse;			// 帧间隔
 		UINT m_nFramePosition;			// 当前帧
-		GIFFRAME* m_pvFrames;			// 帧数组
+		CStdPtrArrayImpl<GIFFrame*> m_vFrames;			// 帧数组
 		bool m_bGif;					// 是否Gif图片
 		bool m_bPlaying;				// 是否正在播放
 	};

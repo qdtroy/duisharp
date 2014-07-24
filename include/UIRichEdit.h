@@ -26,7 +26,7 @@ namespace duisharp {
 			virtual ULONG STDMETHODCALLTYPE AddRef();
 			virtual ULONG STDMETHODCALLTYPE Release();
 			virtual HRESULT STDMETHODCALLTYPE GetInPlaceContext(LPOLEINPLACEFRAME FAR * lplpFrame, LPOLEINPLACEUIWINDOW FAR * lplpDoc, LPOLEINPLACEFRAMEINFO lpFrameInfo);
-			virtual HRESULT STDMETHODCALLTYPE ShowContainerUI(BOOL fShow);
+			virtual HRESULT STDMETHODCALLTYPE ShowUIContainer(BOOL fShow);
 			virtual HRESULT STDMETHODCALLTYPE QueryInsertObject(LPCLSID lpclsid, LPSTORAGE lpstg, LONG cp);
 			virtual HRESULT STDMETHODCALLTYPE DeleteObject(LPOLEOBJECT lpoleobj);
 			virtual HRESULT STDMETHODCALLTYPE QueryAcceptData(LPDATAOBJECT lpdataobj, CLIPFORMAT FAR * lpcfFormat, DWORD reco, BOOL fReally, HGLOBAL hMetaPict);
@@ -112,10 +112,10 @@ namespace duisharp {
 		int LineIndex(int nLine = -1) const;
 		int LineLength(int nLine = -1) const;
 		bool LineScroll(int nLines, int nChars = 0);
-		CPoint GetCharPos(long lChar) const;
+		CStdPoint GetCharPos(long lChar) const;
 		long LineFromChar(long nIndex) const;
-		CPoint PosFromChar(UINT nChar) const;
-		int CharFromPos(CPoint pt) const;
+		CStdPoint PosFromChar(UINT nChar) const;
+		int CharFromPos(CStdPoint pt) const;
 		void EmptyUndoBuffer();
 		UINT SetUndoLimit(UINT nLimit);
 		long StreamIn(int nFormat, EDITSTREAM &es);
@@ -144,7 +144,6 @@ namespace duisharp {
 		void HomeLeft();
 		void EndRight();
 
-		SIZE EstimateSize(SIZE szAvailable, bool bSized = true);
 		void SetPos(RECT rc);
 		void DoEvent(TUIEvent& event);
 		void DoPaint(HDC hDC, const RECT& rcPaint, UINT uType = 0);

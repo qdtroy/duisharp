@@ -30,7 +30,7 @@ public:
 		CHAIN_UIMSG_MAP(CUIWindow)
 	END_UIMSG_MAP()
 	
-	BEGIN_UINOTIFY_MAP(CQQFrame)
+	BEGIN_UINOTIFY_MAP(CMainFrame)
 		UINM_WINDOWINIT(_T("root"), OnWindowInit)
 
 	END_UINOTIFY_MAP()
@@ -115,7 +115,7 @@ public:
 public:
 	LRESULT OnSysCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled)
 	{
-		LRESULT lRes = CWindowWnd::HandleMessage(uMsg, wParam, lParam);
+		LRESULT lRes = CStdWindow::HandleMessage(uMsg, wParam, lParam);
 		
 		// 有时会在收到WM_NCDESTROY后收到wParam为SC_CLOSE的WM_SYSCOMMAND
 		if( wParam == SC_CLOSE ) {

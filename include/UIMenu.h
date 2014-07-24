@@ -56,14 +56,14 @@ namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-	class CUIMenuElement;
+	class CUIMenuItem;
 	class DUISHARP_API CUIMenuWnd : public CUIWindow, public ContextMenuReceiver
 	{
 	public:
 		CUIMenuWnd(HWND hParent = NULL);
 
 	public:
-		void CreateMenu(CUIMenuElement* pOwner, STRINGorID xml, LPCTSTR pSkinType, POINT point);
+		void CreateMenu(CUIMenuItem* pOwner, STRINGorID xml, LPCTSTR pSkinType, POINT point);
 
 	public:
 		LPCTSTR GetWindowClassName() const;
@@ -78,18 +78,18 @@ namespace duisharp {
 		POINT m_BasedPoint;
 		STRINGorID m_xml;
 		CStdString m_sType;
-		CUIMenuElement* m_pOwner;
+		CUIMenuItem* m_pOwner;
 		CUIMenu* m_pLayout;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-	class DUISHARP_API CUIMenuElement : public CUIListElement
+	class DUISHARP_API CUIMenuItem : public CUIListItem
 	{
 		friend CUIMenuWnd;
 	public:
-		CUIMenuElement();
-		~CUIMenuElement();
+		CUIMenuItem();
+		~CUIMenuItem();
 
 	public:
 		LPCTSTR GetClass() const;

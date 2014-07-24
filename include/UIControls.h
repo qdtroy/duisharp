@@ -3,13 +3,6 @@
 
 namespace duisharp {
 
-#define IA_TOP				0x00000000
-#define IA_LEFT				0x00000000
-#define IA_CENTER				0x00000001
-#define IA_RIGHT				0x00000002
-#define IA_VCENTER			0x00000004
-#define IA_BOTTOM				0x00000008
-
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 
@@ -23,8 +16,6 @@ namespace duisharp {
 		LPVOID GetInterface(LPCTSTR pstrName);
 
 	public:
-		SIZE EstimateSize(SIZE szAvailable, bool bSized = true);
-
 		LPCTSTR GetIconImage();
 		void SetIconImage(LPCTSTR pStrIcon);
 		LPCTSTR GetDisabledIconImage();
@@ -240,14 +231,14 @@ namespace duisharp {
 		void SetImageAlign(UINT uAlign);
 		void SetImage(HBITMAP hBitmap);
 		void SetImageData(BYTE* pData, DWORD dwSize);
-		void SetImageData_RGB(BYTE* pData, DWORD dwSize, int nWidth, int nHeight, BOOL bAlpha = FALSE);
+		void SetImageData_RGB(BYTE* pData, DWORD dwSize, int nWidth, int nHeight, bool bAlpha = false);
 
 		void PaintBkImage(HDC hDC);
 
 	protected:
 		HBITMAP m_hBitmap;
 		SIZE m_szBitmap;
-		BOOL m_bAlpha;
+		bool m_bAlpha;
 		UINT m_uAlign;
 	};
 
@@ -267,7 +258,6 @@ namespace duisharp {
 		CStdString* GetLinkContent(int iIndex);
 
 		void DoEvent(TUIEvent& event);
-		SIZE EstimateSize(SIZE szAvailable, bool bSized = true);
 
 		void PaintText(HDC hDC);
 
@@ -409,7 +399,6 @@ namespace duisharp {
 		void SetPos(RECT rc);
 		void SetVisible(bool bVisible = true);
 		void SetInternVisible(bool bVisible = true);
-		SIZE EstimateSize(SIZE szAvailable, bool bSized = true);
 		void DoEvent(TUIEvent& event);
 		void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
 

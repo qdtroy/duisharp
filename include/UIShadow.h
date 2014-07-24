@@ -42,7 +42,7 @@ namespace duisharp
 	private:
 		// 类静态变量：程序实例句柄和所有阴影窗口
 		static HINSTANCE s_hInstance;
-		static std::map<HWND, CUIShadow *> s_Shadowmap;
+		static CStdStringPtrMapImpl<CUIShadow*> s_Shadowmap;
 
 	private:
 		// 阴影图片

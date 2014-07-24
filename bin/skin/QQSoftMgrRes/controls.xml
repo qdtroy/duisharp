@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window name="body_soft_item">
-  <ListElement name="body.soft.item" inset="6,10,0,10" height="72" menu="true">
+  <ListItem name="body.soft.item" inset="6,10,0,10" height="72" menu="true">
     <HorizontalLayout name="body.soft.item.container">
       <HorizontalLayout name="body.soft.item.left" inset="0,2,16,2">
         <Label name="body.soft.item.icon" width="48" height="48" bkimage="IDB_SOFT_DEFLOGO"/>
@@ -23,5 +23,5 @@
         </HorizontalLayout>
       </HorizontalLayout>
     </HorizontalLayout>
-  </ListElement>
+  </ListItem>
 </Window>

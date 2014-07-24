@@ -33,8 +33,8 @@ namespace duisharp {
 		virtual BOOL OnIdle(int);
 
 	protected:
-		std::vector<IUIMessageFilter*> m_aMsgFilter;
-		std::vector<IUIIdleHandler*> m_aIdleHandler;
+		CStdPtrArrayImpl<IUIMessageFilter*> m_aMsgFilter;
+		CStdPtrArrayImpl<IUIIdleHandler*> m_aIdleHandler;
 		MSG m_msg;	
 	};
 
@@ -46,7 +46,7 @@ namespace duisharp {
 
 	public:
 		virtual BOOL Init(HINSTANCE hInstance);
-		virtual int Run();
+		virtual int Run() = 0;
 		virtual void Term();
 	
 	public:
@@ -54,13 +54,10 @@ namespace duisharp {
 		virtual HINSTANCE GetResInstance();
 		virtual CStdString GetInstancePath();
 		virtual CUIResManager* GetResMgr();
-		virtual CUIMessageLoop* GetMessageLoop();
 		
 	public:
 		virtual int LoadSkin(TUISkin skin);
-		std::vector<LPCREATECONTROL> GetPlusgins();
-		virtual int LoadPlugin(LPCTSTR pstrModule);
-		
+
 		virtual void SetHSL(short H, short S, short L);
 		virtual void GetHSL(short* H, short* S, short* L);
 
@@ -69,21 +66,28 @@ namespace duisharp {
 
 		virtual void AddMessageFilter(IUIMessageFilter* pFilter);
 		virtual void RemoveMessageFilter(IUIMessageFilter* pFilter);
+
+		BOOL AddMessageLoop(CUIMessageLoop* pMsgLoop);
+		BOOL RemoveMessageLoop();
+		CUIMessageLoop* GetMessageLoop(DWORD dwThreadID = ::GetCurrentThreadId()) const;
+
 	protected:
+		HWND m_hMainWnd;
 		HINSTANCE m_hInstance;
 		HINSTANCE m_hResInstance;
 		CUIResManager m_ResMgr;
-		CUIMessageLoop m_MessageLoop;
-		std::vector<CUIManager*> m_aManagers;
-		std::vector<LPCREATECONTROL> m_aPlugins;
+		DWORD m_dwMainThreadID;
+		CStdStringPtrMapImpl<CUIMessageLoop*>* m_pMsgLoopMap;
+		CStdPtrArrayImpl<CUIManager*> m_aManagers;
 
 		short m_H;
 		short m_S;
 		short m_L;
+		
+		static CRITICAL_SECTION m_Critical;
 	};
 
 	extern "C" { extern DUISHARP_API CUIApp* _App; }
-
 }//
 
 #endif

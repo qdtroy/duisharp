@@ -119,7 +119,7 @@ public: \
 }
 
 	class DUISHARP_API CUIWindow 
-		: public CWindowWnd
+		: public CStdWindow
 		, public IUIMessageFilter
 		, public IUINotify
 		, public IUIBuilderCallback
@@ -133,7 +133,7 @@ public: \
 			UIMESSAGE_HANDLER(WM_CREATE, OnCreate)
 			UIMESSAGE_HANDLER(WM_DESTROY, OnDestroy)
 			UIMESSAGE_HANDLER(WM_SIZE, OnSize)
-			UIMESSAGE_HANDLER(WM_MOVE, OnMove)
+			UIMESSAGE_HANDLER(WM_NCPAINT, OnNcPaint)
 			UIMESSAGE_HANDLER(WM_NCACTIVATE, OnNcActivate)
 			UIMESSAGE_HANDLER(WM_NCCALCSIZE, OnNcCalcSize)
 			UIMESSAGE_HANDLER(WM_NCHITTEST, OnNcHitTest)
@@ -144,14 +144,12 @@ public: \
 		virtual LPCTSTR GetResFile();
 		virtual LPCTSTR GetResType();
 		virtual LPCTSTR GetResName();
-		virtual bool IsLayerdWindow();
 
 		virtual CUIControl* CreateControl(LPCTSTR pstrClass);
 		virtual bool HitControl(CUIControl* pControl);
 
-		// 回调函数
 		virtual void OnInit();
-		virtual void ChangeTheme();
+		virtual void OnThemeChanged();
 		virtual void OnSized(UINT uCmd);
 		virtual LRESULT HitTestNCA(HWND hWnd, WPARAM wParam, LPARAM lParam);
 		
@@ -165,39 +163,22 @@ public: \
 	public:
 		LRESULT OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		LRESULT OnDestroy(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		LRESULT OnNcPaint(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		LRESULT OnNcActivate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		LRESULT OnNcCalcSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		LRESULT OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		LRESULT OnSize(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
-		LRESULT OnMove(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		LRESULT OnDwmCompositionChanged(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
-
-	public:
-		// 辅助函数
-		void SetLayeredControl(CUIControl* pControl);
-		// 设置窗口RGN
-		void SetRgn();
-		// 设置分层窗口位置
-		void SetLayeredPos(RECT rcWnd);
-		// 获取分层窗口句柄
-		HWND GetLayeredWnd();
 
 	private:
 		LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam);
 		
 	public:
+		// UI管理器
 		CUIManager m_ui;
-		
-	protected:
 		// 窗口缩放状态
 		UINT m_uSizeStatus;
-		// 窗口的边距
-		HWND m_hParent;
-		CUIControl* m_pLayeredControl;
-		static std::vector<CUIWindow*> s_vLayerdWindows;
 	};
-
-
 } // namespace duisharp
 
 #endif // __UIWINDOW_H__

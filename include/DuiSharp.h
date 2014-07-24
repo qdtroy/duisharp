@@ -38,18 +38,11 @@
 #include <windows.h>
 #include <windowsx.h>
 #include <commctrl.h>
-#include <stddef.h>
 #include <richedit.h>
 #include <tchar.h>
 #include <assert.h>
-#include <crtdbg.h>
 #include <malloc.h>
 #include <math.h>
-#include <list>
-#include <vector>
-#include <map>
-#include <set>
-#include <algorithm>
 #include <atlconv.h>
 #include <olectl.h>
 
@@ -61,19 +54,6 @@
 #include <Gdiplusgraphics.h >
 using namespace Gdiplus;
 
-// 怎么都没找到min，max的头文件-_-
-#ifndef min
-#define min(a,b) (((a) < (b)) ? (a) : (b))
-#endif
-#ifndef max
-#define max(a,b) (((a) > (b)) ? (a) : (b))
-#endif
-
-#define lengthof(x) (sizeof(x)/sizeof(*x))
-#define MAX max
-#define MIN min
-#define CLAMP(x,a,b) (MIN(b,MAX(a,x)))
-
 #include "UIBase.h"
 #include "UIBufferedPaint.h"
 #include "UIMarkup.h"
@@ -81,6 +61,7 @@ using namespace Gdiplus;
 #include "UIShadow.h"
 #include "UIManager.h"
 #include "UIRender.h"
+#include "UIBitmap.h"
 #include "UIApp.h"
 #include "UIDelegate.h"
 
@@ -92,7 +73,7 @@ using namespace Gdiplus;
 #include "UIList.h"
 #include "UITree.h"
 #include "UICombo.h"
-#include "UICalender.h"
+#include "UICalendar.h"
 #include "UIActiveX.h"
 #include "UIWebBrowser.h"
 #include "UIRichEdit.h"

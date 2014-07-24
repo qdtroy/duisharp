@@ -36,13 +36,16 @@ namespace duisharp {
 		CStdString sResType;
 	} TImageInfo;
 
-	typedef std::pair<unsigned long, unsigned long> PairRes;
-	typedef std::map<CStdString, PairRes> MapRes;
+	typedef struct tagTPairInfo
+	{
+		unsigned long ulVal1;
+		unsigned long ulVal2;
+	} TPairInfo;
 
-	typedef std::map<CStdString, CStdString> MapString;
-	typedef std::map<CStdString, TFontInfo*> MapFont;
-	typedef std::map<CStdString, TImageInfo*> MapImage;
-
+	typedef CStdStringPtrMapImpl<TPairInfo*> MapRes;
+	typedef CStdStringPtrMapImpl<TFontInfo*> MapFont;
+	typedef CStdStringPtrMapImpl<TImageInfo*> MapImage;
+	typedef CStdStringPtrMapImpl<CStdString*> MapString;
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 
@@ -53,23 +56,23 @@ namespace duisharp {
 		~CUIResManager();
 
 	public:
-		bool LoadRes(STRINGorID sResID, LPCTSTR lpszType = NULL, bool bZip = true);
+		bool LoadRes(HINSTANCE hRes, STRINGorID sResID, LPCTSTR lpszType = NULL, bool bZip = true);
 		void ClearRes();
 	
 	public:
 		TImageInfo* GetImage(const STRINGorID sResID, LPCTSTR lpszType = NULL, DWORD dwMask = 0);
-		TImageInfo* GetImage(LPCTSTR pstrImage);
-		bool GetXml(LPCTSTR pstrResID, std::string& strXml);
+		TImageInfo* GetStrImage(LPCTSTR pstrImage);
+		bool GetXml(LPCTSTR pstrResID, char** xml, int &len);
 		HFONT GetFont(LPCTSTR pstrResID);
 		TFontInfo* GetFontInfo(LPCTSTR pstrResID);
-		LPCTSTR GetStyle(LPCTSTR pstrResID);
+		bool GetStyle(LPCTSTR pstrResID, CStdString& sStyle);
+		TImageInfo* GetColor(DWORD dwColor);
 
 	public:
-		TImageInfo* LoadImage(const STRINGorID sResID, LPCTSTR lpszType = NULL, DWORD dwMask = 0);
-		TImageInfo* LoadImage(const void* pData, const int nLen, DWORD dwMask = 0);
-		void RemoveImage(const STRINGorID sResID);
-
-		bool ReadData(CStdString sResID, void** ppBuffer, DWORD& dwSize, LPCTSTR lpstrType = NULL);
+		TImageInfo* LoadImage(const STRINGorID ResID, LPCTSTR lpszType = NULL, DWORD dwMask = 0, int nFlag = 0);
+		TImageInfo* LoadImage(const void* pData, const int nLen, DWORD dwMask = 0, int nFlag = 0);
+		bool ReadXmlData(const STRINGorID ResID, void** ppBuffer, DWORD& dwBuffer, LPCTSTR lpstrType = NULL);
+		bool ReadImageData(const STRINGorID ResID, void** ppBuffer, DWORD& dwBuffer, LPCTSTR lpstrType = NULL);
 		void FreeData(void* pBuffer);
 
 	private:
@@ -78,22 +81,22 @@ namespace duisharp {
 		bool LoadXmlRes(CUIMarkupNode root);
 		bool LoadFontRes(CUIMarkupNode root);
 		bool LoadStyleRes(CUIMarkupNode root);
+		bool ParseRes(const STRINGorID ResID, LPCTSTR lpszType = NULL);
 
 	private:
+		bool m_bZip;
+		HINSTANCE m_hRes;
+		CStdString m_strResName;
+		CStdFile m_memZipRes;
+		void* m_pResPackData;
+		
 		MapRes m_mapRes;
 		MapString m_mapImage;
 		MapString m_mapXml;
-		MapFont m_mapFont;
 		MapString m_mapStyle;
-
+		MapFont m_mapFont;
 		MapImage m_mapImageCache;
-		
-		bool m_bZip;
-		CStdString m_strResName;
-		HANDLE m_hResHandle;
-		CStdFile m_memZipRes;
-		void* m_pResPackData;
-		CRITICAL_SECTION m_cs;
+		MapImage m_mapColorCache;
 	};
 } // namespace duisharp
 

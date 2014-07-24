@@ -31,6 +31,15 @@ public:
 #endif
 		LoadSkin(skin);
 
+		return TRUE;
+	}
+
+	virtual int Run()
+	{
+		// 添加消息链
+		CUIMessageLoop msgLoop;
+		_App->AddMessageLoop(&msgLoop);
+		
 		CMainFrame* pFrame = new CMainFrame();
 		if( pFrame == NULL ) return 0;
 		pFrame->Create(NULL, _T("QQ软件管理"), WS_OVERLAPPEDWINDOW, 0L, 0, 0, 800, 572);
@@ -38,12 +47,13 @@ public:
 		pFrame->CenterWindow();
 		::ShowWindow(*pFrame, SW_SHOW);
 
-		return TRUE;
-	}
+		// 消息运行
+		msgLoop.Run();
 
-	virtual int Run()
-	{
-		return CUIApp::Run();
+		// 移除消息链
+		_App->RemoveMessageLoop();
+
+		return 0;
 	}
 
 	virtual void Term()
@@ -53,3 +63,15 @@ public:
 };
 
 CMyApp myApp;
+
+int APIENTRY WinMain(HINSTANCE hInstance,
+	HINSTANCE hPrevInstance,
+	LPSTR     lpCmdLine,
+	int       nCmdShow)
+{
+	myApp.Init(hInstance);
+	myApp.Run();
+	myApp.Term();
+
+	return 0;
+}

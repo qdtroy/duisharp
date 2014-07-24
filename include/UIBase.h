@@ -1,9 +1,6 @@
 #ifndef __UIBASE_H__
 #define __UIBASE_H__
 
-#include <Shlwapi.h>
-#include <vector>
-
 namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
@@ -14,116 +11,46 @@ namespace duisharp {
 #ifndef GET_Y_LPARAM
 #define GET_Y_LPARAM(lParam)	((int)(short)HIWORD(lParam))
 #endif
-
-	/////////////////////////////////////////////////////////////////////////////////////
-	//
-#ifndef FREE_APTR
-#define FREE_APTR(x)					if(x){ delete [] x; x = NULL; }
+	
+// 怎么都没找到min，max的头文件-_-
+#ifndef min
+#define min(a,b) (((a) < (b)) ? (a) : (b))
 #endif
-#ifndef FREE_PTR
-#define FREE_PTR(x)						if(x){ delete (x); x = NULL; }
-#endif
-#ifndef FREE_COM_PTR
-#define FREE_COM_PTR(x)					if(x){ x->Release(); x = NULL; }
-#endif
-#ifndef IS_PTR
-#define IS_PTR(x)						( 0!=(x) )
+#ifndef max
+#define max(a,b) (((a) > (b)) ? (a) : (b))
 #endif
 
-#ifndef CountArray
-#define CountArray(x) (sizeof(x)/sizeof(*x))
-#endif
-#ifndef MAX
+#define lengthof(x) (sizeof(x)/sizeof(*x))
 #define MAX max
-#endif
-#ifndef MIN
 #define MIN min
-#endif
-#ifndef CLAMP
 #define CLAMP(x,a,b) (MIN(b,MAX(a,x)))
-#endif
+
 #ifndef ASSERT
 #define ASSERT(expr)  _ASSERTE(expr)
 #endif
 
 #ifdef _DEBUG
 #ifndef TRACE
-#ifdef USE_WTL
-#define TRACE ATLTRACE
-#else
-#define TRACE __Trace
+#define TRACE Trace
 #endif
-#endif
-#define TRACEMSG __TraceMsg
 #else
 #ifndef TRACE
 #define TRACE
 #endif
-#define TRACEMSG _T("")
-#endif
-
-#ifdef _DEBUG
-#ifndef LOG
-#define INITLOG __InitLog
-#define LOG __Log
-#endif
-#else
-#ifndef LOG
-#define INITLOG __InitLog
-#define LOG __Log
-#endif
 #endif
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
-	// 跟踪函数
-	void __Trace(LPCTSTR pstrFormat, ...);
-	LPCTSTR __TraceMsg(UINT uMsg);
-
-	// 日志函数
-	void __InitLog(LPCTSTR pstrFile);
-	void __Log(LPCTSTR pstrFormat, ...);
-
-	// 性能函数
-	bool StartMilliSecond();
-	int GetMilliSecond();
-	int GetCurMilliSecond();
+	void Trace(LPCTSTR pstrFormat, ...);
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
-	// 运行时函数
-	HRESULT GetDllVersion(HINSTANCE hInstDLL, DLLVERSIONINFO* pDllVersionInfo);
-	HRESULT GetDllVersion(LPCTSTR lpstrDllName, DLLVERSIONINFO* pDllVersionInfo);
-	// Common Control Versions:
-	//   Win95/WinNT 4.0    maj=4 min=00
-	//   IE 3.x     maj=4 min=70
-	//   IE 4.0     maj=4 min=71
-	HRESULT GetCommCtrlVersion(LPDWORD pdwMajor, LPDWORD pdwMinor);
-	// Shell Versions:
-	//   Win95/WinNT 4.0                    maj=4 min=00
-	//   IE 3.x, IE 4.0 without Web Integrated Desktop  maj=4 min=00
-	//   IE 4.0 with Web Integrated Desktop         maj=4 min=71
-	//   IE 4.01 with Web Integrated Desktop        maj=4 min=72
-	HRESULT GetShellVersion(LPDWORD pdwMajor, LPDWORD pdwMinor);
-
-	/////////////////////////////////////////////////////////////////////////////////////
-	//
-	bool IsCommCtrl6();
-	bool IsVistaLower();
-	bool IsVista();
-	bool IsWin7();
-	bool IsWin8();
-	bool IsThemeAvailable();
-	bool IsRibbonUIAvailable();
 	bool IsAeroSupported();
 	bool IsComposing();
 	bool IsOpaqueBlend();
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
 	class STRINGorID
 	{
 	public:
@@ -136,39 +63,34 @@ namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
-	class DUISHARP_API CPoint : public tagPOINT
+	class DUISHARP_API CStdPoint : public tagPOINT
 	{
 	public:
-		CPoint();
-		CPoint(const POINT& src);
-		CPoint(int x, int y);
-		CPoint(LPARAM lParam);
+		CStdPoint();
+		CStdPoint(const POINT& src);
+		CStdPoint(int x, int y);
+		CStdPoint(LPARAM lParam);
 	};
-
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
-	class DUISHARP_API CSize : public tagSIZE
+	class DUISHARP_API CStdSize : public tagSIZE
 	{
 	public:
-		CSize();
-		CSize(const SIZE& src);
-		CSize(const RECT rc);
-		CSize(int cx, int cy);
+		CStdSize();
+		CStdSize(const SIZE& src);
+		CStdSize(const RECT rc);
+		CStdSize(int cx, int cy);
 	};
-
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
-	class DUISHARP_API CRect : public tagRECT
+	class DUISHARP_API CStdRect : public tagRECT
 	{
 	public:
-		CRect();
-		CRect(const RECT& src);
-		CRect(int iLeft, int iTop, int iRight, int iBottom);
+		CStdRect();
+		CStdRect(const RECT& src);
+		CStdRect(int iLeft, int iTop, int iRight, int iBottom);
 
 		int GetWidth() const;
 		int GetHeight() const;
@@ -180,12 +102,11 @@ namespace duisharp {
 		void Offset(int cx, int cy);
 		void Inflate(int cx, int cy);
 		void Deflate(int cx, int cy);
-		void Union(CRect& rc);
+		void Union(CStdRect& rc);
 	};
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
 	class DUISHARP_API CStdPtrArray
 	{
 	public:
@@ -193,10 +114,10 @@ namespace duisharp {
 		CStdPtrArray(const CStdPtrArray& src);
 		~CStdPtrArray();
 
-		void Empty();
+		void RemoveAll();
 		void Resize(int iSize);
 		bool IsEmpty() const;
-		int Find(LPVOID iIndex) const;
+		int Find(LPVOID pData) const;
 		bool Add(LPVOID pData);
 		bool SetAt(int iIndex, LPVOID pData);
 		bool InsertAt(int iIndex, LPVOID pData);
@@ -213,10 +134,77 @@ namespace duisharp {
 		int m_nAllocated;
 	};
 
+	template<typename T>
+	class DUISHARP_API CStdPtrArrayImpl : public CStdPtrArray
+	{
+	public:
+		CStdPtrArrayImpl(int iPreallocSize = 0) : CStdPtrArray(iPreallocSize){}
+		CStdPtrArrayImpl(const CStdPtrArrayImpl& src) : CStdPtrArray(src){}
 
+	public:
+		int Find(T pData) const 
+		{
+			return CStdPtrArray::Find(pData);
+		}
+
+		bool Add(T pData)
+		{
+			return CStdPtrArray::Add(pData);
+		}
+
+		bool SetAt(int iIndex, T pData)
+		{
+			return CStdPtrArray::SetAt(iIndex,pData);
+		}
+
+		bool InsertAt(int iIndex, T pData)
+		{
+			return CStdPtrArray::InsertAt(iIndex,pData);
+		}
+
+		bool Remove(int iIndex, bool bDel = false)
+		{
+			if( bDel ) {
+				T pT = GetAt(iIndex);
+				if( pT != NULL ) {
+					delete pT;
+					pT = NULL;
+				}
+			}
+			return CStdPtrArray::Remove(iIndex);
+		}
+
+		void RemoveAll(bool bDel = false)
+		{
+			if( bDel ) {
+				for( int i = 0; i < m_nCount; i++ ) {
+					T pT = GetAt(i);
+					if( pT != NULL ) {
+						delete pT;
+						pT = NULL;
+					}
+				}
+			}
+			return CStdPtrArray::RemoveAll();
+		}
+
+		T GetData()
+		{
+			return static_cast<T>(CStdPtrArray::GetData());
+		}
+
+		T GetAt(int iIndex) const
+		{
+			return static_cast<T>(CStdPtrArray::GetAt(iIndex));
+		}
+
+		T operator[] (int nIndex) const
+		{
+			return static_cast<T>(CStdPtrArray::operator[](nIndex));
+		}
+	};
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
 	class DUISHARP_API CStdValArray
 	{
 	public:
@@ -243,7 +231,6 @@ namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
 	class DUISHARP_API CStdString
 	{
 	public:
@@ -296,6 +283,8 @@ namespace duisharp {
 		void MakeUpper();
 		void MakeLower();
 
+		void StringFormat();
+
 		CStdString Left(int nLength) const;
 		CStdString Mid(int iPos, int nLength = -1) const;
 		CStdString Right(int nLength) const;
@@ -315,7 +304,6 @@ namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
 	struct TITEM
 	{
 		CStdString Key;
@@ -345,10 +333,39 @@ namespace duisharp {
 		int m_nBuckets;
 		int m_nCount;
 	};
+	
+	template<typename T>
+	class DUISHARP_API CStdStringPtrMapImpl : public CStdStringPtrMap
+	{
+	public:
+		CStdStringPtrMapImpl(int nSize = 83) : CStdStringPtrMap(nSize){}
+
+	public:
+		T GetPtr(int iIndex) const 
+		{
+			LPCTSTR nkey = GetAt(iIndex);
+			if( !nkey ) return NULL;
+			return Find(nkey);
+		}
+
+		T Find(LPCTSTR key, bool optimize = true) const
+		{
+			return static_cast<T>(CStdStringPtrMap::Find(key, optimize));
+		}
+
+		bool Insert(LPCTSTR key,T pData)
+		{
+			return CStdStringPtrMap::Insert(key, pData);
+		}
+
+		T Set(LPCTSTR key,T pData)
+		{
+			return static_cast<T>(CStdStringPtrMap::Set(key, pData));
+		}
+	};
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-
 	class CStdFile
 	{
 	public:
@@ -371,50 +388,12 @@ namespace duisharp {
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-	typedef void (*PONTIMERFUNC)(int nID,LPARAM lParam);
-
-	typedef struct _tagStdTimerInfo
-	{
-		int nID;
-		PONTIMERFUNC pOnTimerFunc;
-		LPARAM lParam;
-		DWORD dwMS;
-		DWORD dwTickCount;
-		int cnRun;
-		BOOL bDeleted;
-	}STDTIMERINFO,*PSTDTIMERINFO;
-
-	class CStdTimer
+	class DUISHARP_API CStdWindow
 	{
 	public:
-		CStdTimer();
-		virtual ~CStdTimer();
+		CStdWindow();
 
 	public:
-		BOOL CreateTimer();
-		BOOL SetTimer(int nID, DWORD dwMS, PONTIMERFUNC pFunc, LPARAM lParam = NULL);
-		BOOL DeleteTimer(int nID,LPARAM lParam);
-		DWORD ThreadFunc();
-
-	private:
-		void DestroyTimer();
-
-	private:
-		CRITICAL_SECTION m_cs;
-		HANDLE m_hEvent;
-		HANDLE m_hThread;
-		std::vector<PSTDTIMERINFO> m_listTimer;
-		BOOL m_bTerminate;
-	};
-
-	/////////////////////////////////////////////////////////////////////////////////////
-	//
-
-	class DUISHARP_API CWindowWnd
-	{
-	public:
-		CWindowWnd();
-
 		HWND GetHWND() const;
 		operator HWND() const;
 
@@ -450,34 +429,6 @@ namespace duisharp {
 		HWND m_hWnd;
 		WNDPROC m_OldWndProc;
 		bool m_bSubclassed;
-	};
-
-
-	class DUISHARP_API CFindWnd
-	{
-	public:
-		CFindWnd(HWND hParent, LPCTSTR pstrClassName, BOOL bVisible = TRUE);
-
-	private:
-		static BOOL CALLBACK FindChildClassHwnd(HWND hParent, LPARAM lParam);
-
-	public:
-		HWND m_hWnd;
-		BOOL m_bVisible;
-		LPCTSTR m_pstrClassName;
-	};
-
-	/////////////////////////////////////////////////////////////////////////////////////
-	//
-
-	class DUISHARP_API CWaitCursor
-	{
-	public:
-		CWaitCursor();
-		~CWaitCursor();
-
-	protected:
-		HCURSOR m_hOrigCursor;
 	};
 
 } // namespace duisharp

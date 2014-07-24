@@ -5,10 +5,10 @@
 #include "..\UIBase\ControlEx.h"
 #include "flash10a.tlh"
 
-class CQQFrame : public CUIWindow
+class CMainFrame : public CUIWindow
 {
 public:
-	CQQFrame() 
+	CMainFrame() 
 	{
 		m_pCloseBtn = NULL;
 		m_pMaxBtn = NULL;
@@ -17,13 +17,13 @@ public:
 	}
 
 public:
-	BEGIN_UIMSG_MAP(CQQFrame)
+	BEGIN_UIMSG_MAP(CMainFrame)
 		UIMESSAGE_HANDLER(WM_SYSCOMMAND, OnSysCommand)
 		UIMESSAGE_HANDLER(UIWM_MENU, OnMenuCmd)
 		CHAIN_UIMSG_MAP(CUIWindow)
 	END_UIMSG_MAP()
 
-	BEGIN_UINOTIFY_MAP(CQQFrame)
+	BEGIN_UINOTIFY_MAP(CMainFrame)
 		UINM_WINDOWINIT(_T("root"), OnWindowInit)
 		UINM_LCLICK(_T("menubtn"), OnSysBtnLClick)
 		UINM_LCLICK(_T("minbtn"), OnSysBtnLClick)
@@ -81,7 +81,7 @@ public:
 		return ::HitControlEx(pControl);
 	}
 
-	void ChangeTheme()
+	void OnThemeChanged()
 	{
 		if(m_ui.IsAero())
 		{
@@ -154,7 +154,7 @@ public:
 					pList->SetEffect(nEffect);
 				else
 					pList->SetEffect(nEffect);
-				pList->StartEffect(40, false);
+				pList->StartEffect(40, 1, false);
 			}
 		}
 	}
@@ -201,7 +201,8 @@ public:
 	}
 
 public:
-	void OnInit() {
+	void OnInit()
+	{
 		SetIcon(IDR_MAINFRAME);
 		LONG styleValue = ::GetWindowLong(*this, GWL_STYLE);
 		styleValue &= ~WS_CAPTION;
@@ -236,7 +237,7 @@ public:
 		UIFINDCONTROL(CUIList, pList, _T("listview"));
 		for(int i = 0; i < 12; i++)
 		{
-			CUIListElement* pElement = new CUIListElement;
+			CUIListItem* pElement = new CUIListItem;
 			pElement->SetName(_T("listelement"));
 			pElement->SetTag(i);
 			pList->Add(pElement);
@@ -316,7 +317,7 @@ public:
 			return 0;
 		}
 		BOOL bZoomed = ::IsZoomed(*this);
-		LRESULT lRes = CWindowWnd::HandleMessage(uMsg, wParam, lParam);
+		LRESULT lRes = CStdWindow::HandleMessage(uMsg, wParam, lParam);
 		if( ::IsZoomed(*this) != bZoomed ) {
 			if( !bZoomed ) {
 				CUIControl* pControl = static_cast<CUIControl*>(m_ui.FindControl(_T("maxbtn")));

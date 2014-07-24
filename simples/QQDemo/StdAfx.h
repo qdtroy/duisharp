@@ -9,26 +9,11 @@
 
 #include "..\..\Include\DuiSharp.h"
 using namespace duisharp;
-#if _MSC_VER <= 1400
-#ifdef _DEBUG
-# pragma comment(lib, "..\\..\\Lib\\duisharp_2005_d.lib")
-#else
-# pragma comment(lib, "..\\..\\Lib\\duisharp_2005.lib")
-#endif
-#else
-#if _MSC_VER <= 1500
-#ifdef _DEBUG
-# pragma comment(lib, "..\\..\\Lib\\duisharp_2008_d.lib")
-#else
-# pragma comment(lib, "..\\..\\Lib\\duisharp_2008.lib")
-#endif
-#else
+
 #ifdef _DEBUG
 # pragma comment(lib, "..\\..\\Lib\\duisharp_d.lib")
 #else
 # pragma comment(lib, "..\\..\\Lib\\duisharp.lib")
-#endif
-#endif
 #endif
 
 //{{AFX_INSERT_LOCATION}}

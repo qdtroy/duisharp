@@ -37,30 +37,30 @@
             <RichEdit name="wordedit" readonly="true" vscrollbar="true" autovscroll="true"/>
             <HorizontalLayout name="fontbar" visible="false" height="30" childpadding="3" bkimage="file='font_bk.bmp'" inset="4,4,4,4">
               <Combo name="font_type" style="chat_combo" width="100">
-                <ListElement text="微软雅黑" selected="true" height="23"/>
-                <ListElement text="宋体" height="23" />
-                <ListElement text="黑体" height="23" />
-                <ListElement text="幼圆" height="23" />
-                <ListElement text="楷体" height="23" />
+                <ListItem text="微软雅黑" selected="true" height="23"/>
+                <ListItem text="宋体" height="23" />
+                <ListItem text="黑体" height="23" />
+                <ListItem text="幼圆" height="23" />
+                <ListItem text="楷体" height="23" />
               </Combo>
               <Combo name="font_size" style="chat_combo">
-                <ListElement text="9" selected="true" height="23" />
-                <ListElement text="10" height="23" />
-                <ListElement text="11" height="23" />
-                <ListElement text="12" height="23" />
-                <ListElement text="13" height="23" />
-                <ListElement text="14" height="23" />
-                <ListElement text="15" height="23" />
-                <ListElement text="16" height="23" />
-                <ListElement text="17" height="23" />
-                <ListElement text="18" height="23" />
-                <ListElement text="19" height="23" />
-                <ListElement text="20" height="23" />
-                <ListElement text="21" height="23" />
-                <ListElement text="22" height="23" />
-                <ListElement text="24" height="23" />
-                <ListElement text="28" height="23" />
-                <ListElement text="32" height="23" />
+                <ListItem text="9" selected="true" height="23" />
+                <ListItem text="10" height="23" />
+                <ListItem text="11" height="23" />
+                <ListItem text="12" height="23" />
+                <ListItem text="13" height="23" />
+                <ListItem text="14" height="23" />
+                <ListItem text="15" height="23" />
+                <ListItem text="16" height="23" />
+                <ListItem text="17" height="23" />
+                <ListItem text="18" height="23" />
+                <ListItem text="19" height="23" />
+                <ListItem text="20" height="23" />
+                <ListItem text="21" height="23" />
+                <ListItem text="22" height="23" />
+                <ListItem text="24" height="23" />
+                <ListItem text="28" height="23" />
+                <ListItem text="32" height="23" />
               </Combo>
               <Control width="5"/>
               <ExButton name="boldbtn" option="true" iconimage="images/chat/bold.png" style="chat_fontbtn"/>

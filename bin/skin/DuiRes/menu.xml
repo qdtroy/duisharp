@@ -2,37 +2,37 @@
 <Window bktrans="true">
   <Default name="Menu" value="bkimage=&quot;res='menu_bk.png' corner='30,4,4,4'&quot; inset=&quot;1,1,1,1&quot; itemtextpadding=&quot;30,0,23,0&quot; itemglowsize=&quot;0&quot;" />
   <Menu bkimage="res='menu_bk.png' corner='30,4,4,4'" inset="1,1,1,1" itemtextpadding="30,0,23,0" itemglowsize="0">
-    <MenuElement text="菜单测试0000" style="menu_arrow_style">
-      <MenuElement text="菜单测试1" style="menu_arrow_style">
-        <MenuElement text="菜单测ddddddddddd  " menucmd="1"/>
-        <MenuElement text="菜单测试2" menucmd="2"/>
-      </MenuElement>
-      <MenuElement text="菜单测试3" menucmd="3"/>
-      <MenuElement text="菜单测试4" style="menu_arrow_style">
-        <MenuElement text="菜单测试5">
-          <MenuElement text="菜单测试6" menucmd="4"/>
-          <MenuElement text="菜单测试7" menucmd="5"/>
-        </MenuElement>
-        <MenuElement text="菜单测试8" style="menu_arrow_style">
-          <MenuElement text="菜单测试a" />
-          <MenuElement text="菜单测试b" />
-        </MenuElement>
-      </MenuElement>
-    </MenuElement>
-    <MenuElement text="菜单测试0" style="menu_arrow_style">
-      <MenuElement text="菜单测dddddddddddddddddddddd" />
-      <MenuElement text="菜单测试2" />
-    </MenuElement>
-    <MenuElement text="菜单测试3" />
-    <MenuElement text="菜单测试4" style="menu_arrow_style">
-      <MenuElement text="菜单测试5" style="menu_arrow_style">
-        <MenuElement text="菜单测试6" />
-        <MenuElement text="菜单测试7" />
-      </MenuElement>
-      <MenuElement text="菜单测试8" style="menu_arrow_style" >
-        <MenuElement text="菜单测试a" />
-        <MenuElement text="菜单测试b " />
-      </MenuElement>
-    </MenuElement>
+    <MenuItem text="菜单测试0000" style="menu_arrow_style">
+      <MenuItem text="菜单测试1" style="menu_arrow_style">
+        <MenuItem text="菜单测ddddddddddd  " menucmd="1"/>
+        <MenuItem text="菜单测试2" menucmd="2"/>
+      </MenuItem>
+      <MenuItem text="菜单测试3" menucmd="3"/>
+      <MenuItem text="菜单测试4" style="menu_arrow_style">
+        <MenuItem text="菜单测试5">
+          <MenuItem text="菜单测试6" menucmd="4"/>
+          <MenuItem text="菜单测试7" menucmd="5"/>
+        </MenuItem>
+        <MenuItem text="菜单测试8" style="menu_arrow_style">
+          <MenuItem text="菜单测试a" />
+          <MenuItem text="菜单测试b" />
+        </MenuItem>
+      </MenuItem>
+    </MenuItem>
+    <MenuItem text="菜单测试0" style="menu_arrow_style">
+      <MenuItem text="菜单测dddddddddddddddddddddd" />
+      <MenuItem text="菜单测试2" />
+    </MenuItem>
+    <MenuItem text="菜单测试3" />
+    <MenuItem text="菜单测试4" style="menu_arrow_style">
+      <MenuItem text="菜单测试5" style="menu_arrow_style">
+        <MenuItem text="菜单测试6" />
+        <MenuItem text="菜单测试7" />
+      </MenuItem>
+      <MenuItem text="菜单测试8" style="menu_arrow_style" >
+        <MenuItem text="菜单测试a" />
+        <MenuItem text="菜单测试b " />
+      </MenuItem>
+    </MenuItem>
   </Menu>
 </Window>

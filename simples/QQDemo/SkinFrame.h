@@ -23,7 +23,7 @@ public:
 		CHAIN_UIMSG_MAP(CUIWindow)
 	END_UIMSG_MAP()
 	
-	BEGIN_UINOTIFY_MAP(CQQFrame)
+	BEGIN_UINOTIFY_MAP(CMainFrame)
 		UINM_WINDOWINIT(_T("root"), OnWindowInit)
 		UINM_LCLICK(_T("closebtn"), OnSysBtnLClick)
 		UINM_SELECTCHANGED(_T("skintab"), OnSelectChanged)
@@ -193,7 +193,7 @@ public:
 			return 0;
 		}
 		BOOL bZoomed = ::IsZoomed(*this);
-		LRESULT lRes = CWindowWnd::HandleMessage(uMsg, wParam, lParam);
+		LRESULT lRes = CStdWindow::HandleMessage(uMsg, wParam, lParam);
 		if( ::IsZoomed(*this) != bZoomed ) {
 			if( !bZoomed ) {
 				CUIControl* pControl = static_cast<CUIControl*>(m_ui.FindControl(_T("maxbtn")));

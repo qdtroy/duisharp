@@ -157,9 +157,7 @@
     <ResourceCompile Include="GameDemo.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\bin\skin\GameRes\main.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="..\..\bin\skin\GameRes\main.xml" />
     <None Include="..\..\bin\skin\GameRes\resources.xml" />
     <None Include="..\..\bin\skin\GameRes\skin.xml" />
   </ItemGroup>

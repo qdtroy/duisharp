@@ -44,7 +44,7 @@ namespace duisharp {
 			if (receiver == NULL)
 				return;
 
-			receivers_.push_back(receiver);
+			receivers_.Add(receiver);
 			receiver->AddObserver(this);
 		}
 
@@ -53,23 +53,15 @@ namespace duisharp {
 			if (receiver == NULL)
 				return;
 
-			ReceiversVector::iterator it = receivers_.begin();
-			for (; it != receivers_.end(); ++it)
-			{
-				if (*it == receiver)
-				{
-					receivers_.erase(it);
-					break;
-				}
-			}
+			receivers_.Remove(receivers_.Find(receiver));
 		}
 
 		virtual ReturnT Broadcast(ParamT param)
 		{
-			ReceiversVector::iterator it = receivers_.begin();
-			for (; it != receivers_.end(); ++it)
+			for (int it = 0; it < receivers_.GetSize(); ++it)
 			{
-				(*it)->Receive(param);
+				CReceiverImplBase<ReturnT, ParamT>* receiver = receivers_.GetAt(it);
+				receiver->Receive(param);
 			}
 
 			return ReturnT();
@@ -77,10 +69,10 @@ namespace duisharp {
 
 		virtual ReturnT RBroadcast(ParamT param)
 		{
-			ReceiversVector::reverse_iterator it = receivers_.rbegin();
-			for (; it != receivers_.rend(); ++it)
+			for (int it = receivers_.GetSize() - 1; it >= 0; --it)
 			{
-				(*it)->Receive(param);
+				CReceiverImplBase<ReturnT, ParamT>* receiver = receivers_.GetAt(it);
+				receiver->Receive(param);
 			}
 
 			return ReturnT();
@@ -88,10 +80,10 @@ namespace duisharp {
 
 		virtual ReturnT Notify(ParamT param)
 		{
-			ReceiversVector::iterator it = receivers_.begin();
-			for (; it != receivers_.end(); ++it)
+			for (int it = 0; it < receivers_.GetSize(); ++it)
 			{
-				(*it)->Respond(param, this);
+				CReceiverImplBase<ReturnT, ParamT>* receiver = receivers_.GetAt(it);
+				receiver->Respond(param, this);
 			}
 
 			return ReturnT();
@@ -101,7 +93,7 @@ namespace duisharp {
 		class Iterator
 		{
 			CObserverImpl<ReturnT, ParamT> & _tbl;
-			size_t index;
+			int index;
 			CReceiverImplBase<ReturnT, ParamT>* ptr;
 		public:
 			Iterator( CObserverImpl & table )
@@ -114,21 +106,19 @@ namespace duisharp {
 
 			CReceiverImplBase<ReturnT, ParamT>* next()
 			{
-				if ( index >= _tbl.receivers_.size() )
+				if ( index >= _tbl.receivers_.GetSize() )
 					return NULL;
 
-				for ( ; index < _tbl.receivers_.size(); )
+				for ( ; index < _tbl.receivers_.GetSize(); )
 				{
-					ptr = _tbl.receivers_[ index++ ];
-					if ( ptr )
-						return ptr;
+					ptr = _tbl.receivers_.GetAt(index++);
+					if ( ptr ) return ptr;
 				}
 				return NULL;
 			}
 		};
 	protected:
-		typedef std::vector<CReceiverImplBase<ReturnT, ParamT>*> ReceiversVector;
-		ReceiversVector receivers_;
+		CStdPtrArrayImpl<CReceiverImplBase<ReturnT, ParamT>*> receivers_;
 	};
 
 
@@ -142,16 +132,12 @@ namespace duisharp {
 	public:
 		virtual void AddObserver(CObserverImplBase<ReturnT, ParamT>* observer)
 		{
-			observers_.push_back(observer);
+			observers_.Add(observer);
 		}
 
 		virtual void RemoveObserver()
 		{
-			ObserversVector::iterator it = observers_.begin();
-			for (; it != observers_.end(); ++it)
-			{
-				(*it)->RemoveReceiver(this);
-			}
+			observers_.Remove(observers_.Find((CObserverImplBase<ReturnT, ParamT>*)this));
 		}
 
 		virtual ReturnT Receive(ParamT param)
@@ -165,8 +151,7 @@ namespace duisharp {
 		}
 
 	protected:
-		typedef std::vector<CObserverImplBase<ReturnT, ParamT>*> ObserversVector;
-		ObserversVector observers_;
+		CStdPtrArrayImpl<CObserverImplBase<ReturnT, ParamT>*> observers_;
 	};
 
 } // namespace duisharp

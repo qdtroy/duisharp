@@ -32,15 +32,15 @@
         </HorizontalLayout>
         <HorizontalLayout>
           <List name="body_soft_catalog" style="body_catalog_style" >
-            <ListElement name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
-            <ListElement name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
-            <ListElement name="ossoft" text="装机必备" style="body_catalog_item_style" />
-            <ListElement name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
+            <ListItem name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListItem name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
+            <ListItem name="ossoft" text="装机必备" style="body_catalog_item_style" />
+            <ListItem name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
 
-            <ListElement name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
-            <ListElement name="playersoft" text="播放器" style="body_catalog_item_style" />
-            <ListElement name="browsersoft" text="浏览器" style="body_catalog_item_style" />
-            <ListElement name="safesoft" text="安全工具" style="body_catalog_item_style" />
+            <ListItem name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListItem name="playersoft" text="播放器" style="body_catalog_item_style" />
+            <ListItem name="browsersoft" text="浏览器" style="body_catalog_item_style" />
+            <ListItem name="safesoft" text="安全工具" style="body_catalog_item_style" />
           </List>
           <TabLayout name="body_soft_list">
             <WebBrowser bkcolor="#FF0000FF" name="webbrowser1" url="http://www.baidu.com" autonavi="true" />
@@ -77,15 +77,15 @@
         </HorizontalLayout>
         <HorizontalLayout>
           <List name="body_upgrade_catalog" style="body_catalog_style" >
-            <ListElement name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
-            <ListElement name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
-            <ListElement name="ossoft" text="装机必备" style="body_catalog_item_style" />
-            <ListElement name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
+            <ListItem name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListItem name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
+            <ListItem name="ossoft" text="装机必备" style="body_catalog_item_style" />
+            <ListItem name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
 
-            <ListElement name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
-            <ListElement name="playersoft" text="播放器" style="body_catalog_item_style" />
-            <ListElement name="browsersoft" text="浏览器" style="body_catalog_item_style" />
-            <ListElement name="safesoft" text="安全工具" style="body_catalog_item_style" />
+            <ListItem name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListItem name="playersoft" text="播放器" style="body_catalog_item_style" />
+            <ListItem name="browsersoft" text="浏览器" style="body_catalog_item_style" />
+            <ListItem name="safesoft" text="安全工具" style="body_catalog_item_style" />
           </List>
           <TabLayout name="body_upgrade_list">
             <WebBrowser bkcolor="#FF0000FF" name="webbrowser2" url="http://www.qq.com" autonavi="true" />
@@ -106,15 +106,15 @@
         </HorizontalLayout>
         <HorizontalLayout>
           <List name="body_uninstall_catalog" style="body_catalog_style" >
-            <ListElement name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
-            <ListElement name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
-            <ListElement name="ossoft" text="装机必备" style="body_catalog_item_style" />
-            <ListElement name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
+            <ListItem name="goodsoft" text="精品软件" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListItem name="hotsoft" text="热门软件" style="body_catalog_item_style" selected="true" />
+            <ListItem name="ossoft" text="装机必备" style="body_catalog_item_style" />
+            <ListItem name="qqsoft" text="QQ软件" style="body_catalog_item_style" />
 
-            <ListElement name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
-            <ListElement name="playersoft" text="播放器" style="body_catalog_item_style" />
-            <ListElement name="browsersoft" text="浏览器" style="body_catalog_item_style" />
-            <ListElement name="safesoft" text="安全工具" style="body_catalog_item_style" />
+            <ListItem name="kindsoft" text="软件分类" itemstyle="true" style="body_catalog_item_title_style" />
+            <ListItem name="playersoft" text="播放器" style="body_catalog_item_style" />
+            <ListItem name="browsersoft" text="浏览器" style="body_catalog_item_style" />
+            <ListItem name="safesoft" text="安全工具" style="body_catalog_item_style" />
           </List>
           <TabLayout name="body_uninstall_list">
             <WebBrowser bkcolor="#FF0000FF" name="webbrowser3" url="http://www.hao123.com" autonavi="true" />
@@ -137,7 +137,7 @@
     </HorizontalLayout>
 
     <!-- 系统按钮 -->
-    <HorizontalLayout name="syspanel" float="true" width="130" height="18" relativepadding="-1,0,0,-1" >
+    <HorizontalLayout name="syspanel" float="true" width="130" height="18" floatalign="top, right">
       <Control />
       <ExButton fade="true" name="minbtn" style="btn_style_min" />
       <ExButton fade="true" name="maxbtn" style="btn_style_max" />

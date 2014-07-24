@@ -32,19 +32,29 @@ public:
 #endif
 		LoadSkin(skin);
 
-		CQQFrame* pFrame = new CQQFrame();
+		return TRUE;
+	}
+
+	virtual int Run()
+	{
+		// 添加消息链
+		CUIMessageLoop msgLoop;
+		_App->AddMessageLoop(&msgLoop);
+
+		CMainFrame* pFrame = new CMainFrame();
 		if( pFrame == NULL ) return 0;
 		pFrame->Create(NULL, _T("TroyGame"), WS_OVERLAPPEDWINDOW, 0L, 0, 0, 296, 573);
 		
 		pFrame->CenterWindow();
 		::ShowWindow(*pFrame, SW_SHOW);
 
-		return TRUE;
-	}
+		// 消息运行
+		msgLoop.Run();
 
-	virtual int Run()
-	{
-		return CUIApp::Run();
+		// 移除消息链
+		_App->RemoveMessageLoop();
+
+		return 0;
 	}
 
 	virtual void Term()
@@ -54,3 +64,15 @@ public:
 };
 
 CMyApp myApp;
+
+int APIENTRY WinMain(HINSTANCE hInstance,
+	HINSTANCE hPrevInstance,
+	LPSTR     lpCmdLine,
+	int       nCmdShow)
+{
+	myApp.Init(hInstance);
+	myApp.Run();
+	myApp.Term();
+
+	return 0;
+}

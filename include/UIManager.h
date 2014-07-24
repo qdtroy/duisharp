@@ -181,14 +181,6 @@ public: \
 #define UIFIND_TOP_FIRST     0x00000008
 #define UIFIND_ME_FIRST      0x80000000
 
-	// Flags for the CDialogLayout stretching
-#define UISTRETCH_NEWGROUP   0x00000001
-#define UISTRETCH_NEWLINE    0x00000002
-#define UISTRETCH_MOVE_X     0x00000004
-#define UISTRETCH_MOVE_Y     0x00000008
-#define UISTRETCH_SIZE_X     0x00000010
-#define UISTRETCH_SIZE_Y     0x00000020
-
 	// Flags used for controlling the paint
 #define UISTATE_FOCUSED      0x00000001
 #define UISTATE_SELECTED     0x00000002
@@ -198,31 +190,52 @@ public: \
 #define UISTATE_READONLY     0x00000020
 #define UISTATE_CAPTURED     0x00000040
 
+	/////////////////////////////////////////////////////////////////////////////////////
+	// 浮动控件布局标识	
+#define UIICON_TOP			0x00000000
+#define UIICON_LEFT			0x00000000
+#define UIICON_CENTER		0x00000001
+#define UIICON_RIGHT		0x00000002
+#define UIICON_VCENTER		0x00000004
+#define UIICON_BOTTOM		0x00000008
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	// 浮动控件布局标识
+#define UIFLOAT_NULL		0x00000000
+#define UIFLOAT_LEFT		0x00000001
+#define UIFLOAT_CENTER		0x00000002
+#define UIFLOAT_RIGHT		0x00000004
+#define UIFLOAT_AUTO		0x00000008
+#define UIFLOAT_TOP			0x00000010
+#define UIFLOAT_VCENTER		0x00000020
+#define UIFLOAT_BOTTOM		0x00000040
+#define UIFLOAT_VAUTO		0x00000080
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 内部消息ID
-#define UIWM_BASE			WM_USER + 10
-#define UIWM_USER			WM_USER + 100
-
 typedef enum enUIWM
 {
-	UIWM_TIMER = UIWM_BASE + 1,
+	UIWM_TIMER = WM_USER + 10,
 	UIWM_MENU,
+	
+	//...
+
+	UIWM_USER = WM_USER + 100,
 };
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 定时器ID
-#define UITIMER_ID_BASE			10
-
-#define UITIMER_ID_SETFOCUS		UITIMER_ID_BASE + 1
-#define UITIMER_ID_SCROLLBAR	UITIMER_ID_BASE + 2
-#define UITIMER_ID_SLIDER		UITIMER_ID_BASE + 3
-#define UITIMER_ID_EFFECT		UITIMER_ID_BASE + 4
-
-#define UITIMER_ID_ANIMATION	UITIMER_ID_BASE + 10
-
-#define UITIMER_ID_USER			UITIMER_ID_BASE + 100
-
+typedef enum enUITIMER
+{
+	UITIMER_ID_SETFOCUS = 10,
+	UITIMER_ID_SCROLLBAR,
+	UITIMER_ID_SLIDER,
+	UITIMER_ID_EFFECT,
+	//...
+	UITIMER_ID_ANIMATION = 50,
+	//...
+	UITIMER_ID_USER = 100,
+};
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -294,17 +307,6 @@ typedef enum enUIWM
 		LPARAM lParam;
 	} TUINotify;
 
-	// Structure for relative position to the parent
-	typedef struct tagTUIRelativePos
-	{
-		bool bRelative;
-		SIZE szParent;
-		int nMoveXPercent;
-		int nMoveYPercent;
-		int nZoomXPercent;
-		int nZoomYPercent;
-	}TUIRelativePos;
-
 	// Listener interface
 	class IUINotify
 	{
@@ -338,8 +340,8 @@ typedef enum enUIWM
 		void ReloadRes();
 
 		HDC GetPaintDC() const;
-		HWND GetPaintWindow() const;
-		HWND GetTooltipWindow() const;
+		HWND GetUIWindow() const;
+		HWND GetTTWindow() const;
 
 		POINT GetMousePos() const;
 		SIZE GetClientSize() const;
@@ -359,10 +361,13 @@ typedef enum enUIWM
 		void SetTransparent(int nOpacity);
 		bool IsBackgroundTransparent() const;
 		void SetBackgroundTransparent(bool bTrans);
-		bool IsAero() const;
+		bool IsAero(bool bAero = false) const;
 		void SetAero(bool bAero);
+		void SetMargins(MARGINS mar);
+		MARGINS GetMargins() const;
 		bool IsBlur() const;
-		void SetBlur(bool bBlur, bool bEnabled = true);
+		void SetBlur(bool bBlur);
+		void SetRgn();
 		bool IsShowUpdateRect() const;
 		void SetShowUpdateRect(bool show);
 
@@ -371,6 +376,9 @@ typedef enum enUIWM
 		void SetShadowImage(LPCTSTR pImage);
 		void SetShadowBorder(RECT rcBorder);
 		void SetShadowTrans(bool bTrans);
+
+		void SetPreventLostFocus(bool bPrevent);
+		bool IsPreventLostFocus() const;
 
 		bool UseParentResource(CUIManager* pm);
 		CUIManager* GetParentResource() const;
@@ -492,10 +500,9 @@ typedef enum enUIWM
 		HDC m_hDcPaint;
 		HDC m_hDcBuffer;
 		HBITMAP m_hBmpBuffer;
-		// Vista系统及以上绘图使用
+		LPBYTE m_pBufferBits;
 		BP_PAINTPARAMS m_PaintParams;
 		CUIBufferedPaint m_BufferedPaint;
-
 		HWND m_hToolTip;
 		TOOLINFO m_ToolTip;
 		bool m_bShowUpdateRect;
@@ -522,8 +529,10 @@ typedef enum enUIWM
 		bool m_bAlphaBackground;
 		bool m_bAero;
 		bool m_bBlur;
+		MARGINS m_Margins;
 		bool m_bMouseTracking;
 		bool m_bMouseCapture;
+		bool m_bPreventLostFocus;
 		//
 		CStdPtrArray m_aNotifiers;
 		CStdPtrArray m_aTimers;

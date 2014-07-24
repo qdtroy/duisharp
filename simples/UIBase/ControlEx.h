@@ -1,5 +1,8 @@
 #pragma once
 
+#include <vector>
+using namespace std;
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////
 
@@ -21,7 +24,7 @@ public:
 public:
 	LPCTSTR GetClass() const
 	{
-		return _T("EXButtonUI");
+		return _T("UIEXButton");
 	}
 
 	LPVOID GetInterface(LPCTSTR pstrName)
@@ -103,7 +106,7 @@ public:
 		int _level;
 		bool _expand;
 		CStdString _text;
-		CUIListElement* _pListElement;
+		CUIListItem* _pListItem;
 	};
 
 	class Node
@@ -164,7 +167,7 @@ public:
 		_root = new Node;
 		_root->data()._level = -1;
 		_root->data()._expand = true;
-		_root->data()._pListElement = NULL;
+		_root->data()._pListItem = NULL;
 	}
 
 	~CUIQQList() { if(_root) delete _root; }
@@ -188,10 +191,10 @@ public:
 		if( !pControl ) return false;
 		if( _tcscmp(pControl->GetClass(), _T("ListLabelElementUI")) != 0 ) return false;
 
-		if (reinterpret_cast<Node*>(static_cast<CUIListElement*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()) == NULL)
+		if (reinterpret_cast<Node*>(static_cast<CUIListItem*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()) == NULL)
 			return CUIList::Remove(pControl);
 		else
-			return RemoveNode(reinterpret_cast<Node*>(static_cast<CUIListElement*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()));
+			return RemoveNode(reinterpret_cast<Node*>(static_cast<CUIListItem*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()));
 	}
 
 	bool RemoveAt(int iIndex)
@@ -200,10 +203,10 @@ public:
 		if( !pControl ) return false;
 		if( _tcscmp(pControl->GetClass(), _T("ListLabelElementUI")) != 0 ) return false;
 
-		if (reinterpret_cast<Node*>(static_cast<CUIListElement*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()) == NULL)
+		if (reinterpret_cast<Node*>(static_cast<CUIListItem*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()) == NULL)
 			return CUIList::RemoveAt(iIndex);
 		else
-			return RemoveNode(reinterpret_cast<Node*>(static_cast<CUIListElement*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()));
+			return RemoveNode(reinterpret_cast<Node*>(static_cast<CUIListItem*>(pControl->GetInterface(_T("ListLabelElement")))->GetTag()));
 	}
 
 	void RemoveAll()
@@ -218,7 +221,7 @@ public:
 		_root = new Node;
 		_root->data()._level = -1;
 		_root->data()._expand = true;
-		_root->data()._pListElement = NULL;
+		_root->data()._pListItem = NULL;
 	}
 
 	Node* GetRoot() { return _root; }
@@ -228,13 +231,13 @@ public:
 		bool bFirst = parent ? false : true;
 		if( !parent ) parent = _root;
 
-		CUIListElement* pListElement = new CUIListElement;
-		pListElement->SetName(_T("listitem"));
+		CUIListItem* pListItem = new CUIListItem;
+		pListItem->SetName(_T("listitem"));
 		if(!bFirst) {
-			pListElement->SetFixedHeight(56);
+			pListItem->SetFixedHeight(56);
 		}
 		else {
-			pListElement->SetFixedHeight(32);
+			pListItem->SetFixedHeight(32);
 		}
 		Node* node = new Node;
 		node->data().id = id;
@@ -242,11 +245,11 @@ public:
 		if( node->data()._level == 0 ) node->data()._expand = true;
 		else node->data()._expand = false;
 		node->data()._text = text;
-		node->data()._pListElement = pListElement;
+		node->data()._pListItem = pListItem;
 
 		if( parent != _root ) {
-			if( !(parent->data()._expand && parent->data()._pListElement->IsVisible()) )
-				pListElement->SetInternVisible(false);
+			if( !(parent->data()._expand && parent->data()._pListItem->IsVisible()) )
+				pListItem->SetInternVisible(false);
 		}
 
 		CStdString html_text;
@@ -256,20 +259,20 @@ public:
 			else html_text += _T("<a><i tree_expand.png 2 0></a>");
 		}
 		html_text += node->data()._text;
-		pListElement->SetText(html_text);
-		pListElement->SetTag((UINT_PTR)node);
+		pListItem->SetText(html_text);
+		pListItem->SetTag((UINT_PTR)node);
 
 		int index = 0;
 		if( parent->has_children() ) {
 			Node* prev = parent->get_last_child();
-			index = prev->data()._pListElement->GetIndex() + 1;
+			index = prev->data()._pListItem->GetIndex() + 1;
 		}
 		else {
 			if( parent == _root ) index = 0;
-			else index = parent->data()._pListElement->GetIndex() + 1;
+			else index = parent->data()._pListItem->GetIndex() + 1;
 		}
-		if( !CUIList::AddAt(pListElement, index) ) {
-			delete pListElement;
+		if( !CUIList::AddAt(pListItem, index) ) {
+			delete pListItem;
 			delete node;
 			node = NULL;
 		}
@@ -284,7 +287,7 @@ public:
 			Node* child = node->child(i);
 			RemoveNode(child);
 		}
-		CUIList::Remove(node->data()._pListElement);
+		CUIList::Remove(node->data()._pListItem);
 		node->parent()->remove_child(node);
 		delete node;
 		return true;
@@ -304,19 +307,19 @@ public:
 			else html_text += _T("<a><i tree_expand.png 2 0></a>");
 		}
 		html_text += node->data()._text;
-		node->data()._pListElement->SetText(html_text);
+		node->data()._pListItem->SetText(html_text);
 
-		if( !node->data()._pListElement->IsVisible() ) return;
+		if( !node->data()._pListItem->IsVisible() ) return;
 		if( !node->has_children() ) return;
 
 		Node* begin = node->child(0);
 		Node* end = node->get_last_child();
-		int nFirst = begin->data()._pListElement->GetIndex();
-		for( int i = nFirst; i <= end->data()._pListElement->GetIndex(); ++i ) {
+		int nFirst = begin->data()._pListItem->GetIndex();
+		for( int i = nFirst; i <= end->data()._pListItem->GetIndex(); ++i ) {
 			CUIControl* control = GetItemAt(i);
 			if( _tcsicmp(control->GetName(), _T("listitem")) == 0 ) {
 				Node* local_parent = ((CUIQQList::Node*)control->GetTag())->parent();
-				control->SetInternVisible(local_parent->data()._expand && local_parent->data()._pListElement->IsVisible());
+				control->SetInternVisible(local_parent->data()._expand && local_parent->data()._pListItem->IsVisible());
 			}
 		}
 
@@ -325,8 +328,8 @@ public:
 
 	SIZE GetExpanderSizeX(Node* node) const
 	{
-		if( !node || node == _root ) return duisharp::CSize();
-		if( node->data()._level >= 3 ) return duisharp::CSize();
+		if( !node || node == _root ) return duisharp::CStdSize();
+		if( node->data()._level >= 3 ) return duisharp::CStdSize();
 
 		SIZE szExpander = {0};
 		szExpander.cx = 6 + 24 * node->data()._level - 4/*适当放大一点*/;
@@ -352,13 +355,13 @@ static CUIControl* CreateControlEx(LPCTSTR pstrClass)
 
 static bool HitControlEx(LPCTSTR pstrClass)
 {
-	if( _tcsicmp(pstrClass, _T("EXButtonUI")) == 0 ||
-		_tcsicmp(pstrClass, _T("EXProgressUI")) == 0 ||
-		_tcsicmp(pstrClass, _T("ButtonUI")) == 0 ||
-		_tcsicmp(pstrClass, _T("TextUI")) == 0 ||
-		_tcsicmp(pstrClass, _T("EditUI")) == 0 ||
-		_tcsicmp(pstrClass, _T("ComboUI")) == 0 ||
-		_tcsicmp(pstrClass, _T("CalenderUI")) == 0)
+	if( _tcsicmp(pstrClass, _T("UIEXButton")) == 0 ||
+		_tcsicmp(pstrClass, _T("UIEXProgress")) == 0 ||
+		_tcsicmp(pstrClass, _T("UIButton")) == 0 ||
+		_tcsicmp(pstrClass, _T("UIText")) == 0 ||
+		_tcsicmp(pstrClass, _T("UIEdit")) == 0 ||
+		_tcsicmp(pstrClass, _T("UICombo")) == 0 ||
+		_tcsicmp(pstrClass, _T("UICalendar")) == 0)
 	{
 		return true;
 	}
