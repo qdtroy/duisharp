@@ -1,7 +1,5 @@
-duisharp
+duisharp 界面库
 ========
-
-duisharp v1.0 Beta
 
 介绍：duisharp是采用DirectUI技术的一套轻量级C++UI库。
 
@@ -12,4 +10,6 @@ duisharp v1.0 Beta
 4、支持Png背景窗口透明（高效处理透明绘制）
 5、UI库原生支持控件动画
 
-duisharp交流群：（221499948）
+duisharp交流群：221499948
+
+By Troy（QQ：656067418）
