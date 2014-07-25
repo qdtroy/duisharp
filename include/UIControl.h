@@ -143,8 +143,12 @@ namespace duisharp {
 		virtual void SetFocus();
 
 		// 定时器函数
-		bool SetTimer(UINT nTimerID, UINT nElapse);
+		bool SetTimer(UINT nTimerID, UINT iElapse);
 		void KillTimer(UINT nTimerID);
+
+		// 通知消息函数
+		void SendNotify(LPCTSTR pstrMessage, WPARAM wParam = 0, LPARAM lParam = 0, BOOL bAsync = FALSE);
+		void SendNotify(TUINotify& Msg, BOOL bAsync = FALSE);
 
 		// 特效函数
 		virtual bool IsEffectRunning(UINT uEffect);

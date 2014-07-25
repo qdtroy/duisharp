@@ -57,7 +57,7 @@ using namespace Gdiplus;
 #include "UIBase.h"
 #include "UIBufferedPaint.h"
 #include "UIMarkup.h"
-#include "UIResManager.h"
+#include "UIRes.h"
 #include "UIShadow.h"
 #include "UIManager.h"
 #include "UIRender.h"
@@ -88,5 +88,5 @@ using namespace Gdiplus;
 #pragma comment( lib, "Uxtheme.lib" )
 #pragma comment( lib, "comctl32.lib" )
 #pragma comment( lib, "GdiPlus.lib" )
-#pragma comment(lib, "shlwapi.lib")
+#pragma comment( lib, "shlwapi.lib" )
 

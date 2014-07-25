@@ -6,12 +6,12 @@ namespace duisharp {
 	//
 
 	class CComboWnd;
-	class CComboEdit;
+	class IUIComboEdit;
 
 	class DUISHARP_API CUICombo : public CUIContainer, public IUIListOwner
 	{
 		friend CComboWnd;
-		friend CComboEdit;
+		friend IUIComboEdit;
 	public:
 		CUICombo();
 
@@ -97,10 +97,11 @@ namespace duisharp {
 		void DoEvent(TUIEvent& event);
 		void SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
 		void DoPaint(HDC hDC, const RECT& rcPaint, UINT uType = 0);
+		void PaintText(HDC hDC);
 
 	protected:
 		CComboWnd* m_pWindow;
-		CComboEdit* m_pEdit;
+		IUIComboEdit* m_pEdit;
 
 		bool m_bComposited;
 		bool m_bDropList;
@@ -111,7 +112,37 @@ namespace duisharp {
 
 		TUIListInfo m_ListInfo;
 	};
+	
+	class IUIComboEdit
+	{
+	public:
+		IUIComboEdit();
+		~IUIComboEdit();
 
+	public:
+		virtual void Init(CUICombo* pOwner) = 0;
+		virtual BOOL InitBegin(CUICombo* pOwner);
+		virtual void InitEnd();
+		virtual HWND GetEditWnd() = 0;
+		virtual BOOL IsWindow();
+		virtual RECT CalPos();
+		virtual void SetSelAll();
+		virtual LRESULT HandleMessage(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnKeyMsg(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnChar(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnSetFocus(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnKillFocus(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnEditChanged(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnCtrlColor(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+
+	protected:
+		BOOL m_bInit;
+		CUICombo* m_pOwner;
+		HBRUSH m_hBkBrush;
+		HWND m_hParent;
+		UINT m_uStyle;
+		RECT m_rcItem;
+	};
 } // namespace duisharp
 
 #endif // __UICOMBO_H__

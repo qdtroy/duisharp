@@ -53,7 +53,7 @@ namespace duisharp {
 		virtual HINSTANCE GetInstance();
 		virtual HINSTANCE GetResInstance();
 		virtual CStdString GetInstancePath();
-		virtual CUIResManager* GetResMgr();
+		virtual CUIRes* GetResMgr();
 		
 	public:
 		virtual int LoadSkin(TUISkin skin);
@@ -75,7 +75,7 @@ namespace duisharp {
 		HWND m_hMainWnd;
 		HINSTANCE m_hInstance;
 		HINSTANCE m_hResInstance;
-		CUIResManager m_ResMgr;
+		CUIRes m_ResMgr;
 		DWORD m_dwMainThreadID;
 		CStdStringPtrMapImpl<CUIMessageLoop*>* m_pMsgLoopMap;
 		CStdPtrArrayImpl<CUIManager*> m_aManagers;
