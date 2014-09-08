@@ -133,7 +133,7 @@ namespace duisharp {
 		bool Remove(CUIControl* pControl);
 		bool RemoveAt(int iIndex);
 		void RemoveAll();
-		bool Sort(SORTCONTROLPROC Proc);
+		bool Sort(LPSORTPROC Proc, LPVOID pData = NULL);
 
 		void EnsureVisible(int iIndex);
 		void Scroll(int dx, int dy);
@@ -229,7 +229,7 @@ namespace duisharp {
 	public:
 		CUIListBody(CUIList* pOwner);
 
-		bool Sort(SORTCONTROLPROC Proc);
+		virtual bool Sort(LPSORTPROC Proc, LPVOID pData = NULL);
 
 		void SetScrollPos(SIZE szPos);
 		void SetPos(RECT rc);

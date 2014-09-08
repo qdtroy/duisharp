@@ -12,8 +12,9 @@ namespace duisharp {
 		CUILabel();
 
 	public:
-		LPCTSTR GetClass() const;
-		LPVOID GetInterface(LPCTSTR pstrName);
+		virtual LPCTSTR GetClass() const;
+		virtual LPVOID GetInterface(LPCTSTR pstrName);
+		virtual RECT GetIconRect();
 
 	public:
 		LPCTSTR GetIconImage();
@@ -31,9 +32,6 @@ namespace duisharp {
 
 		void PaintIconImage(HDC hDC);
 		void PaintText(HDC hDC);
-
-	protected:
-		RECT CalIconRect();
 
 	protected:
 		CStdString m_sIconImage;
@@ -109,7 +107,7 @@ namespace duisharp {
 		virtual LPCTSTR GetGroup() const;
 		virtual void SetGroup(LPCTSTR pStrGroupName = NULL);
 		virtual bool IsSelected() const;
-		virtual void Selected(bool bSelected);
+		virtual void SetSelected(bool bSelected);
 
 		// 渐隐渐显特效参数
 		virtual bool IsFade() const;
@@ -426,25 +424,36 @@ namespace duisharp {
 		CStdString m_sDisabledImage;
 		DWORD m_dwEditbkColor;
 	};
-
+	
 	class IUIEdit
 	{
 	public:
 		IUIEdit();
+		~IUIEdit();
 
 	public:
 		virtual void Init(CUIEdit* pOwner) = 0;
+		virtual BOOL InitBegin(CUIEdit* pOwner);
+		virtual void InitEnd();
 		virtual HWND GetEditWnd() = 0;
-		virtual bool IsWindow();
+		virtual BOOL IsWindow();
 		virtual RECT CalPos();
 		virtual void SetSelAll();
+		virtual LRESULT HandleMessage(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnKeyMsg(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnChar(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+		virtual LRESULT OnSetFocus(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		virtual LRESULT OnKillFocus(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		virtual LRESULT OnEditChanged(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
 		virtual LRESULT OnCtrlColor(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);
+
 	protected:
+		BOOL m_bInit;
 		CUIEdit* m_pOwner;
 		HBRUSH m_hBkBrush;
-		bool m_bInit;
+		HWND m_hParent;
+		UINT m_uStyle;
+		RECT m_rcItem;
 	};
 
 	/////////////////////////////////////////////////////////////////////////////////////

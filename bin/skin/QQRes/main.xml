@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window size="281,532" mininfo="281,532" sizebox="4,4,4,4" caption="0,0,0,136" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
-
-  <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1430,250,0,0' fade='200'">
+<Window size="281,532" mininfo="281,532" sizebox="4,4,4,4" caption="0,0,0,136" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAIN_SHADOW' corner='8,8,8,8'">
+  <VerticalLayout name="root" bkcolor="#FF2d456c">
     <VerticalLayout height="136" >
       <HorizontalLayout height="22" inset="6">
         <!-- 系统标题 -->
-        <Label name="titlebar" text="QQ2012" height="22" font="font12b" glowsize="6" />
+        <Label name="titlebar" text="QQ2012" height="22" font="font12b"/>
         <Control />
         <!-- 系统按钮 -->
         <ExButton fade="true" name="skinbtn" style="btn_style_skin" />
@@ -20,22 +19,22 @@
         <VerticalLayout>
           <HorizontalLayout>
             <ExButton name="statusbtn" style="statusbtn_style" height="22" width="38" iconimage="res='IDB_GG_IMONLINE' dest='1,1,21,21'"/>
-            <ExButton name="nicknamebtn" height="22" autowidth="true" text="duisharp" textpadding="6,0,0,0" glowsize="6" font="font13b"/>
-            <ExButton name="levevaluebtn" height="7" width="10" bkimage="IDB_LEVEL" padding="4,9,0,0" glowsize="8" font="font13b"/>
-            <ExButton name="levevaluebtn" height="7" width="30" bkimage="res='IDB_LEVEL_VALUE' source='6,0,18,7' dest='0,0,12,7'" padding="0,9,0,0" glowsize="8" font="font13b"/>
+            <ExButton name="nicknamebtn" height="22" autowidth="true" text="duisharp" textpadding="6,0,0,0" font="font13b"/>
+            <ExButton name="levevaluebtn" height="7" width="10" bkimage="IDB_LEVEL" padding="4,9,0,0" font="font13b"/>
+            <ExButton name="levevaluebtn" height="7" width="30" bkimage="res='IDB_LEVEL_VALUE' source='6,0,18,7' dest='0,0,12,7'" padding="0,9,0,0" font="font13b"/>
           </HorizontalLayout>
 
           <HorizontalLayout padding="0,0,48,0">
-            <Edit name="myword" hint="请输入个性签名" style="edit_style" width="0" height="19" textpadding="7,0,7,0" font="font12" composited="true" glowsize="6"/>
+            <Edit name="myword" hint="请输入个性签名" style="edit_style" width="0" height="19" textpadding="7,0,7,0" font="font12" composited="true"/>
           </HorizontalLayout>
 
           <HorizontalLayout childpadding="1" inset="0,0,6,0">
-            <ExButton style="allbtn_style" text="10" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_ZONE' dest='1,1,21,21'"/>
-            <ExButton style="allbtn_style" text="10" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_WEIBO' dest='2,2,20,20'"/>
-            <ExButton style="allbtn_style" text="10" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_EMAIL' dest='1,1,21,21'"/>
-            <ExButton style="allbtn_style" text="20" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_XIAOYOU' dest='3,3,19,19'"/>
+            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_ZONE' dest='1,1,21,21'"/>
+            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_WEIBO' dest='2,2,20,20'"/>
+            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_EMAIL' dest='1,1,21,21'"/>
+            <ExButton style="allbtn_style" text="20" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_XIAOYOU' dest='3,3,19,19'"/>
             <Control />
-            <ExButton style="allbtn_style" text="" glowsize="3" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_MSGMGR' dest='1,1,21,21'"/>
+            <ExButton style="allbtn_style" text="" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_MSGMGR' dest='1,1,21,21'"/>
           </HorizontalLayout>
         </VerticalLayout>
 
@@ -44,7 +43,7 @@
       </HorizontalLayout>
 
       <HorizontalLayout name="searchbg" height="30" bkimage="res='IDB_MAINSEARCH_BG' fade='255' corner='4,4,4,4'" inset="4,0,4,0" >
-        <Edit name="searchedit" hint="搜索联系人..." padding="0,3,0,3" bkcolor="#FFFFFFFF" nativebkcolor="#FFFFFFFF" composited="true" glowsize="0"/>
+        <Edit name="searchedit" hint="搜索联系人..." padding="0,3,0,3" bkcolor="#FFFFFFFF" nativebkcolor="#FFFFFFFF" composited="true" />
         <ExButton name="searchmenu" width="31" height="28" padding="0,1,0,1" bkimage="IDB_MAINSEARCH_MENU"/>
       </HorizontalLayout>
     </VerticalLayout>
@@ -96,7 +95,7 @@
         <HorizontalLayout childpadding="6">
           <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TOOLS' dest='1,1,21,21'"/>
           <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MESSAGE' dest='1,1,21,21'"/>
-          <ExButton style="allbtn_style" width="56" text="查找" textstyle="vcenter" textpadding="22,0,0,0" glowsize="0" iconimage="res='IDB_APPICON_FIND' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" width="56" text="查找" textstyle="vcenter" textpadding="22,0,0,0" iconimage="res='IDB_APPICON_FIND' dest='1,1,21,21'"/>
         </HorizontalLayout>
       </VerticalLayout>
     </HorizontalLayout>

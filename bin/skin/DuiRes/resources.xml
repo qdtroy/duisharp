@@ -63,6 +63,10 @@
     <Image id="IDB_MAIN_TAB_LAST_SELECTED" path="images/maingroup/icon_last_selected.png" />
 
     <Image id="IDB_CHAT_COMBO" path="images/chat/combo.png" />
+
+    <!-- 滚动条资源图片 -->
+    <Image id="IDB_VSCROLLBAR" path="images/vscrollbar.png"/>
+    <Image id="IDB_HSCROLLBAR" path="images/hscrollbar.png"/>
   </Images>
   
 
@@ -83,6 +87,9 @@
   </Fonts>
 
   <Styles>
+    <Style id="VScrollBar" width="8" showbutton1="false" showbutton2="false" thumbnormalimage="file='IDB_VSCROLLBAR' source='0,60,8,100' corner='0,4,0,4'" thumbhotimage="file='IDB_VSCROLLBAR' source='8,60,16,100' corner='0,4,0,4'" thumbpushedimage="file='IDB_VSCROLLBAR' source='16,60,24,100' corner='0,4,0,4'" railnormalimage="" railhotimage="" railpushedimage="" raildisabledimage="" bknormalimage="file='IDB_VSCROLLBAR' source='0,0,8,60' corner='0,4,0,4'" bkhotimage="" bkpushedimage="" bkdisabledimage="" />
+    <Style id="HScrollBar" height="8" showbutton1="false" showbutton2="false" thumbnormalimage="file='IDB_HSCROLLBAR' source='0,0,32,8' corner='4,0,4,0'" thumbhotimage="file='IDB_HSCROLLBAR' source='0,8,32,16' corner='4,0,4,0'" thumbpushedimage="file='IDB_HSCROLLBAR' source='0,16,32,24' corner='4,0,4,0'" railnormalimage="" railhotimage="" railpushedimage="" raildisabledimage="" bknormalimage="file='IDB_HSCROLLBAR' source='0,0,32,8' corner='4,0,4,0'" bkhotimage="" bkpushedimage="" bkdisabledimage="" />
+
     <Style id="btn_style_menu" width="28" height="20" normalimage="res='IDB_SYSBTN_MENU_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MENU_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MENU_PUSHED' dest='0,-2,28,18'"/>
     <Style id="btn_style_min" width="28" height="20" normalimage="res='IDB_SYSBTN_MINI_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MINI_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MINI_PUSHED' dest='0,-2,28,18'"/>
     <Style id="btn_style_max" width="28" height="20" normalimage="res='IDB_SYSBTN_MAX_NORMAL' dest='0,-2,28,18'" hotimage="res='IDB_SYSBTN_MAX_HOT' dest='0,-2,28,18'" pushedimage="res='IDB_SYSBTN_MAX_PUSHED' dest='0,-2,28,18'" />
