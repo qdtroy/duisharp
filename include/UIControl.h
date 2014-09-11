@@ -147,8 +147,13 @@ namespace duisharp {
 		void KillTimer(UINT nTimerID);
 
 		// 通知消息函数
+<<<<<<< HEAD
 		void SendNotify(LPCTSTR pstrMessage, WPARAM wParam = 0, LPARAM lParam = 0, bool bAsync = false);
 		void SendNotify(TUINotify& Msg, bool bAsync = false);
+=======
+		void SendNotify(LPCTSTR pstrMessage, WPARAM wParam = 0, LPARAM lParam = 0, BOOL bAsync = FALSE);
+		void SendNotify(TUINotify& Msg, BOOL bAsync = FALSE);
+>>>>>>> origin/master
 
 		// 特效函数
 		virtual bool IsEffectRunning(UINT uEffect);
