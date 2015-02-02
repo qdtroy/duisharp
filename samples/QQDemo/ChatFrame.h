@@ -9,7 +9,7 @@ public:
 	CChatFrame()
 	{
 		Create(NULL, _T("chatframe"), WS_OVERLAPPEDWINDOW | WS_VISIBLE, 0);
-	} 
+	}
 
 public:
 	BEGIN_UIMSG_MAP(CChatFrame)

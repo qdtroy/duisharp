@@ -96,8 +96,6 @@ public:
 public:
 	void OnWindowInit(CUIControl* pControl, WPARAM wParam, LPARAM lParam)
 	{
-		pControl->SetEffect(Effect_VExpandCenter);
-		pControl->StartEffect(80);
 	}
 
 	void OnSysBtnLClick(CUIControl* pControl, WPARAM wParam, LPARAM lParam)

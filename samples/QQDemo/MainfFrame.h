@@ -82,7 +82,7 @@ public:
 		return ::HitControlEx(pControl);
 	}
 
-	void ChangeTheme()
+	void OnThemeChanged()
 	{
 		if(m_ui.IsAero())
 		{

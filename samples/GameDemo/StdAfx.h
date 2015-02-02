@@ -10,10 +10,18 @@
 #include "..\..\Include\DuiSharp.h"
 using namespace duisharp;
 
+#ifndef _WIN64
 #ifdef _DEBUG
 # pragma comment(lib, "..\\..\\Lib\\duisharp_d.lib")
 #else
 # pragma comment(lib, "..\\..\\Lib\\duisharp.lib")
+#endif
+#else
+#ifdef _DEBUG
+# pragma comment(lib, "..\\..\\Lib\\duisharp_x64_d.lib")
+#else
+# pragma comment(lib, "..\\..\\Lib\\duisharp_x64.lib")
+#endif
 #endif
 
 //{{AFX_INSERT_LOCATION}}
