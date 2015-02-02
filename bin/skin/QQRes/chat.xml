@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window size="537,484" mininfo="537,484" sizebox="4,4,4,4" caption="0,0,0,86" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAINFRAME_AERO' corner='8,8,8,8'">
+<Window size="537,484" mininfo="537,484" sizebox="4,4,4,4" caption="0,0,0,86" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAIN_SHADOW' corner='8,8,8,8'">
 
   <VerticalLayout name="root" bkimage="res='IDB_MAINFRAME_BG' corner='1430,250,0,0' fade='200'">
     <HorizontalLayout height="85">

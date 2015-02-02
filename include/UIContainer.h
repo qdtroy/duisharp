@@ -4,8 +4,16 @@
 namespace duisharp {
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
+	// 容器子控件的对齐方式
+#define CA_NULL			0x00000000
+#define CA_LEFT			0x00000001
+#define CA_CENTER		0x00000002
+#define CA_RIGHT		0x00000004
+#define CA_TOP			0x00000010
+#define CA_VCENTER		0x00000020
+#define CA_BOTTOM		0x00000040
 
-	typedef bool (*SORTCONTROLPROC)(CUIControl* pCtrl1, CUIControl* pCtrl2);
+	typedef int (*LPSORTPROC)(LPCVOID pCtrl1, LPCVOID pCtrl2, LPVOID pData);
 
 	class IUIContainer
 	{
@@ -50,7 +58,7 @@ namespace duisharp {
 	//
 	class CUIScrollBar;
 
-	class DUISHARP_API CUIContainer : public IUIContainer, public CUIButton
+	class CUIContainer : public IUIContainer, public CUIButton
 	{
 	public:
 		CUIContainer();
@@ -87,6 +95,8 @@ namespace duisharp {
 		virtual void SetDelayedDestroy(bool bDelayed);
 		virtual bool IsMouseChildEnabled() const;
 		virtual void SetMouseChildEnabled(bool bEnable = true);
+		virtual int GetAlign();
+		virtual void SetAlign(int uAlign);
 
 		CStdString GetSubControlText(LPCTSTR pstrSubControlName);
 		int GetSubControlFixedHeight(LPCTSTR pstrSubControlName);
@@ -133,7 +143,8 @@ namespace duisharp {
 		//////////////////////////////////////////////////////////////////
 		// 布局排序
 		virtual void SetPos(RECT rc);
-		virtual bool Sort(SORTCONTROLPROC Proc);
+		virtual bool Sort(LPSORTPROC Proc, LPVOID pData = NULL);
+		virtual SIZE EstimateSize(SIZE szAvailable, bool bSized = true);
 
 		void DoEvent(TUIEvent& event);
 		void DoPaint(HDC hDC, const RECT& rcPaint, UINT uType = 0);
@@ -142,6 +153,7 @@ namespace duisharp {
 
 	protected:
 		virtual void ProcessScrollBar(RECT rc, int cxRequired, int cyRequired);
+		static int __cdecl SortFunc(LPVOID pOwner, LPCVOID pCtrl1, LPCVOID pCtrl2);
 
 	protected:
 		CStdPtrArray m_items;
@@ -151,8 +163,12 @@ namespace duisharp {
 		bool m_bAutoDestroy;
 		bool m_bDelayedDestroy;
 		bool m_bMouseChildEnabled;
-		bool m_bScrollProcess; // 防止SetPos循环调用
-		bool m_bEventContainer;	 // 是否接收鼠标事件
+		bool m_bScrollProcess;		// 防止SetPos循环调用
+		bool m_bEventContainer;		// 是否接收鼠标事件
+		UINT m_uAlign;				// 子控件对齐方式
+
+		LPSORTPROC m_pSortFunc;
+		LPVOID m_pSortData;
 
 		CUIScrollBar* m_pVerticalScrollBar;
 		CUIScrollBar* m_pHorizontalScrollBar;

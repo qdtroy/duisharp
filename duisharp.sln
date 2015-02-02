@@ -1,21 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQSoftMgr", "simples\QQSoftMgr\QQSoftMgr.vcxproj", "{463FE628-A176-4C58-B005-3924BFD1E4E6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQSoftMgr", "samples\QQSoftMgr\QQSoftMgr.vcxproj", "{463FE628-A176-4C58-B005-3924BFD1E4E6}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo", "simples\QQDemo\QQDemo.vcxproj", "{3416DAA1-5661-40E2-A191-C06F54673424}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo", "samples\QQDemo\QQDemo.vcxproj", "{3416DAA1-5661-40E2-A191-C06F54673424}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameDemo", "simples\GameDemo\GameDemo.vcxproj", "{A95EAEF5-9131-4585-B621-2AD254CA405E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameDemo", "samples\GameDemo\GameDemo.vcxproj", "{A95EAEF5-9131-4585-B621-2AD254CA405E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiDemo", "simples\DuiDemo\DuiDemo.vcxproj", "{4B2D413D-8542-4414-BD62-C1006F16405B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiDemo", "samples\DuiDemo\DuiDemo.vcxproj", "{4B2D413D-8542-4414-BD62-C1006F16405B}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlashDemo", "simples\FlashDemo\FlashDemo.vcxproj", "{161DDBD6-405B-4863-B08F-7AE5BBC92EE1}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlashDemo", "samples\FlashDemo\FlashDemo.vcxproj", "{161DDBD6-405B-4863-B08F-7AE5BBC92EE1}"
 EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Debug|x64 = Debug|x64
@@ -58,5 +54,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal

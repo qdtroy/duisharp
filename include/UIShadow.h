@@ -32,6 +32,7 @@ namespace duisharp
 		// 父窗口消息处理函数
 		static LRESULT CALLBACK ParentProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 		static LRESULT CALLBACK WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+		LRESULT OnWndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 		LRESULT OnParentProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 		// 刷新
 		void Update(HWND hParent);
@@ -57,6 +58,8 @@ namespace duisharp
 		bool m_bEnabled;
 		// 是否投过鼠标消息
 		bool m_bTrans;
+		// 是否主动移动
+		bool m_bMoving;
 		// 阴影大小
 		RECT m_rcBorder;
 		// 偏移量

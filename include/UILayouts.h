@@ -6,7 +6,7 @@ namespace duisharp {
 	class CUIContainer;
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
-	class DUISHARP_API CUIVerticalLayout : public CUIContainer
+	class CUIVerticalLayout : public CUIContainer
 	{
 	public:
 		CUIVerticalLayout();
@@ -39,7 +39,7 @@ namespace duisharp {
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 
-	class DUISHARP_API CUIHorizontalLayout : public CUIContainer
+	class CUIHorizontalLayout : public CUIContainer
 	{
 	public:
 		CUIHorizontalLayout();
@@ -73,7 +73,7 @@ namespace duisharp {
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 
-	class DUISHARP_API CUITileLayout : public CUIContainer
+	class CUITileLayout : public CUIContainer
 	{
 	public:
 		CUITileLayout();
@@ -99,7 +99,7 @@ namespace duisharp {
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 
-	class DUISHARP_API CUITabLayout : public CUIContainer
+	class CUITabLayout : public CUIContainer
 	{
 	public:
 		CUITabLayout();

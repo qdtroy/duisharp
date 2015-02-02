@@ -147,8 +147,8 @@ namespace duisharp {
 		void KillTimer(UINT nTimerID);
 
 		// 通知消息函数
-		void SendNotify(LPCTSTR pstrMessage, WPARAM wParam = 0, LPARAM lParam = 0, BOOL bAsync = FALSE);
-		void SendNotify(TUINotify& Msg, BOOL bAsync = FALSE);
+		void SendNotify(LPCTSTR pstrMessage, WPARAM wParam = 0, LPARAM lParam = 0, bool bAsync = false);
+		void SendNotify(TUINotify& Msg, bool bAsync = false);
 
 		// 特效函数
 		virtual bool IsEffectRunning(UINT uEffect);
@@ -166,6 +166,8 @@ namespace duisharp {
 		bool IsUpdateNeeded() const;
 		void NeedUpdate();
 		void NeedParentUpdate();
+		void NeedLayout();
+		void NeedParentLayout();
 		DWORD GetAdjustColor(DWORD dwColor);
 
 	public:
@@ -210,6 +212,7 @@ namespace duisharp {
 		CUIControl* m_pParent;
 		CStdString m_sName;
 		bool m_bUpdateNeeded;
+		bool m_bLayoutNeeded;
 		bool m_bMenuUsed;
 		RECT m_rcItem;
 		RECT m_rcPadding;

@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiDemo_2008", "simples\DuiDemo\DuiDemo_2008.vcproj", "{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiDemo_2008", "samples\DuiDemo\DuiDemo_2008.vcproj", "{999C70FB-5D9F-4A98-A3E1-BBAFC044230D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo_2008", "simples\QQDemo\QQDemo_2008.vcproj", "{9BF67AEF-041B-4DCC-BDCE-18C25358A126}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QQDemo_2008", "samples\QQDemo\QQDemo_2008.vcproj", "{9BF67AEF-041B-4DCC-BDCE-18C25358A126}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameDemo_2008", "simples\GameDemo\GameDemo_2008.vcproj", "{2E8DA1E5-B60C-4A11-B037-61EF854E6EB0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameDemo_2008", "samples\GameDemo\GameDemo_2008.vcproj", "{2E8DA1E5-B60C-4A11-B037-61EF854E6EB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
