@@ -43,3 +43,8 @@ Icon
 *.user
 *.sdf
 *.opensdf
+*.bsc
+*.map
+*.pdb
+*.ipch
+*.suo
