@@ -201,15 +201,15 @@ public: \
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	// 浮动控件布局标识
-#define UIFLOAT_NULL		0x00000000
-#define UIFLOAT_LEFT		0x00000001
-#define UIFLOAT_CENTER		0x00000002
-#define UIFLOAT_RIGHT		0x00000004
-#define UIFLOAT_AUTO		0x00000008
-#define UIFLOAT_TOP			0x00000010
-#define UIFLOAT_VCENTER		0x00000020
-#define UIFLOAT_BOTTOM		0x00000040
-#define UIFLOAT_VAUTO		0x00000080
+#define UIALIGN_NULL		0x00000000
+#define UIALIGN_LEFT		0x00000001
+#define UIALIGN_CENTER		0x00000002
+#define UIALIGN_RIGHT		0x00000004
+#define UIALIGN_AUTO		0x00000008
+#define UIALIGN_TOP			0x00000010
+#define UIALIGN_VCENTER		0x00000020
+#define UIALIGN_BOTTOM		0x00000040
+#define UIALIGN_VAUTO		0x00000080
 
 /////////////////////////////////////////////////////////////////////////////////////
 // 内部消息ID
