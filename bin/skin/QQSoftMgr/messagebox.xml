@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="400,300" sizebox="0,0,0,0" roundcorner="5,5" caption="0,0,0,30" mininfo="400,300" bktrans="false">
+  <VerticalLayout bkimage="res='IDB_MAINFRAME_BG' corner='6,97,6,29,'" borderround="5,5" padding="1,0,1,0">
+    <Label name="title" height="30" text="消息提示" />
+    <!-- 系统按钮 -->
+    <HorizontalLayout name="syspanel" float="true" width="130" height="18" relativepadding="-1,0,0,-1" >
+      <Control />
+      <ExButton fade="true" name="minbtn" style="btn_style_min" />
+      <ExButton fade="true" name="closebtn" style="btn_style_close" />
+    </HorizontalLayout>
+    
+  </VerticalLayout>
+</Window>

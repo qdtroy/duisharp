@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Window size="281,532" mininfo="281,532" sizebox="4,4,4,4" caption="0,0,0,136" bktrans="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAIN_SHADOW' corner='8,8,8,8'">
+<Window size="281,532" mininfo="281,532" sizebox="4,4,4,4" caption="0,0,0,136" blur="true" shadow="true" shadowtrans="true" shadowborder="6,6,6,6" shadowimage="res='IDB_MAIN_SHADOW' corner='8,8,8,8'">
   <VerticalLayout name="root" bkcolor="#FF2d456c">
     <VerticalLayout height="136" >
       <HorizontalLayout height="22" inset="6">
@@ -15,10 +15,10 @@
       </HorizontalLayout>
 
       <HorizontalLayout inset="2,0,0,0">
-        <ExButton name="avatarbtn" width="61" height="61" cursor="hand" bkimage="res='IDB_AVATAR_BG'" foreimage="res='IDB_AVATAR_PIC' dest='1,1,60,60'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
+        <ExButton name="avatarbtn" width="61" height="61" cursor="hand" bkimage="res='IDB_AVATAR_BG'" foreimage="res='IDB_AVATAR_PIC' dest='1,1,59,59'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
         <VerticalLayout>
           <HorizontalLayout>
-            <ExButton name="statusbtn" style="statusbtn_style" height="22" width="38" iconimage="res='IDB_GG_IMONLINE' dest='1,1,21,21'"/>
+            <ExButton name="statusbtn" style="statusbtn_style" height="22" width="38" iconimage="res='IDB_GG_IMONLINE' dest='1,1,19,19'"/>
             <ExButton name="nicknamebtn" height="22" autowidth="true" text="duisharp" textpadding="6,0,0,0" font="font13b"/>
             <ExButton name="levevaluebtn" height="7" width="10" bkimage="IDB_LEVEL" padding="4,9,0,0" font="font13b"/>
             <ExButton name="levevaluebtn" height="7" width="30" bkimage="res='IDB_LEVEL_VALUE' source='6,0,18,7' dest='0,0,12,7'" padding="0,9,0,0" font="font13b"/>
@@ -29,12 +29,12 @@
           </HorizontalLayout>
 
           <HorizontalLayout childpadding="1" inset="0,0,6,0">
-            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_ZONE' dest='1,1,21,21'"/>
-            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_WEIBO' dest='2,2,20,20'"/>
-            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_EMAIL' dest='1,1,21,21'"/>
-            <ExButton style="allbtn_style" text="20" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_XIAOYOU' dest='3,3,19,19'"/>
+            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_ZONE' dest='1,1,20,20'"/>
+            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_WEIBO' dest='2,2,18,18'"/>
+            <ExButton style="allbtn_style" text="10" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_EMAIL' dest='1,1,20,20'"/>
+            <ExButton style="allbtn_style" text="20" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_XIAOYOU' dest='3,3,16,16'"/>
             <Control />
-            <ExButton style="allbtn_style" text="" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_MSGMGR' dest='1,1,21,21'"/>
+            <ExButton style="allbtn_style" text="" autowidth="true" textpadding="20,0,3,0" iconimage="res='IDB_WEBICON_MSGMGR' dest='1,1,20,20'"/>
           </HorizontalLayout>
         </VerticalLayout>
 
@@ -85,17 +85,17 @@
 
       <VerticalLayout inset="8,12,0,0" childpadding="6">
         <HorizontalLayout height="22" childpadding="6">
-          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MUSIC' dest='1,1,21,21'"/>
-          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_GAME' dest='1,1,21,21'"/>
-          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TENPAY' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MUSIC' dest='1,1,20,20'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_GAME' dest='1,1,20,20'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TENPAY' dest='1,1,20,20'"/>
           <Control />
-          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MANAGER' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MANAGER' dest='1,1,20,20'"/>
 
         </HorizontalLayout>
         <HorizontalLayout childpadding="6">
-          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TOOLS' dest='1,1,21,21'"/>
-          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MESSAGE' dest='1,1,21,21'"/>
-          <ExButton style="allbtn_style" width="56" text="查找" textstyle="vcenter" textpadding="22,0,0,0" iconimage="res='IDB_APPICON_FIND' dest='1,1,21,21'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_TOOLS' dest='1,1,20,20'"/>
+          <ExButton style="allbtn_style" iconimage="res='IDB_APPICON_MESSAGE' dest='1,1,20,20'"/>
+          <ExButton style="allbtn_style" width="56" text="查找" textstyle="vcenter" textpadding="22,0,0,0" iconimage="res='IDB_APPICON_FIND' dest='1,1,20,20'"/>
         </HorizontalLayout>
       </VerticalLayout>
     </HorizontalLayout>

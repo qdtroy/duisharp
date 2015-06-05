@@ -96,7 +96,7 @@
       <itembkimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itembkimage>
       <itemhotimage>res='IDB_CATALOG_ITEM_HOT' corner='0,4,0,4' xtiled='true'</itemhotimage>
       <itemselectedimage>res='IDB_CATALOG_ITEM_SELECTED' corner='0,4,0,4' xtiled='true'</itemselectedimage>
-      <itemforeimage>res='IDB_CATALOG_ICON_NOMINATE' source='17,0,34,17' dest='21,6,38,23'</itemforeimage>
+      <itemforeimage>res='IDB_CATALOG_ICON_NOMINATE' source='17,0,34,17' dest='21,6,17,17'</itemforeimage>
     </Style>
 
     <Style id="body_catalog_item_title_style" width="190" height="40" itemfont="font12b" itemtextstyle="center">
@@ -106,7 +106,7 @@
       <itembkimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itembkimage>
       <itemhotimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itemhotimage>
       <itemselectedimage>res='IDB_CATALOG_ITEM_NORMAL' corner='0,4,0,4' xtiled='true'</itemselectedimage>
-      <itemforeimage>res='IDB_CATALOG_ICON_0' source='0,0,17,17' dest='49,10,66,27'</itemforeimage>
+      <itemforeimage>res='IDB_CATALOG_ICON_0' source='0,0,17,17' dest='49,10,17,17'</itemforeimage>
     </Style>
     
     <Style id="body_catalog_item_style" height="32"/>

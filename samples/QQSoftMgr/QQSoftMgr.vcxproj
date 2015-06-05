@@ -159,7 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\bin\skin\QQSoftMgrRes\controls.xml" />
-    <None Include="..\..\bin\skin\QQSoftMgrRes\main.xml" />
+    <None Include="..\..\bin\skin\QQSoftMgrRes\main.xml">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="..\..\bin\skin\QQSoftMgrRes\messagebox.xml" />
     <None Include="..\..\bin\skin\QQSoftMgrRes\resources.xml" />
     <None Include="res\QQSoftMgr.ico" />

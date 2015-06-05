@@ -5,7 +5,7 @@
     <HorizontalLayout height="85">
       <!-- 头像 -->
       <HorizontalLayout inset="6,6">
-        <ExButton name="avatarbtn" width="61" height="61" cursor="hand" bkimage="res='IDB_AVATAR_BG'" foreimage="res='IDB_AVATAR_PIC' dest='1,1,60,60'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
+        <ExButton name="avatarbtn" width="61" height="61" cursor="hand" bkimage="res='IDB_AVATAR_BG'" foreimage="res='IDB_AVATAR_PIC' dest='1,1,59,59'" hotimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'" pushedimage="res='IDB_AVATAR_HOT' corner='5,5,5,5'"/>
         <VerticalLayout>
           <ExButton name="nicknamebtn" height="22" autowidth="true" cursor="hand" text="duisharp" textcolor="#FF000000" textpadding="6,0,0,0" glowsize="6" font="font14bu"/>
 

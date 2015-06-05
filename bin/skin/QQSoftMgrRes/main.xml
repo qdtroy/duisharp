@@ -10,9 +10,9 @@
       <HorizontalLayout name="toolbar" height="75" inset="18,0,18,0">
         <HorizontalLayout bkimage="IDB_LOGO" width="150" height="54" />
         <HorizontalLayout inset="21,0,0,0">
-          <ExButton option="true" name="tabbar_soft" text="软件仓库" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_SOFTHOUSE' dest='15,8,69,57'" selected="true"/>
-          <ExButton option="true" name="tabbar_upgrade" text="软件升级" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_UPGRADE' dest='15,8,69,57'" />
-          <ExButton option="true" name="tabbar_uninstall" text="软件卸载" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_UNINSTALL' dest='15,8,69,57'" />
+          <ExButton option="true" name="tabbar_soft" text="软件仓库" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_SOFTHOUSE' dest='15,8,54,49'" selected="true"/>
+          <ExButton option="true" name="tabbar_upgrade" text="软件升级" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_UPGRADE' dest='15,8,54,49'" />
+          <ExButton option="true" name="tabbar_uninstall" text="软件卸载" style="tab_btn_style" foreimage="res='IDB_TABBUTTON_UNINSTALL' dest='15,8,54,49'" />
         </HorizontalLayout>
         <HorizontalLayout width="250" height="25" padding="0,20,0,0">
           <HorizontalLayout bkimage="res='IDB_SEARCHEDIT_BG' corner='22,0,2,0'" inset="12,1,0,3"  >

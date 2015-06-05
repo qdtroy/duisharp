@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window name="body_soft_item">
+  <ListContainerItem name="body.soft.item" padding="6,10,0,10" height="72" menu="true">
+    <HorizontalLayout name="body.soft.item.container">
+      <HorizontalLayout name="body.soft.item.left" padding="0,2,16,2">
+        <Label name="body.soft.item.icon" width="48" height="48" bkimage="IDB_SOFT_DEFLOGO"/>
+        <VerticalLayout name="body.soft.item.detail">
+          <HorizontalLayout name="body.soft.item.top" height="20" childpadding="2">
+            <EXButton name="body.soft.item.name" text="QQ软件" autowidth="true" textstyle="left" height="15" textcolor="#FF555555" hottextcolor="#FF0000FF"/>
+          </HorizontalLayout>
+          <HorizontalLayout name="body.soft.item.bottom" height="20">
+            <Label name="body.soft.item.description" text="最好用的软件" height="15" textstyle="left endellipsis:true" textcolor="#FF555555" hottextcolor="#FF0000FF"/>
+            <EXButton name="body.soft.item.updatetip" width="60" visible="true" height="15" text="升级信息" textcolor="#FFaaaaFF" hottextcolor="#FF0000FF"/>
+          </HorizontalLayout>
+        </VerticalLayout>
+      </HorizontalLayout>
+
+      <HorizontalLayout name="body.soft.item.right" width="340">
+        <Label name="body.soft.item.softsize" width="74" textstyle="left" text="0" textcolor="#FF555555" endellipsis="true"/>
+        <HorizontalLayout name="body.soft.item.normal">
+          <Label name="body.soft.item.rate" text="10分" float="true" pos="0,4,93,20" textstyle="center" textcolor="#FF000000"/>
+          <Label name="body.soft.item.check" text="正在检测..." visible="true" float="true" pos="130,0,265,40" textstyle="center" textcolor="#FF555555" />
+        </HorizontalLayout>
+      </HorizontalLayout>
+    </HorizontalLayout>
+  </ListContainerItem>
+</Window>
