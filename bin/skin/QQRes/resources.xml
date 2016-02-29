@@ -162,7 +162,7 @@
 
     <Style id="edit_style" glowsize="0" hotimage="res='IDB_EDIT_HOT' corner='4,4,4,4'" pushedimage="res='IDB_EDIT_PUSHED' corner='4,4,4,4'" focusedimage="res='IDB_EDIT_PUSHED' corner='4,4,4,4'" />
     <Style id="allbtn_style" glowsize="0" width="22" height="22" hotimage="res='IDB_BUTTON_ALL_HOT' corner='4,4,4,4'" pushedimage="res='IDB_BUTTON_ALL_PUSHED' corner='4,4,4,4'" selectedimage="res='IDB_BUTTON_ALL_PUSHED' corner='4,4,4,4'"/>
-    <Style id="statusbtn_style" glowsize="0" height="22" hotimage="res='IDB_STATUSBTN_HOT' corner='4,4,4,4'" pushedimage="res='IDB_STATUSBTN_PUSHED' corner='4,4,4,4'" arrowimage="res='IDB_STATUSBTN_ARROW_DOWN' dest='-12,8,-3,12'"/>
+    <Style id="statusbtn_style" glowsize="0" height="22" hotimage="res='IDB_STATUSBTN_HOT' corner='4,4,4,4'" pushedimage="res='IDB_STATUSBTN_PUSHED' corner='4,4,4,4'" arrowimage="res='IDB_STATUSBTN_ARROW_DOWN' dest='0,0,9,4' destpadding='0,0,5,0' destalign='right,vcenter'"/>
     
     <Style id="maintab_style" height="34" option="true" textcolor="#FFFFFFFF" iconsize="20,20" iconalign="center,vcenter" normalimage="res='IDB_MAIN_TAB_NORMAL' corner='6,6,6,6'" hotimage="res='IDB_MAIN_TAB_HOT' corner='6,6,6,6'" pushedimage="res='IDB_MAIN_TAB_PUSHED' corner='6,6,6,6'" selectedimage="res='IDB_MAIN_TAB_PUSHED' corner='6,6,6,6'" group="main_tab" />
     

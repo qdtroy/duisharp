@@ -90,7 +90,7 @@ public:
 		}
 		else
 		{
-			m_ui.GetRoot()->SetBkColor(0xFF76A8D0);
+			m_ui.GetRoot()->SetBkColor(0xFFFFFFFF);
 		}
 	}
 
